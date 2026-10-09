@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { clinic } from "@/data/clinic";
 import { getWhatsAppUrl } from "@/lib/site";
@@ -18,7 +19,14 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-[4.5rem] items-center justify-between gap-3 py-2">
           <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Aura Ayurveda home">
-            <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#214d3a] font-serif text-sm text-white">A</span>
+            <Image
+              src="/images/logo/image.png"
+              alt=""
+              width={48}
+              height={48}
+              priority
+              className="size-11 shrink-0"
+            />
             <span className="min-w-0">
               <span className="block truncate font-serif text-lg leading-tight text-[#1d3026] sm:text-xl">Aura Ayurveda</span>
               <span className="mt-1 block truncate text-[10px] font-medium uppercase tracking-[0.12em] text-[#647267]">Manjadi · Thiruvalla</span>

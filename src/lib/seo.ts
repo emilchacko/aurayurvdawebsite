@@ -26,6 +26,9 @@ export function buildMetadata({
       index: true,
       follow: true,
     },
+    icons: {
+      icon: "/images/logo/image.png",
+    },
     alternates: {
       canonical,
     },
