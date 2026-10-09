@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { clinic } from "@/data/clinic";
 import { getWhatsAppUrl } from "@/lib/site";
+import { MobileNav } from "@/components/layout/mobile-nav";
 
 const navItems = [
   { href: "/about", label: "About" },
@@ -36,24 +37,13 @@ export function Header() {
             <a href={getWhatsAppUrl("Hello, I would like to enquire about Aura Ayurveda services.")} target="_blank" rel="noreferrer" className="hidden min-h-10 items-center justify-center rounded-full bg-[#214d3a] px-4 text-sm font-semibold text-white transition hover:bg-[#183b2c] sm:inline-flex">
               WhatsApp us
             </a>
-            <a href={`tel:${clinic.phone.replace(/\s/g, "")}`} aria-label={`Call Aura Ayurveda at ${clinic.phone}`} className="inline-flex min-h-10 items-center justify-center rounded-full border border-[#cbd4c9] px-3 text-sm font-semibold text-[#214d3a] sm:px-4">
+            <a href={`tel:${clinic.phone.replace(/\s/g, "")}`} aria-label={`Call Aura Ayurveda at ${clinic.phone}`} className="hidden min-h-10 items-center justify-center rounded-full border border-[#cbd4c9] px-3 text-sm font-semibold text-[#214d3a] sm:inline-flex sm:px-4">
               Call
             </a>
-            <details className="relative lg:hidden">
-              <summary className="flex min-h-10 cursor-pointer list-none items-center justify-center rounded-full border border-[#cbd4c9] px-4 text-sm font-semibold text-[#214d3a] [&::-webkit-details-marker]:hidden">
-                Menu
-              </summary>
-              <nav aria-label="Mobile navigation" className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(18rem,calc(100vw-2rem))] rounded-xl border border-[#d8ded4] bg-[#faf9f5] p-2 shadow-xl">
-                {navItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="block rounded-lg px-4 py-3 text-sm font-medium text-[#26392e] hover:bg-[#edf1e9]">
-                    {item.label}
-                  </Link>
-                ))}
-                <a href={getWhatsAppUrl("Hello, I would like to enquire about Aura Ayurveda services.")} target="_blank" rel="noreferrer" className="mt-1 block rounded-lg bg-[#214d3a] px-4 py-3 text-sm font-semibold text-white">
-                  Message on WhatsApp
-                </a>
-              </nav>
-            </details>
+            <Link href="/store" className="inline-flex min-h-10 items-center justify-center rounded-full border border-[#a05435] bg-white px-3 text-sm font-semibold text-[#8d462f] transition hover:bg-[#f8eee8] sm:px-4 lg:hidden">
+              Store
+            </Link>
+            <MobileNav items={navItems} whatsappUrl={getWhatsAppUrl("Hello, I would like to enquire about Aura Ayurveda services.")} />
           </div>
         </div>
       </div>

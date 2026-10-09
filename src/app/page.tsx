@@ -122,6 +122,9 @@ export default function Home() {
                 <a href={clinic.mapUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#b9c7b8] bg-white px-6 text-sm font-semibold text-[#214d3a]">
                   Get directions
                 </a>
+                <Link href="/store" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#a05435] bg-white px-6 text-sm font-semibold text-[#8d462f]">
+                  Browse the store
+                </Link>
               </div>
               <p className="mt-4 text-sm text-[#58665c]">Prefer to call? <a className="font-semibold text-[#214d3a] underline underline-offset-4" href={`tel:${clinic.phone.replace(/\s/g, "")}`}>{clinic.phone}</a></p>
             </div>
@@ -160,7 +163,7 @@ export default function Home() {
 
           <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
             {focusAreas.map((area) => (
-              <Link key={area.title} href="/treatments" className="min-w-0 overflow-hidden rounded-lg border border-[#d8ded4] bg-white transition hover:border-[#aab9a8]">
+              <article key={area.title} className="min-w-0 overflow-hidden rounded-lg border border-[#d8ded4] bg-white">
                 <Image
                   src={withBasePath(area.image)}
                   alt={area.imageAlt}
@@ -173,7 +176,7 @@ export default function Home() {
                   <h3 className="font-serif text-lg leading-tight text-[#1d3026] sm:text-xl">{area.title}</h3>
                   <p className="mt-2 hidden text-sm leading-6 text-[#58665c] sm:block">{area.summary}</p>
                 </div>
-              </Link>
+              </article>
             ))}
           </div>
         </Container>
