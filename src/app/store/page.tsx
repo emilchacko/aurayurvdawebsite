@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { clinic } from "@/data/clinic";
 import { buildMetadata } from "@/lib/seo";
+import { withBasePath } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Store | Aura Ayurveda",
@@ -66,7 +67,7 @@ export default function StorePage() {
                 className="flex flex-col rounded-2xl border border-[#e5dccf] bg-white p-4 shadow-sm"
               >
                 <Image
-                  src={product.image}
+                  src={withBasePath(product.image)}
                   alt={`${product.name} illustration`}
                   width={1200}
                   height={900}
