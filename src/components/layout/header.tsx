@@ -4,6 +4,7 @@ import { clinic } from "@/data/clinic";
 const navItems = [
   { href: "/about", label: "About" },
   { href: "/treatments", label: "Treatments" },
+  { href: "/store", label: "Store" },
   { href: "/doctor", label: "Doctor" },
   { href: "/contact", label: "Contact" },
 ];
