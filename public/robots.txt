@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /aurayurvdawebsite/
+Allow: /
 
-Sitemap: https://emilchacko.github.io/aurayurvdawebsite/sitemap.xml
+Sitemap: https://auraayurvedawellness.in/sitemap.xml

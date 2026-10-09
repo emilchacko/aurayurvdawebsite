@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-
-const siteUrl = "https://emilchacko.github.io";
-const basePath =
-  process.env.GITHUB_ACTIONS === "true" &&
-  process.env.GITHUB_REPOSITORY === "emilchacko/aurayurvdawebsite"
-    ? "/aurayurvdawebsite"
-    : "";
+import { siteUrl } from "@/lib/site";
 
 export function buildMetadata({
   title,
@@ -16,12 +10,12 @@ export function buildMetadata({
   description: string;
   path?: string;
 }): Metadata {
-  const canonical = `${siteUrl}${basePath}${path}`;
+  const canonical = `${siteUrl}${path}`;
 
   return {
     title,
     description,
-    metadataBase: new URL(`${siteUrl}${basePath}/`),
+    metadataBase: new URL(`${siteUrl}/`),
     keywords: [
       "Ayurvedic clinic in Manjadi",
       "Ayurvedic doctor near Thiruvalla",
@@ -44,7 +38,7 @@ export function buildMetadata({
       locale: "en_IN",
       images: [
         {
-          url: `${siteUrl}${basePath}/doctor-lidiya-thomas.png`,
+          url: `${siteUrl}/doctor-lidiya-thomas.png`,
           width: 768,
           height: 768,
           alt: "Dr. Lidiya Thomas, Ayurveda Doctor at Aura Ayurveda in Manjadi, Kerala",
@@ -55,7 +49,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${siteUrl}${basePath}/doctor-lidiya-thomas.png`],
+      images: [`${siteUrl}/doctor-lidiya-thomas.png`],
     },
   };
 }

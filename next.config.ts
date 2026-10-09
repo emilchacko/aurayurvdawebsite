@@ -6,7 +6,6 @@ const isGitHubPagesBuild =
 
 const nextConfig: NextConfig = {
   ...(isGitHubPagesBuild ? { output: "export" as const } : {}),
-  basePath: isGitHubPagesBuild ? "/aurayurvdawebsite" : "",
   trailingSlash: true,
   images: {
     unoptimized: true,

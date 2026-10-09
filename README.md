@@ -22,13 +22,15 @@ npm run dev
 
 Then open http://localhost:3000.
 
-## Publish preview with GitHub Pages
+## Publish with GitHub Pages
 
-After the deployment workflow is pushed and Pages is enabled, the preview will be available at:
+The site is published at:
 
-https://emilchacko.github.io/aurayurvdawebsite/
+https://auraayurvedawellness.in/
 
-In the GitHub repository, open **Settings → Pages** and choose **GitHub Actions** as the build and deployment source. Push changes to `main` to trigger the deployment workflow. The site is public to anyone with the URL.
+In the GitHub repository, open **Settings → Pages**, set the custom domain to `auraayurvedawellness.in`, and choose **GitHub Actions** as the build and deployment source. The deployment workflow exports the site at the domain root and includes the `CNAME` file. Push changes to `main` to trigger a deployment.
+
+The `www` hostname should have a CNAME record pointing to `emilchacko.github.io`. The apex domain should point only to GitHub Pages using these A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`. Remove any other apex A records. Enable **Enforce HTTPS** in Pages after GitHub provisions the certificate.
 
 ## Important notes
 

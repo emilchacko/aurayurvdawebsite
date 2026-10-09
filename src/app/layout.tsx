@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { StickyCta } from "@/components/layout/sticky-cta";
 import { buildMetadata } from "@/lib/seo";
+import { siteUrl } from "@/lib/site";
 import { clinic } from "@/data/clinic";
 import "./globals.css";
 
@@ -25,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               "@type": "MedicalClinic",
               name: clinic.name,
               alternateName: clinic.secondaryName,
-              url: "https://emilchacko.github.io/aurayurvdawebsite/",
+              url: siteUrl,
               telephone: clinic.phone,
               address: {
                 "@type": "PostalAddress",
