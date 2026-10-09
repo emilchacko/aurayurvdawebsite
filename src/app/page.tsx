@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { treatments } from "@/content/treatments";
 import { clinic } from "@/data/clinic";
 import { doctor } from "@/data/doctor";
-import { withBasePath } from "@/lib/site";
+import { getWhatsAppUrl, withBasePath } from "@/lib/site";
 
 const focusAreas = [
   {
@@ -61,19 +60,17 @@ const focusAreas = [
 ];
 
 const reasons = [
-  "Doctor-led care",
-  "Personalized attention",
-  "Thoughtful treatment planning",
-  "Traditional therapies",
-  "Genuine medicines",
-  "Welcoming clinic environment",
+  "Meet your doctor before you book",
+  "Ask about suitability and next steps",
+  "Clear clinic location and directions",
+  "Message the clinic directly on WhatsApp",
 ];
 
 const steps = [
-  "Book a consultation",
-  "Consultation & assessment",
-  "Personalized Ayurvedic plan",
-  "Follow-up & care",
+  "Start with a conversation",
+  "Share what you need help with",
+  "Discuss a suitable appointment",
+  "Review your next steps with the doctor",
 ];
 
 const faqs = [
@@ -106,54 +103,54 @@ const faqs = [
 
 export default function Home() {
   return (
-    <Container>
-      <section className="py-10 sm:py-14 lg:py-18">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#496d56]">Aura Ayurveda • Manjadi, near Thiruvalla</p>
-            <h1 className="mt-4 max-w-2xl font-serif text-5xl leading-none text-[#1a2a2a] sm:text-6xl">
-              Personalized Ayurvedic care for skin, hair & women’s wellness.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#536260]">
-              Discover a thoughtful Ayurvedic approach to everyday health and wellness at Aura Ayurveda, designed for people seeking supportive, personalized care.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/contact">Book a Consultation</Button>
-              <a
-                href={clinic.whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-[#d9d0c5] bg-white px-5 py-3 text-sm font-semibold text-[#1a2a2a] transition-colors hover:bg-[#f4efe8]"
-              >
-                WhatsApp Us
-              </a>
+    <div>
+      <section className="bg-[#edf0e8]">
+        <Container>
+          <div className="grid items-center gap-8 py-8 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:py-16">
+            <div className="order-2 lg:order-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a05435]">Ayurvedic clinic · Manjadi · Thiruvalla, Kerala</p>
+              <h1 className="mt-4 max-w-2xl font-serif text-4xl leading-[1.08] text-[#1d3026] sm:text-5xl lg:text-[3.5rem]">
+                A doctor-led conversation about your wellbeing.
+              </h1>
+              <p className="mt-5 max-w-xl text-base leading-7 text-[#58665c] sm:text-lg sm:leading-8">
+                Meet Dr. Lidiya Thomas at Aura Ayurveda in Manjadi, near Thiruvalla. Explore personalized Ayurvedic consultations, hair and skin care, traditional therapies and women’s wellness.
+              </p>
+              <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap">
+                <a href={getWhatsAppUrl("Hello, I would like to ask about booking a consultation at Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-6 text-sm font-semibold text-white transition hover:bg-[#183b2c]">
+                  Ask about an appointment
+                </a>
+                <a href={clinic.mapUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#b9c7b8] bg-white px-6 text-sm font-semibold text-[#214d3a]">
+                  Get directions
+                </a>
+              </div>
+              <p className="mt-4 text-sm text-[#58665c]">Prefer to call? <a className="font-semibold text-[#214d3a] underline underline-offset-4" href={`tel:${clinic.phone.replace(/\s/g, "")}`}>{clinic.phone}</a></p>
             </div>
-            <div className="mt-6 flex flex-wrap gap-4 text-sm text-[#536260]">
-              <Link href="/contact" className="font-medium text-[#1d4f3a] underline-offset-4 hover:underline">
-                Call the clinic
-              </Link>
-              <Link href="/contact" className="font-medium text-[#1d4f3a] underline-offset-4 hover:underline">
-                Get directions
-              </Link>
-            </div>
-          </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#e5dccf] bg-[radial-gradient(circle_at_top,_#edf5ee,_#dfeae1_38%,_#e7d4be_100%)] p-5 shadow-[0_24px_50px_rgba(28,39,35,0.08)]">
-            <div className="flex h-[430px] items-end rounded-[1.5rem] border border-white/80 bg-white/25 p-5 backdrop-blur-sm">
-              <div className="w-full rounded-[1.5rem] border border-[#d9d0c5] bg-white/80 p-6">
-                <h2 className="mt-3 font-serif text-4xl text-[#1a2a2a]">Local, warm, and doctor-led.</h2>
-                <ul className="mt-5 space-y-2 text-sm text-[#4c5654]">
-                  <li>• Personalized Ayurvedic care</li>
-                  <li>• Hair, skin, and women’s wellness</li>
-                  <li>• Pregnancy, postnatal, and lifestyle support</li>
-                </ul>
+            <div className="relative order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none">
+              <div className="aspect-[4/4.3] overflow-hidden rounded-t-[12rem] rounded-b-xl bg-[#d7e0d5] sm:aspect-[4/3.4] lg:aspect-[4/4.3]">
+                <Image src={withBasePath(doctor.photo)} alt="Dr. Lidiya Thomas, Ayurveda Doctor at Aura Ayurveda" width={768} height={768} priority sizes="(max-width: 1023px) 100vw, 45vw" className="h-full w-full object-cover object-top" />
+              </div>
+              <div className="absolute inset-x-3 bottom-3 rounded-lg bg-[#faf9f5]/95 p-4 shadow-sm sm:inset-x-5 sm:bottom-5 sm:p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Your local Ayurveda doctor</p>
+                <p className="mt-1 font-serif text-2xl text-[#1d3026]">{doctor.name}</p>
+                <p className="mt-1 text-sm text-[#58665c]">{doctor.qualification} · Aura Ayurveda, Manjadi</p>
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
-      <section className="border-y border-[#e5dccf] bg-[#f0eadf] py-16">
+      <section aria-label="Clinic details" className="border-y border-[#d8ded4] bg-[#faf9f5]">
+        <Container>
+          <div className="grid gap-4 py-5 sm:grid-cols-3 sm:gap-6">
+            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Local clinic</p><p className="mt-1 text-sm font-medium text-[#34463b]">Manjadi, near Thiruvalla</p></div>
+            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Speak directly</p><p className="mt-1 text-sm font-medium text-[#34463b]">Call or message the clinic</p></div>
+            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">First step</p><p className="mt-1 text-sm font-medium text-[#34463b]">Ask about an appointment</p></div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[#f4f3ed] py-12 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="What can we help with?"
@@ -161,26 +158,28 @@ export default function Home() {
             description="Explore the areas where Aura Ayurveda offers thoughtful, personalized care."
           />
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
             {focusAreas.map((area) => (
-              <Link key={area.title} href="/treatments" className="rounded-[1.5rem] border border-[#d9d0c5] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#b9cbb7]">
+              <Link key={area.title} href="/treatments" className="min-w-0 overflow-hidden rounded-lg border border-[#d8ded4] bg-white transition hover:border-[#aab9a8]">
                 <Image
                   src={withBasePath(area.image)}
                   alt={area.imageAlt}
                   width={640}
                   height={420}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                  className="mb-4 h-24 w-full rounded-2xl object-cover"
+                  className="aspect-[1.55/1] w-full object-cover"
                 />
-                <h3 className="font-serif text-2xl text-[#1a2a2a]">{area.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#536260]">{area.summary}</p>
+                <div className="p-3 sm:p-4">
+                  <h3 className="font-serif text-lg leading-tight text-[#1d3026] sm:text-xl">{area.title}</h3>
+                  <p className="mt-2 hidden text-sm leading-6 text-[#58665c] sm:block">{area.summary}</p>
+                </div>
               </Link>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="Treatments"
@@ -188,21 +187,22 @@ export default function Home() {
             description="Learn what each service may involve and its potential benefits. The doctor can help determine what may be suitable for you."
           />
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-7 grid gap-x-8 sm:grid-cols-2">
             {treatments.map((treatment) => (
-              <Link key={treatment.slug} href={`/treatments/${treatment.slug}`} className="rounded-[1.5rem] border border-[#d9d0c5] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#b9cbb7]">
-                <div className="mb-4 flex h-40 items-center justify-center rounded-2xl border border-dashed border-[#b6b8a7] bg-[#f5f0e8] text-sm text-[#536260]">
-                  Image coming soon
-                </div>
-                <h3 className="font-serif text-2xl text-[#1a2a2a]">{treatment.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#536260]">{treatment.shortDescription}</p>
+              <Link key={treatment.slug} href={`/treatments/${treatment.slug}`} className="group flex min-h-24 items-start justify-between gap-4 border-b border-[#d8ded4] py-5 transition hover:border-[#a05435]">
+                <span>
+                  <span className="block text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">{treatment.category}</span>
+                  <span className="mt-1 block font-serif text-xl text-[#1d3026]">{treatment.title}</span>
+                  <span className="mt-2 block text-sm leading-6 text-[#58665c]">{treatment.shortDescription}</span>
+                </span>
+                <span aria-hidden="true" className="mt-4 shrink-0 text-lg text-[#214d3a]">→</span>
               </Link>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="bg-[#edf0e8] py-12 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="Why Aura Ayurveda?"
@@ -210,20 +210,20 @@ export default function Home() {
             description="The clinic is being positioned as a trusted local wellness destination where people feel listened to and supported by a doctor-led Ayurvedic approach."
           />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-7 grid gap-x-8 sm:grid-cols-2">
             {reasons.map((reason) => (
-              <div key={reason} className="rounded-[1.5rem] border border-[#e5dccf] bg-[#fffaf4] p-6 shadow-sm">
-                <p className="text-lg font-medium text-[#263332]">{reason}</p>
+              <div key={reason} className="border-b border-[#d1d9ce] py-4">
+                <p className="text-base font-medium text-[#34463b]">{reason}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#f5f0e8] py-16">
+      <section className="py-12 sm:py-16">
         <Container>
-          <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative h-[420px] overflow-hidden rounded-[2rem] bg-[#f5f0e8]">
+          <div className="grid items-center gap-7 md:grid-cols-[0.8fr_1.2fr] md:gap-12">
+            <div className="relative mx-auto aspect-[4/4.3] w-full max-w-sm overflow-hidden rounded-t-[10rem] rounded-b-lg bg-[#d7e0d5] md:max-w-none">
               <Image
                 src={withBasePath(doctor.photo)}
                 alt="Dr. Lidiya Thomas"
@@ -240,17 +240,14 @@ export default function Home() {
                 description="Ayurveda Doctor at Aura Ayurveda."
               />
 
-              <div className="mt-8 rounded-[2rem] border border-[#e5dccf] bg-white p-7 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.18em] text-[#496d56]">Doctor profile</p>
-                <h3 className="mt-4 font-serif text-4xl text-[#1a2a2a]">{doctor.name}</h3>
-                <p className="mt-3 text-base text-[#536260]">{doctor.qualification}</p>
-              </div>
+              <p className="mt-5 max-w-xl text-sm leading-7 text-[#58665c]">Learn about the consultation process and what to expect before you decide on care. Treatment recommendations are based on assessment and individual needs.</p>
+              <Link href="/doctor" className="mt-5 inline-flex min-h-11 items-center font-semibold text-[#214d3a] underline underline-offset-4">Read the doctor profile</Link>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="border-y border-[#e5dccf] bg-[#f7f4ee] py-16">
+      <section className="border-y border-[#d8ded4] bg-[#f4f3ed] py-12 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="How it works"
@@ -258,20 +255,20 @@ export default function Home() {
             description="The exact treatment plan depends on individual assessment, which is why the process is framed as a guided consultation rather than a fixed protocol."
           />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
-              <div key={step} className="rounded-[1.5rem] border border-[#e5dccf] bg-white p-5 text-center shadow-sm">
-                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#e3eee5] text-sm font-semibold text-[#1d4f3a]">
+              <div key={step} className="border-t-2 border-[#a05435] bg-white p-4 sm:p-5">
+                <div className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">
                   {index + 1}
                 </div>
-                <p className="mt-4 text-base font-medium text-[#263332]">{step}</p>
+                <p className="mt-2 text-sm font-medium leading-6 text-[#34463b]">{step}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#f3efe7] py-16">
+      <section className="bg-[#edf0e8] py-12 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="Google reviews"
@@ -279,22 +276,9 @@ export default function Home() {
             description="Google reviews for Aura Ayurveda."
           />
 
-          <div className="mt-8 rounded-[2rem] border border-[#e5dccf] bg-white p-6 shadow-sm sm:p-8">
-            <div className="sk-ww-google-reviews" data-embed-id="25720708" />
-            <p className="mt-6 text-center text-sm text-[#536260]">
-              <a
-                href={clinic.googleReviewsUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium text-[#1d4f3a] underline underline-offset-4"
-              >
-                See all reviews on Google
-              </a>
-            </p>
-            <Script
-              src="https://widgets.sociablekit.com/google-reviews/widget.js"
-              strategy="afterInteractive"
-            />
+          <div className="mt-7 flex flex-col gap-4 border-y border-[#d1d9ce] py-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl text-sm leading-7 text-[#58665c]">Read current feedback directly on Google. Reviews and ratings are hosted by Google and may change over time.</p>
+            <a href={clinic.googleReviewsUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white">Read Google reviews</a>
           </div>
         </Container>
       </section>
@@ -307,35 +291,37 @@ export default function Home() {
             description="These are designed to be practical and honest, with placeholders where clinic-specific information still needs to be finalized."
           />
 
-          <div className="mt-10 space-y-4">
+          <div className="mt-7 divide-y divide-[#d8ded4] border-y border-[#d8ded4]">
             {faqs.map((faq) => (
-              <div key={faq.question} className="rounded-[1.5rem] border border-[#e5dccf] bg-white p-5 shadow-sm">
-                <h3 className="font-serif text-2xl text-[#1a2a2a]">{faq.question}</h3>
-                <p className="mt-3 text-base leading-8 text-[#536260]">{faq.answer}</p>
-              </div>
+              <details key={faq.question} className="group py-4">
+                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 font-serif text-xl text-[#1d3026] [&::-webkit-details-marker]:hidden">
+                  {faq.question}<span aria-hidden="true" className="text-xl text-[#a05435] group-open:rotate-45">+</span>
+                </summary>
+                <p className="max-w-3xl pb-2 pt-3 text-sm leading-7 text-[#58665c]">{faq.answer}</p>
+              </details>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="pb-16">
+      <section className="py-12 sm:py-16">
         <Container>
           <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-[2rem] border border-[#e5dccf] bg-[#fffaf4] p-8 shadow-sm">
+            <div className="rounded-xl bg-[#edf0e8] p-5 sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#496d56]">Clinic location</p>
               <h3 className="mt-4 font-serif text-4xl text-[#1a2a2a]">Aura Ayurveda</h3>
               <p className="mt-4 text-base leading-8 text-[#536260]">{clinic.location}</p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-[#e5dccf] bg-white p-4">
+                <div className="rounded-lg bg-white p-4">
                   <p className="text-sm font-medium text-[#263332]">Phone</p>
                   <a href="tel:+919600233308" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{clinic.phone}</a>
                 </div>
-                <div className="rounded-2xl border border-[#e5dccf] bg-white p-4">
+                <div className="rounded-lg bg-white p-4">
                   <p className="text-sm font-medium text-[#263332]">WhatsApp</p>
-                  <a href={clinic.whatsappUrl} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{clinic.whatsapp}</a>
+                  <a href={getWhatsAppUrl("Hello, I would like to ask about visiting Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{clinic.whatsapp}</a>
                 </div>
-                <div className="rounded-2xl border border-[#e5dccf] bg-white p-4">
+                <div className="rounded-lg bg-white p-4">
                   <p className="text-sm font-medium text-[#263332]">Opening hours</p>
                   <p className="mt-2 text-sm text-[#536260]">{clinic.openingHours}</p>
                 </div>
@@ -344,7 +330,7 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href="/contact">Book a Consultation</Button>
                 <a
-                  href={clinic.whatsappUrl}
+                  href={getWhatsAppUrl("Hello, I would like to enquire about visiting Aura Ayurveda in Manjadi.")}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-[#d9d0c5] bg-white px-5 py-3 text-sm font-semibold text-[#1a2a2a] transition-colors hover:bg-[#f4efe8]"
@@ -362,7 +348,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-[#e5dccf] bg-white p-5 shadow-sm">
+            <div className="rounded-xl border border-[#d8ded4] bg-white p-4">
               <div className="flex items-center justify-between gap-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#496d56]">Clinic location</p>
                 <a
@@ -379,24 +365,25 @@ export default function Home() {
                 title="Aura Ayurveda location on Google Maps"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="mt-4 h-[420px] w-full rounded-[1.5rem] border-0"
+                className="mt-4 aspect-[4/3] w-full rounded-lg border-0 sm:aspect-[16/9] lg:aspect-auto lg:h-[420px]"
               />
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="pb-20">
+      <section className="pb-12 sm:pb-16">
         <Container>
-          <div className="rounded-[2rem] border border-[#e5dccf] bg-[#1d4f3a] p-8 text-white sm:p-10">
+          <div className="rounded-xl bg-[#214d3a] p-5 text-white sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#dfeae1]">Ready when you are</p>
             <h2 className="mt-3 max-w-2xl font-serif text-4xl sm:text-5xl">Ready to begin your Ayurvedic wellness journey?</h2>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/contact" className="bg-white text-[#1d4f3a] hover:bg-[#f1f5f2]">Book a Consultation</Button>
+            <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap">
+              <a href={getWhatsAppUrl("Hello, I would like to ask about booking an Ayurvedic consultation at Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about a consultation</a>
+              <Button href="/contact" variant="secondary" className="min-h-12">Visit and contact details</Button>
             </div>
           </div>
         </Container>
       </section>
-    </Container>
+    </div>
   );
 }

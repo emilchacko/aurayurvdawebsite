@@ -6,6 +6,8 @@ export type Treatment = {
   process: string;
   potentialBenefits: string;
   category: string;
+  image: string;
+  imageAlt: string;
 };
 
 export const treatments: Treatment[] = [
@@ -21,6 +23,8 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "Some people find a session relaxing and soothing for temporary muscle tension. Experience varies, and massage is not a substitute for medical care or a guaranteed detox.",
     category: "Massage & Therapies",
+    image: "/images/focus-areas/ayurvedic-therapies.jpg",
+    imageAlt: "Ayurvedic massage therapy, illustrative image",
   },
   {
     slug: "kalari-varma-massage",
@@ -34,6 +38,8 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "A session may support relaxation and temporary ease of muscular tightness. It is not a replacement for diagnosis or treatment of an injury or medical condition.",
     category: "Massage & Therapies",
+    image: "/images/focus-areas/ayurvedic-therapies.jpg",
+    imageAlt: "Ayurvedic massage therapy, illustrative image",
   },
   {
     slug: "ayurvedic-dandruff-treatment",
@@ -47,6 +53,8 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "Personalized care may help manage visible flakes, dryness, or itch for some people. Results vary; persistent, severe, or worsening symptoms may need medical evaluation.",
     category: "Hair & Scalp",
+    image: "/images/focus-areas/hair-scalp.jpg",
+    imageAlt: "Hair and scalp care, illustrative image",
   },
   {
     slug: "ayurvedic-acne-treatment",
@@ -60,6 +68,8 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "A personalized plan may help you build a more suitable skin-care routine and support day-to-day skin comfort. Acne varies; persistent, painful, or scarring acne should be assessed by a qualified medical professional.",
     category: "Skin Care",
+    image: "/images/focus-areas/skin-wellness.jpg",
+    imageAlt: "Facial skin care, illustrative image",
   },
   {
     slug: "ayurvedic-hair-spa",
@@ -73,6 +83,8 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "A session may leave hair feeling conditioned and the scalp feeling refreshed, while offering a relaxing self-care experience. It is not a guaranteed treatment for hair loss or scalp disease.",
     category: "Hair & Scalp",
+    image: "/images/focus-areas/hair-scalp.jpg",
+    imageAlt: "Hair and scalp care, illustrative image",
   },
   {
     slug: "varicose-vein-care",
@@ -86,5 +98,7 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "A consultation can help clarify suitable next steps and comfort-focused support. Ayurvedic care cannot be promised to remove or reverse varicose veins and should not replace evaluation by a qualified medical professional.",
     category: "Circulation & Wellness",
+    image: "/images/focus-areas/joint-muscle.jpg",
+    imageAlt: "Person experiencing back discomfort, illustrative image",
   },
 ];

@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return buildMetadata({
-    title: `${treatment.title} | Aura Ayurveda`,
-    description: treatment.shortDescription,
+    title: `${treatment.title} in Thiruvalla | Aura Ayurveda`,
+    description: `${treatment.shortDescription} Enquire at Aura Ayurveda in Manjadi near Thiruvalla, Kerala.`,
     path: `/treatments/${treatment.slug}`,
   });
 }

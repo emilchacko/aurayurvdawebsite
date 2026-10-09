@@ -2,7 +2,12 @@ export const clinic = {
   name: "Aura Ayurveda",
   secondaryName: "Ayur Arogyam",
   location: "Manjadi, near Thiruvalla, Kerala",
-  address: "TK Rd, Manjadi, Thiruvalla, Keralam 689105, near Chikkos Fried Chicken",
+  address: "TK Rd, Manjadi, Thiruvalla, Kerala 689105, near Chikkos Fried Chicken",
+  streetAddress: "TK Rd, Manjadi",
+  addressLocality: "Thiruvalla",
+  addressRegion: "Kerala",
+  postalCode: "689105",
+  addressCountry: "IN",
   phone: "+91 96002 33308",
   whatsapp: "+91 96002 33308",
   whatsappUrl:

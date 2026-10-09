@@ -21,6 +21,17 @@ export function buildMetadata({
   return {
     title,
     description,
+    metadataBase: new URL(`${siteUrl}${basePath}/`),
+    keywords: [
+      "Ayurvedic clinic in Manjadi",
+      "Ayurvedic doctor near Thiruvalla",
+      "Ayurvedic treatments in Kerala",
+      "Aura Ayurveda",
+    ],
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical,
     },
@@ -30,11 +41,21 @@ export function buildMetadata({
       url: canonical,
       siteName: "Aura Ayurveda",
       type: "website",
+      locale: "en_IN",
+      images: [
+        {
+          url: `${siteUrl}${basePath}/doctor-lidiya-thomas.png`,
+          width: 768,
+          height: 768,
+          alt: "Dr. Lidiya Thomas, Ayurveda Doctor at Aura Ayurveda in Manjadi, Kerala",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [`${siteUrl}${basePath}/doctor-lidiya-thomas.png`],
     },
   };
 }
