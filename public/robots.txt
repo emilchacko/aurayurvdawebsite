@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /aurayurvdawebsite/
+
+Sitemap: https://emilchacko.github.io/aurayurvdawebsite/sitemap.xml
