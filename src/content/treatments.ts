@@ -98,7 +98,7 @@ export const treatments: Treatment[] = [
     potentialBenefits:
       "A consultation can help clarify suitable next steps and comfort-focused support. Ayurvedic care cannot be promised to remove or reverse varicose veins and should not replace evaluation by a qualified medical professional.",
     category: "Circulation & Wellness",
-    image: "/images/focus-areas/joint-muscle.jpg",
-    imageAlt: "Person experiencing back discomfort, illustrative image",
+    image: "/images/focus-areas/varicose-veins.jpg",
+    imageAlt: "Diagram comparing normal and varicose veins in the leg",
   },
 ];

@@ -36,7 +36,7 @@ export default function TreatmentsPage() {
               href={`/treatments/${treatment.slug}`}
               className="group flex min-w-0 flex-col overflow-hidden rounded-lg border border-[#d8ded4] bg-white transition hover:border-[#aab9a8]"
             >
-              <Image src={withBasePath(treatment.image)} alt={treatment.imageAlt} width={800} height={520} sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 33vw" className="aspect-[1.6/1] w-full object-cover" />
+              <Image src={withBasePath(treatment.image)} alt={treatment.imageAlt} width={800} height={520} sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 33vw" className={`aspect-[1.6/1] w-full ${treatment.slug === "varicose-vein-care" ? "bg-[#f4f3ed] object-contain p-2" : "object-cover"}`} />
               <span className="flex flex-1 flex-col p-4 sm:p-5">
                 <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">{treatment.category}</span>
                 <span className="mt-2 font-serif text-2xl leading-tight text-[#1d3026]">{treatment.title}</span>

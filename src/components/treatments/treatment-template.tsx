@@ -6,6 +6,8 @@ import type { Treatment } from "@/content/treatments";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
 
 export function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
+  const isVaricoseVeinPage = treatment.slug === "varicose-vein-care";
+
   return (
     <div className="space-y-12">
       <section className="border-b border-[#d8ded4] pb-8">
@@ -20,7 +22,7 @@ export function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
       </section>
 
       <section className="grid gap-5 md:grid-cols-[0.95fr_1.05fr]">
-        <Image src={withBasePath(treatment.image)} alt={treatment.imageAlt} width={900} height={620} sizes="(max-width: 767px) 100vw, 45vw" className="aspect-[1.45/1] w-full rounded-lg object-cover md:aspect-auto md:h-full md:min-h-72" />
+        <Image src={withBasePath(treatment.image)} alt={treatment.imageAlt} width={900} height={620} sizes="(max-width: 767px) 100vw, 45vw" className={isVaricoseVeinPage ? "aspect-square w-full rounded-lg bg-[#f4f3ed] p-3 object-contain md:aspect-auto md:min-h-72" : "aspect-[1.45/1] w-full rounded-lg object-cover md:aspect-auto md:h-full md:min-h-72"} />
         <div className="grid gap-6">
           <div className="border-t-2 border-[#a05435] bg-[#edf0e8] p-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">What the process may involve</h2>
