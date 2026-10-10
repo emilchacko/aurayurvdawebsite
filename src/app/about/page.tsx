@@ -43,6 +43,39 @@ export default function AboutPage() {
           </div>
           <a href={getWhatsAppUrl("Hello, I would like to ask about an Ayurvedic consultation at Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about a consultation</a>
         </div>
+
+        <div className="mt-8 grid gap-6 rounded-xl border border-[#d8ded4] bg-[#faf9f5] p-5 sm:p-7 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">Sister concern</p>
+            <h2 className="mt-2 font-serif text-3xl text-[#1d3026] sm:text-4xl">Ayurarogyam</h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[#58665c]">
+              Ayurarogyam is the sister concern of Aura Ayurveda and brings the same consultation-first, patient-focused approach to Ayurvedic care. It offers a welcoming space for people seeking holistic guidance and personalized wellness support.
+            </p>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-[#58665c]">
+              Whether you are looking for a general consultation, lifestyle guidance, or support for your day-to-day wellbeing, Ayurarogyam continues the same philosophy of listening first and recommending care thoughtfully.
+            </p>
+            <div className="mt-5 inline-flex items-center rounded-full bg-[#edf0e8] px-4 py-2 text-sm font-semibold text-[#214d3a]">
+              {clinic.sisterConcernLocation}
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-xl border border-[#d8ded4] bg-white p-3 shadow-sm">
+            <div className="mb-3 flex items-center justify-between gap-3 px-1">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Location map</p>
+                <p className="mt-1 text-sm font-medium text-[#34463b]">Ayurarogyam, Manakachira</p>
+              </div>
+              <a href={clinic.sisterConcernMapUrl} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[#214d3a] underline underline-offset-4">Open map</a>
+            </div>
+            <iframe
+              src={clinic.sisterConcernMapEmbedUrl}
+              title="Ayurarogyam location map"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="aspect-[4/3] w-full rounded-lg border-0"
+            />
+          </div>
+        </div>
       </section>
     </Container>
   );

@@ -57,6 +57,16 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <a href={clinic.facebookUrl} target="_blank" rel="noreferrer" className="transition hover:text-[#1d4f3a]">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href={clinic.instagramUrl} target="_blank" rel="noreferrer" className="transition hover:text-[#1d4f3a]">
+                Instagram
+              </a>
+            </li>
+            <li>
               <Link href="/privacy-policy" className="transition hover:text-[#1d4f3a]">
                 Privacy Policy
               </Link>

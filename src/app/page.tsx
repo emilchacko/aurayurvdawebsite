@@ -315,6 +315,12 @@ export default function Home() {
               <h3 className="mt-4 font-serif text-4xl text-[#1a2a2a]">Aura Ayurveda</h3>
               <p className="mt-4 text-base leading-8 text-[#536260]">{clinic.location}</p>
 
+              <div className="mt-5 rounded-lg border border-[#cdd9cf] bg-[#f8faf7] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Also available at</p>
+                <p className="mt-2 font-serif text-2xl text-[#1d3026]">{clinic.sisterConcernName}</p>
+                <p className="mt-1 text-sm text-[#536260]">{clinic.sisterConcernLocation}</p>
+              </div>
+
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-lg bg-white p-4">
                   <p className="text-sm font-medium text-[#263332]">Phone</p>
@@ -324,7 +330,7 @@ export default function Home() {
                   <p className="text-sm font-medium text-[#263332]">WhatsApp</p>
                   <a href={getWhatsAppUrl("Hello, I would like to ask about visiting Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{clinic.whatsapp}</a>
                 </div>
-                <div className="rounded-lg bg-white p-4">
+                <div className="rounded-lg bg-white p-4 sm:col-span-2">
                   <p className="text-sm font-medium text-[#263332]">Opening hours</p>
                   <p className="mt-2 text-sm text-[#536260]">{clinic.openingHours}</p>
                 </div>
