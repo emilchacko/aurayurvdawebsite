@@ -1,13 +1,12 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { clinic } from "@/data/clinic";
-import { doctor } from "@/data/doctor";
+import { isConfiguredValue, siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "About Aura Ayurveda | Ayurvedic Clinic in Manjadi, Thiruvalla",
-  description: "Learn about Aura Ayurveda, Dr. Lidiya Thomas and our consultation-first approach to Ayurvedic care in Manjadi near Thiruvalla, Kerala.",
+  title: `About ${siteConfig.businessName} | Ayurveda Clinic in Manjadi, Thiruvalla`,
+  description: `Learn about ${siteConfig.businessName} and how to enquire about Ayurvedic care in ${siteConfig.locationLabel}.`,
   path: "/about",
 });
 
@@ -17,9 +16,9 @@ export default function AboutPage() {
       <section className="py-10 sm:py-14">
         <SectionHeading
           as="h1"
-          eyebrow="About Aura Ayurveda · Manjadi, Kerala"
+          eyebrow={`About ${siteConfig.businessName} · ${siteConfig.locationLabel}`}
           title="Care starts with listening and a proper consultation."
-          description="Aura Ayurveda is a local Ayurvedic clinic in Manjadi, near Thiruvalla. Dr. Lidiya Thomas meets with people to understand their concerns and discuss suitable next steps before care is recommended."
+          description={`${siteConfig.businessName} is an Ayurvedic clinic in ${siteConfig.locationLabel}. ${siteConfig.doctorName} meets with people to understand their concerns and discuss suitable next steps before care is recommended.`}
         />
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -37,25 +36,30 @@ export default function AboutPage() {
 
         <div className="mt-8 flex flex-col gap-4 rounded-xl bg-[#214d3a] p-5 text-white sm:flex-row sm:items-center sm:justify-between sm:p-7">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/70">Your local Ayurveda doctor</p>
-            <h2 className="mt-1 font-serif text-2xl">{doctor.name}</h2>
-            <p className="mt-1 text-sm text-white/80">{doctor.qualification} · {clinic.location}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/70">Your Ayurveda doctor</p>
+            <h2 className="mt-1 font-serif text-2xl">{siteConfig.doctorName}</h2>
+            <p className="mt-1 text-sm text-white/80">
+              {isConfiguredValue(siteConfig.doctorQualification)
+                ? `${siteConfig.doctorQualification} · `
+                : ""}
+              {siteConfig.locationLabel}
+            </p>
           </div>
-          <a href={getWhatsAppUrl("Hello, I would like to ask about an Ayurvedic consultation at Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about a consultation</a>
+          <a href={getWhatsAppUrl(`Hello, I would like to ask about an Ayurvedic consultation at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about a consultation</a>
         </div>
 
         <div className="mt-8 grid gap-6 rounded-xl border border-[#d8ded4] bg-[#faf9f5] p-5 sm:p-7 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">Sister concern</p>
-            <h2 className="mt-2 font-serif text-3xl text-[#1d3026] sm:text-4xl">Ayurarogyam</h2>
+            <h2 className="mt-2 font-serif text-3xl text-[#1d3026] sm:text-4xl">{siteConfig.sisterConcern.name}</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#58665c]">
-              Ayurarogyam is the sister concern of Aura Ayurveda and brings the same consultation-first, patient-focused approach to Ayurvedic care. It offers a welcoming space for people seeking holistic guidance and personalized wellness support.
+              {siteConfig.sisterConcern.name} is the sister concern of {siteConfig.businessName} and provides a separate location for Ayurvedic care enquiries.
             </p>
             <p className="mt-3 max-w-2xl text-base leading-7 text-[#58665c]">
-              Whether you are looking for a general consultation, lifestyle guidance, or support for your day-to-day wellbeing, Ayurarogyam continues the same philosophy of listening first and recommending care thoughtfully.
+              Contact the clinic to confirm which location is appropriate for your visit and to ask about availability.
             </p>
             <div className="mt-5 inline-flex items-center rounded-full bg-[#edf0e8] px-4 py-2 text-sm font-semibold text-[#214d3a]">
-              {clinic.sisterConcernLocation}
+              {siteConfig.sisterConcern.location}
             </div>
           </div>
 
@@ -63,13 +67,13 @@ export default function AboutPage() {
             <div className="mb-3 flex items-center justify-between gap-3 px-1">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Location map</p>
-                <p className="mt-1 text-sm font-medium text-[#34463b]">Ayurarogyam, Manakachira</p>
+                <p className="mt-1 text-sm font-medium text-[#34463b]">{siteConfig.sisterConcern.name}, Manakachira</p>
               </div>
-              <a href={clinic.sisterConcernMapUrl} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[#214d3a] underline underline-offset-4">Open map</a>
+              <a href={siteConfig.sisterConcern.mapUrl} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[#214d3a] underline underline-offset-4">Open map</a>
             </div>
             <iframe
-              src={clinic.sisterConcernMapEmbedUrl}
-              title="Ayurarogyam location map"
+              src={siteConfig.sisterConcern.mapEmbedUrl}
+              title={`${siteConfig.sisterConcern.name} location map`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="aspect-[4/3] w-full rounded-lg border-0"

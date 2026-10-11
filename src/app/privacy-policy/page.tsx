@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Privacy Policy | Aura Ayurveda",
-  description: "Privacy information and website policy for Aura Ayurveda.",
+  title: `Privacy Policy | ${siteConfig.businessName}`,
+  description: `Privacy information and website policy for ${siteConfig.businessName}.`,
   path: "/privacy-policy",
 });
 
@@ -14,7 +15,7 @@ export default function PrivacyPolicyPage() {
   return (
     <Container>
       <section className="py-10 sm:py-14">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">Aura Ayurveda · Website information</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">{siteConfig.businessName} · Website information</p>
         <h1 className="mt-3 font-serif text-4xl text-[#1d3026]">Privacy information</h1>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">This website is an informational site. It does not provide user accounts, checkout or a website enquiry form.</p>
 
@@ -29,7 +30,11 @@ export default function PrivacyPolicyPage() {
           </section>
           <section className="py-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">Hosting and questions</h2>
-            <p className="mt-2 text-sm leading-7 text-[#58665c]">The site is hosted through GitHub Pages. Hosting providers may process technical request data to deliver and protect the website. For a privacy question, contact Aura Ayurveda by phone or WhatsApp using the details on the <Link href="/contact" className="font-semibold text-[#214d3a] underline underline-offset-4">contact page</Link>.</p>
+            <p className="mt-2 text-sm leading-7 text-[#58665c]">The site is hosted through GitHub Pages. Hosting providers may process technical request data to deliver and protect the website. For a privacy question, contact {siteConfig.businessName} by phone or WhatsApp using the details on the <Link href="/contact" className="font-semibold text-[#214d3a] underline underline-offset-4">contact page</Link>.</p>
+          </section>
+          <section className="py-5">
+            <h2 className="font-serif text-2xl text-[#1d3026]">Analytics</h2>
+            <p className="mt-2 text-sm leading-7 text-[#58665c]">The site has click-event hooks for clinic contact links, but does not load Google Analytics. Events are sent only if an analytics tag is separately configured.</p>
           </section>
         </div>
         <p className="mt-5 max-w-3xl text-xs leading-6 text-[#58665c]">This summary describes the current website features and is not legal advice. The clinic should obtain a formal review before collecting personal information or adding analytics, forms, or online payments.</p>

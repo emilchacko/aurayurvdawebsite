@@ -1,12 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { treatments } from "@/content/treatments";
-import { clinic } from "@/data/clinic";
+import { siteConfig } from "@/config/site";
 import { doctor } from "@/data/doctor";
+import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
+
+export const metadata = buildMetadata({
+  title: `Ayurveda Clinic in Manjadi, Thiruvalla | ${siteConfig.businessName}`,
+  description: `Visit ${siteConfig.businessName}, an Ayurvedic clinic in ${siteConfig.locationLabel}. Contact the clinic to ask about consultations, services and directions.`,
+  path: "/",
+});
 
 const focusAreas = [
   {
@@ -92,7 +100,7 @@ const faqs = [
   {
     question: "Where is the clinic located?",
     answer:
-      "Aura Ayurveda is located at TK Rd, Manjadi, Thiruvalla, Keralam 689105, near Chikkos Fried Chicken.",
+      `${siteConfig.businessName} is located at ${siteConfig.address.display}.`,
   },
   {
     question: "How do I book an appointment?",
@@ -103,40 +111,40 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <ClinicJsonLd />
       <section className="bg-[#edf0e8]">
         <Container>
           <div className="grid items-center gap-8 py-8 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:py-16">
             <div className="order-2 lg:order-1">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a05435]">Ayurvedic clinic · Manjadi · Thiruvalla, Kerala</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a05435]">Ayurvedic clinic · {siteConfig.locationLabel}</p>
               <h1 className="mt-4 max-w-2xl font-serif text-4xl leading-[1.08] text-[#1d3026] sm:text-5xl lg:text-[3.5rem]">
                 A doctor-led conversation about your wellbeing.
               </h1>
               <p className="mt-5 max-w-xl text-base leading-7 text-[#58665c] sm:text-lg sm:leading-8">
-                Meet Dr. Lidiya Thomas at Aura Ayurveda in Manjadi, near Thiruvalla. Explore personalized Ayurvedic consultations, hair and skin care, traditional therapies and women’s wellness.
+                Meet {siteConfig.doctorName} at {siteConfig.businessName} in {siteConfig.locationLabel}. Explore Ayurvedic consultations, hair and skin care, therapies and women’s wellness.
               </p>
               <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap">
-                <a href={getWhatsAppUrl("Hello, I would like to ask about booking a consultation at Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-6 text-sm font-semibold text-white transition hover:bg-[#183b2c]">
+                <a href={getWhatsAppUrl(`Hello, I would like to ask about booking a consultation at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-6 text-sm font-semibold text-white transition hover:bg-[#183b2c]">
                   Ask about an appointment
                 </a>
-                <a href={clinic.mapUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#b9c7b8] bg-white px-6 text-sm font-semibold text-[#214d3a]">
+                <a href={siteConfig.googleMapsUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#b9c7b8] bg-white px-6 text-sm font-semibold text-[#214d3a]">
                   Get directions
                 </a>
                 <Link href="/store" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#a05435] bg-white px-6 text-sm font-semibold text-[#8d462f]">
                   Browse the store
                 </Link>
               </div>
-              <p className="mt-4 text-sm text-[#58665c]">Prefer to call? <a className="font-semibold text-[#214d3a] underline underline-offset-4" href={`tel:${clinic.phone.replace(/\s/g, "")}`}>{clinic.phone}</a></p>
+              <p className="mt-4 text-sm text-[#58665c]">Prefer to call? <a className="font-semibold text-[#214d3a] underline underline-offset-4" href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>{siteConfig.phone}</a></p>
             </div>
 
             <div className="relative order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none">
               <div className="aspect-[4/4.3] overflow-hidden rounded-t-[12rem] rounded-b-xl bg-[#d7e0d5] sm:aspect-[4/3.4] lg:aspect-[4/4.3]">
-                <Image src={withBasePath(doctor.photo)} alt="Dr. Lidiya Thomas, Ayurveda Doctor at Aura Ayurveda" width={768} height={768} priority sizes="(max-width: 1023px) 100vw, 45vw" className="h-full w-full object-cover object-top" />
+                <Image src={withBasePath(doctor.photo)} alt={`${siteConfig.doctorName} at ${siteConfig.businessName}`} width={768} height={768} priority sizes="(max-width: 1023px) 100vw, 45vw" className="h-full w-full object-cover object-top" />
               </div>
               <div className="absolute inset-x-3 bottom-3 rounded-lg bg-[#faf9f5]/95 p-4 shadow-sm sm:inset-x-5 sm:bottom-5 sm:p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Your local Ayurveda doctor</p>
-                <p className="mt-1 font-serif text-2xl text-[#1d3026]">{doctor.name}</p>
-                <p className="mt-1 text-sm text-[#58665c]">{doctor.qualification} · Aura Ayurveda, Manjadi</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Your Ayurveda doctor</p>
+                <p className="mt-1 text-sm text-[#58665c]">{siteConfig.locationLabel}</p>
               </div>
             </div>
           </div>
@@ -146,7 +154,7 @@ export default function Home() {
       <section aria-label="Clinic details" className="border-y border-[#d8ded4] bg-[#faf9f5]">
         <Container>
           <div className="grid gap-4 py-5 sm:grid-cols-3 sm:gap-6">
-            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Local clinic</p><p className="mt-1 text-sm font-medium text-[#34463b]">Manjadi, near Thiruvalla</p></div>
+            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Local clinic</p><p className="mt-1 text-sm font-medium text-[#34463b]">{siteConfig.locationLabel}</p></div>
             <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Speak directly</p><p className="mt-1 text-sm font-medium text-[#34463b]">Call or message the clinic</p></div>
             <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">First step</p><p className="mt-1 text-sm font-medium text-[#34463b]">Ask about an appointment</p></div>
           </div>
@@ -158,7 +166,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="What can we help with?"
             title="Support for the concerns that matter most."
-            description="Explore the areas where Aura Ayurveda offers thoughtful, personalized care."
+            description={`Explore the services available at ${siteConfig.businessName}.`}
           />
 
           <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
@@ -187,7 +195,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Treatments"
             title="Treatments we offer."
-            description="Learn what each service may involve and its potential benefits. The doctor can help determine what may be suitable for you."
+            description="Learn what each service may involve and what to ask before deciding whether it may be suitable for you."
           />
 
           <div className="mt-7 grid gap-x-8 sm:grid-cols-2">
@@ -208,9 +216,9 @@ export default function Home() {
       <section className="bg-[#edf0e8] py-12 sm:py-16">
         <Container>
           <SectionHeading
-            eyebrow="Why Aura Ayurveda?"
+            eyebrow={`Why ${siteConfig.businessName}?`}
             title="A calm, care-led clinic experience."
-            description="The clinic is being positioned as a trusted local wellness destination where people feel listened to and supported by a doctor-led Ayurvedic approach."
+            description={`Ask about consultations, services and practical details at ${siteConfig.businessName}.`}
           />
 
           <div className="mt-7 grid gap-x-8 sm:grid-cols-2">
@@ -229,7 +237,7 @@ export default function Home() {
             <div className="relative mx-auto aspect-[4/4.3] w-full max-w-sm overflow-hidden rounded-t-[10rem] rounded-b-lg bg-[#d7e0d5] md:max-w-none">
               <Image
                 src={withBasePath(doctor.photo)}
-                alt="Dr. Lidiya Thomas"
+                alt={siteConfig.doctorName}
                 width={768}
                 height={768}
                 className="h-full w-full object-cover object-top"
@@ -239,11 +247,11 @@ export default function Home() {
             <div>
               <SectionHeading
                 eyebrow="Meet the doctor"
-                title="Meet Dr. Lidiya Thomas."
-                description="Ayurveda Doctor at Aura Ayurveda."
+                title={`Meet ${siteConfig.doctorName}.`}
+                description={`Meet the doctor at ${siteConfig.businessName}.`}
               />
 
-              <p className="mt-5 max-w-xl text-sm leading-7 text-[#58665c]">Learn about the consultation process and what to expect before you decide on care. Treatment recommendations are based on assessment and individual needs.</p>
+              <p className="mt-5 max-w-xl text-sm leading-7 text-[#58665c]">Learn about the consultation process and what to expect before you decide on care. Recommendations are discussed after an individual assessment.</p>
               <Link href="/doctor" className="mt-5 inline-flex min-h-11 items-center font-semibold text-[#214d3a] underline underline-offset-4">Read the doctor profile</Link>
             </div>
           </div>
@@ -275,13 +283,16 @@ export default function Home() {
         <Container>
           <SectionHeading
             eyebrow="Google reviews"
-            title="See what patients are saying."
-            description="Google reviews for Aura Ayurveda."
+            title="Read Google reviews."
+            description={`Read current feedback about ${siteConfig.businessName} directly on Google.`}
           />
 
           <div className="mt-7 flex flex-col gap-4 border-y border-[#d1d9ce] py-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-7 text-[#58665c]">Read current feedback directly on Google. Reviews and ratings are hosted by Google and may change over time.</p>
-            <a href={clinic.googleReviewsUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white">Read Google reviews</a>
+            <div className="flex flex-wrap gap-3">
+              <a href={siteConfig.googleBusinessProfileReviewUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white">Review us on Google</a>
+              <Link href="/review-qr/" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full border border-[#214d3a] px-5 text-sm font-semibold text-[#214d3a]">Print our review QR code</Link>
+            </div>
           </div>
         </Container>
       </section>
@@ -312,34 +323,34 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-xl bg-[#edf0e8] p-5 sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#496d56]">Clinic location</p>
-              <h3 className="mt-4 font-serif text-4xl text-[#1a2a2a]">Aura Ayurveda</h3>
-              <p className="mt-4 text-base leading-8 text-[#536260]">{clinic.location}</p>
+              <h3 className="mt-4 font-serif text-4xl text-[#1a2a2a]">{siteConfig.businessName}</h3>
+              <p className="mt-4 text-base leading-8 text-[#536260]">{siteConfig.locationLabel}</p>
 
               <div className="mt-5 rounded-lg border border-[#cdd9cf] bg-[#f8faf7] p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Also available at</p>
-                <p className="mt-2 font-serif text-2xl text-[#1d3026]">{clinic.sisterConcernName}</p>
-                <p className="mt-1 text-sm text-[#536260]">{clinic.sisterConcernLocation}</p>
+                <p className="mt-2 font-serif text-2xl text-[#1d3026]">{siteConfig.sisterConcern.name}</p>
+                <p className="mt-1 text-sm text-[#536260]">{siteConfig.sisterConcern.location}</p>
               </div>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-lg bg-white p-4">
                   <p className="text-sm font-medium text-[#263332]">Phone</p>
-                  <a href="tel:+919600233308" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{clinic.phone}</a>
+                  <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{siteConfig.phone}</a>
                 </div>
                 <div className="rounded-lg bg-white p-4">
                   <p className="text-sm font-medium text-[#263332]">WhatsApp</p>
-                  <a href={getWhatsAppUrl("Hello, I would like to ask about visiting Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{clinic.whatsapp}</a>
+                  <a href={getWhatsAppUrl(`Hello, I would like to ask about visiting ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{siteConfig.whatsapp}</a>
                 </div>
                 <div className="rounded-lg bg-white p-4 sm:col-span-2">
                   <p className="text-sm font-medium text-[#263332]">Opening hours</p>
-                  <p className="mt-2 text-sm text-[#536260]">{clinic.openingHours}</p>
+                  <p className="mt-2 text-sm text-[#536260]">Please call or message the clinic to confirm current hours and visit location.</p>
                 </div>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href="/contact">Book a Consultation</Button>
                 <a
-                  href={getWhatsAppUrl("Hello, I would like to enquire about visiting Aura Ayurveda in Manjadi.")}
+                  href={getWhatsAppUrl(`Hello, I would like to enquire about visiting ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-[#d9d0c5] bg-white px-5 py-3 text-sm font-semibold text-[#1a2a2a] transition-colors hover:bg-[#f4efe8]"
@@ -347,7 +358,7 @@ export default function Home() {
                   WhatsApp Us
                 </a>
                 <a
-                  href={clinic.mapUrl}
+                  href={siteConfig.googleMapsUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-[#d9d0c5] bg-white px-5 py-3 text-sm font-semibold text-[#1a2a2a] transition-colors hover:bg-[#f4efe8]"
@@ -361,7 +372,7 @@ export default function Home() {
               <div className="flex items-center justify-between gap-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#496d56]">Clinic location</p>
                 <a
-                  href={clinic.mapUrl}
+                  href={siteConfig.googleMapsUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm font-medium text-[#1d4f3a] underline underline-offset-4"
@@ -370,8 +381,8 @@ export default function Home() {
                 </a>
               </div>
               <iframe
-                src={clinic.mapEmbedUrl}
-                title="Aura Ayurveda location on Google Maps"
+                src={siteConfig.googleMapsEmbedUrl}
+                title={`Map showing ${siteConfig.businessName} at ${siteConfig.locationLabel}`}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="mt-4 aspect-[4/3] w-full rounded-lg border-0 sm:aspect-[16/9] lg:aspect-auto lg:h-[420px]"
@@ -387,12 +398,12 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#dfeae1]">Ready when you are</p>
             <h2 className="mt-3 max-w-2xl font-serif text-4xl sm:text-5xl">Ready to begin your Ayurvedic wellness journey?</h2>
             <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap">
-              <a href={getWhatsAppUrl("Hello, I would like to ask about booking an Ayurvedic consultation at Aura Ayurveda in Manjadi.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about a consultation</a>
+              <a href={getWhatsAppUrl(`Hello, I would like to ask about booking an Ayurvedic consultation at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about a consultation</a>
               <Button href="/contact" variant="secondary" className="min-h-12">Visit and contact details</Button>
             </div>
           </div>
         </Container>
       </section>
-    </div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 import { siteUrl } from "@/lib/site";
 
 export function buildMetadata({
@@ -10,7 +11,8 @@ export function buildMetadata({
   description: string;
   path?: string;
 }): Metadata {
-  const canonical = `${siteUrl}${path}`;
+  const canonicalPath = path === "/" ? "/" : `${path.replace(/\/+$/, "")}/`;
+  const canonical = `${siteUrl}${canonicalPath}`;
 
   return {
     title,
@@ -20,7 +22,7 @@ export function buildMetadata({
       "Ayurvedic clinic in Manjadi",
       "Ayurvedic doctor near Thiruvalla",
       "Ayurvedic treatments in Kerala",
-      "Aura Ayurveda",
+      siteConfig.businessName,
     ],
     robots: {
       index: true,
@@ -36,7 +38,7 @@ export function buildMetadata({
       title,
       description,
       url: canonical,
-      siteName: "Aura Ayurveda",
+      siteName: siteConfig.businessName,
       type: "website",
       locale: "en_IN",
       images: [
@@ -44,7 +46,7 @@ export function buildMetadata({
           url: `${siteUrl}/doctor-lidiya-thomas.png`,
           width: 768,
           height: 768,
-          alt: "Dr. Lidiya Thomas, Ayurveda Doctor at Aura Ayurveda in Manjadi, Kerala",
+          alt: `${siteConfig.doctorName}, at ${siteConfig.businessName} in ${siteConfig.locationLabel}`,
         },
       ],
     },

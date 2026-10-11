@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { clinic } from "@/data/clinic";
+import { siteConfig } from "@/config/site";
 import { getWhatsAppUrl } from "@/lib/site";
 import { MobileNav } from "@/components/layout/mobile-nav";
 
@@ -15,10 +15,10 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-[#d8ded4] bg-[#faf9f5]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-[#d8ded4] bg-[#faf9f5]/95 backdrop-blur-md print:hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-[4.5rem] items-center justify-between gap-3 py-2">
-          <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Aura Ayurveda home">
+          <Link href="/" className="flex min-w-0 items-center gap-3" aria-label={`${siteConfig.businessName} home`}>
             <Image
               src="/images/logo/image.png"
               alt=""
@@ -28,8 +28,8 @@ export function Header() {
               className="size-11 shrink-0"
             />
             <span className="min-w-0">
-              <span className="block truncate font-serif text-lg leading-tight text-[#1d3026] sm:text-xl">Aura Ayurveda</span>
-              <span className="mt-1 block truncate text-[10px] font-medium uppercase tracking-[0.12em] text-[#647267]">Manjadi · Thiruvalla</span>
+              <span className="block truncate font-serif text-lg leading-tight text-[#1d3026] sm:text-xl">{siteConfig.businessName}</span>
+              <span className="mt-1 block truncate text-[10px] font-medium uppercase tracking-[0.12em] text-[#647267]">{siteConfig.locationLabel}</span>
             </span>
           </Link>
 
@@ -42,16 +42,16 @@ export function Header() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
-            <a href={getWhatsAppUrl("Hello, I would like to enquire about Aura Ayurveda services.")} target="_blank" rel="noreferrer" className="hidden min-h-10 items-center justify-center rounded-full bg-[#214d3a] px-4 text-sm font-semibold text-white transition hover:bg-[#183b2c] sm:inline-flex">
+            <a href={getWhatsAppUrl(`Hello, I would like to enquire about ${siteConfig.businessName} services.`)} target="_blank" rel="noreferrer" className="hidden min-h-10 items-center justify-center rounded-full bg-[#214d3a] px-4 text-sm font-semibold text-white transition hover:bg-[#183b2c] sm:inline-flex">
               WhatsApp us
             </a>
-            <a href={`tel:${clinic.phone.replace(/\s/g, "")}`} aria-label={`Call Aura Ayurveda at ${clinic.phone}`} className="hidden min-h-10 items-center justify-center rounded-full border border-[#cbd4c9] px-3 text-sm font-semibold text-[#214d3a] sm:inline-flex sm:px-4">
+            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} aria-label={`Call ${siteConfig.businessName} at ${siteConfig.phone}`} className="hidden min-h-10 items-center justify-center rounded-full border border-[#cbd4c9] px-3 text-sm font-semibold text-[#214d3a] sm:inline-flex sm:px-4">
               Call
             </a>
             <Link href="/store" className="inline-flex min-h-10 items-center justify-center rounded-full border border-[#a05435] bg-white px-3 text-sm font-semibold text-[#8d462f] transition hover:bg-[#f8eee8] sm:px-4 lg:hidden">
               Store
             </Link>
-            <MobileNav items={navItems} whatsappUrl={getWhatsAppUrl("Hello, I would like to enquire about Aura Ayurveda services.")} />
+            <MobileNav items={navItems} whatsappUrl={getWhatsAppUrl(`Hello, I would like to enquire about ${siteConfig.businessName} services.`)} />
           </div>
         </div>
       </div>

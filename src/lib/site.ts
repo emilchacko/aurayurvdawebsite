@@ -1,8 +1,8 @@
-import { clinic } from "@/data/clinic";
+import { siteConfig } from "@/config/site";
 
-export const siteUrl = "https://auraayurvedawellness.in";
+export const siteUrl = siteConfig.siteUrl;
 
 export const withBasePath = (path: string) => path;
 
 export const getWhatsAppUrl = (message: string) =>
-  `https://wa.me/${clinic.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+  `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;

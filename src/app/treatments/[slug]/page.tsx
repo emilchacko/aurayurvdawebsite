@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { TreatmentTemplate } from "@/components/treatments/treatment-template";
 import { treatments } from "@/content/treatments";
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -14,15 +15,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!treatment) {
     return buildMetadata({
-      title: "Treatment not found | Aura Ayurveda",
+      title: `Treatment not found | ${siteConfig.businessName}`,
       description: "This treatment page could not be found.",
       path: "/treatments",
     });
   }
 
   return buildMetadata({
-    title: `${treatment.title} in Thiruvalla | Aura Ayurveda`,
-    description: `${treatment.shortDescription} Enquire at Aura Ayurveda in Manjadi near Thiruvalla, Kerala.`,
+    title: `${treatment.title} in Thiruvalla | ${siteConfig.businessName}`,
+    description: `${treatment.shortDescription} Enquire at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
     path: `/treatments/${treatment.slug}`,
   });
 }

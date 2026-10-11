@@ -1,12 +1,13 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { blogPosts } from "@/content/blog";
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = {
   ...buildMetadata({
-    title: "Ayurveda Journal | Aura Ayurveda, Thiruvalla",
-    description: "Upcoming educational articles from Aura Ayurveda in Manjadi near Thiruvalla, Kerala.",
+    title: `Ayurveda Journal | ${siteConfig.businessName}`,
+    description: `Upcoming educational articles from ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
     path: "/blog",
   }),
   robots: { index: false, follow: true },

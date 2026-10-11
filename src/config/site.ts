@@ -1,0 +1,56 @@
+type OpeningHoursSpecification = {
+  dayOfWeek: string[];
+  opens: string;
+  closes: string;
+};
+
+export const siteConfig = {
+  businessName: "Aura Ayurveda",
+  siteUrl: "https://auraayurvedawellness.in",
+  doctorName: "Dr. Lidiya Thomas",
+  doctorQualification: "TODO: confirm the doctor's full approved qualification",
+  phone: "+91 96002 33308",
+  whatsapp: "+91 96002 33308",
+  email: "TODO: add the clinic's public email address",
+  address: {
+    streetAddress: "TK Rd, Manjadi",
+    addressLocality: "Thiruvalla",
+    addressRegion: "Kerala",
+    postalCode: "689105",
+    addressCountry: "IN",
+    display:
+      "TK Rd, Manjadi, Thiruvalla, Kerala 689105, near Chikkos Fried Chicken",
+  },
+  locationLabel: "Manjadi, near Thiruvalla, Kerala",
+  // TODO: Add only coordinates verified for Aura Ayurveda at Manjadi.
+  geo: {
+    latitude: null as number | null,
+    longitude: null as number | null,
+  },
+  // TODO: Add only clinic-confirmed weekly hours for the Manjadi location.
+  openingHours: {
+    note: "TODO: confirm Aura Ayurveda's weekly opening hours at Manjadi",
+    specifications: [] as OpeningHoursSpecification[],
+  },
+  googleMapsUrl: "https://share.google/tKnJchnqEmaezNX70",
+  googleMapsEmbedUrl:
+    "https://maps.google.com/maps?q=AURA+Ayurveda,+TK+Rd,+Manjadi,+Thiruvalla,+Kerala+689105&output=embed",
+  googleBusinessProfileReviewUrl: "https://share.google/tKnJchnqEmaezNX70",
+  socialLinks: [
+    "https://www.facebook.com/Drlidiya.thomas",
+    "https://www.instagram.com/ayurarogyam1987/",
+  ],
+  serviceAreas: ["Manjadi", "Thiruvalla", "Kuttapuzha"],
+  sisterConcern: {
+    name: "Ayurarogyam",
+    location: "Manakachira, near Thiruvalla, Kerala",
+    address: "Manakachira, near Thiruvalla, Kerala",
+    mapUrl: "https://maps.app.goo.gl/FDMo1n2TrK6qWVNi7",
+    mapEmbedUrl:
+      "https://maps.google.com/maps?q=9.3818422,76.6034454&z=17&output=embed",
+  },
+} as const;
+
+export function isConfiguredValue(value: string | null | undefined): value is string {
+  return Boolean(value && !value.startsWith("TODO:"));
+}

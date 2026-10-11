@@ -1,66 +1,125 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { clinic } from "@/data/clinic";
+import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
+import { isConfiguredValue, siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "Contact an Ayurvedic Clinic in Thiruvalla | Aura Ayurveda",
-  description: "Call or WhatsApp Aura Ayurveda to enquire about an Ayurvedic consultation, services and appointments in Manjadi near Thiruvalla, Kerala. Find the clinic and get directions.",
+  title: `Contact ${siteConfig.businessName} | Ayurveda Clinic in Manjadi, Thiruvalla`,
+  description: `Call or WhatsApp ${siteConfig.businessName}, an Ayurvedic clinic in ${siteConfig.locationLabel}, to ask about appointments and directions.`,
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
-    <Container>
-      <section className="py-10 sm:py-14">
-        <SectionHeading
-          as="h1"
-          eyebrow="Visit Aura Ayurveda · Manjadi, Thiruvalla"
-          title="Ask a question before you plan your visit."
-          description="Call or message the clinic to ask about an Ayurvedic consultation, available services, appointment times or directions."
-        />
+    <>
+      <ClinicJsonLd />
+      <Container>
+        <section className="py-10 sm:py-14">
+          <SectionHeading
+            as="h1"
+            eyebrow={`Visit ${siteConfig.businessName} · ${siteConfig.locationLabel}`}
+            title="Contact the clinic and plan your visit."
+            description={`Call or message ${siteConfig.businessName} to ask about a consultation, availability or directions to the clinic.`}
+          />
 
-        <div className="mt-7 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="flex flex-col rounded-xl bg-[#edf0e8] p-5 sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">Clinic contact</p>
-            <h2 className="mt-2 font-serif text-3xl text-[#1d3026]">Aura Ayurveda</h2>
-            <p className="mt-3 text-sm leading-6 text-[#58665c]">{clinic.address}</p>
-            <p className="mt-1 text-sm text-[#58665c]">{clinic.location}</p>
+          <div className="mt-7 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="rounded-xl bg-[#edf0e8] p-5 sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">Clinic contact</p>
+              <h2 className="mt-2 font-serif text-3xl text-[#1d3026]">{siteConfig.businessName}</h2>
+              <address className="mt-3 text-sm not-italic leading-6 text-[#58665c]">
+                {siteConfig.address.display}
+              </address>
+              <p className="mt-1 text-sm text-[#58665c]">{siteConfig.locationLabel}</p>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-              <a href={`tel:${clinic.phone.replace(/\s/g, "")}`} className="flex min-h-14 flex-col justify-center rounded-lg bg-white px-4 py-2">
-                <span className="text-xs font-semibold uppercase tracking-[0.1em] text-[#788378]">Call the clinic</span>
-                <span className="mt-1 text-sm font-semibold text-[#214d3a]">{clinic.phone}</span>
-              </a>
-              <a href={getWhatsAppUrl("Hello, I would like to enquire about Aura Ayurveda in Manjadi. Please share appointment availability and visit details.")} target="_blank" rel="noreferrer" className="flex min-h-14 flex-col justify-center rounded-lg bg-white px-4 py-2">
-                <span className="text-xs font-semibold uppercase tracking-[0.1em] text-[#788378]">WhatsApp</span>
-                <span className="mt-1 text-sm font-semibold text-[#214d3a]">Message the clinic</span>
-              </a>
-            </div>
-
-            <p className="mt-5 text-xs leading-6 text-[#58665c]">Clinic hours can vary by location. Please call or message to confirm today’s availability and where to visit before travelling.</p>
-            <a href={clinic.googleReviewsUrl} target="_blank" rel="noreferrer" className="mt-auto inline-flex min-h-11 items-center pt-4 text-sm font-semibold text-[#214d3a] underline underline-offset-4">Read Google reviews</a>
-          </div>
-
-          <div className="rounded-xl border border-[#d8ded4] bg-white p-4 sm:p-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Find us</p>
-                <h2 className="mt-1 font-serif text-2xl text-[#1d3026]">Manjadi, near Thiruvalla</h2>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                <a
+                  href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                  className="flex min-h-14 items-center justify-center rounded-full bg-[#214d3a] px-4 py-2 text-center text-sm font-semibold text-white"
+                >
+                  Call {siteConfig.phone}
+                </a>
+                <a
+                  href={getWhatsAppUrl(`Hello, I would like to enquire about ${siteConfig.businessName}. Please share appointment availability and visit details.`)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex min-h-14 items-center justify-center rounded-full border border-[#214d3a] bg-white px-4 py-2 text-center text-sm font-semibold text-[#214d3a]"
+                >
+                  WhatsApp the clinic
+                </a>
+                <a
+                  href={siteConfig.googleMapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex min-h-14 items-center justify-center rounded-full border border-[#214d3a] bg-white px-4 py-2 text-center text-sm font-semibold text-[#214d3a]"
+                >
+                  Get directions
+                </a>
               </div>
-              <a href={clinic.mapUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#cbd4c9] px-4 text-sm font-semibold text-[#214d3a]">Open map</a>
+
+              {isConfiguredValue(siteConfig.email) ? (
+                <p className="mt-4 text-sm text-[#58665c]">
+                  Email: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+                </p>
+              ) : null}
+              <div className="mt-5 border-t border-[#d1d9ce] pt-4">
+                <h3 className="text-sm font-semibold text-[#34463b]">Opening hours</h3>
+                <p className="mt-1 text-sm leading-6 text-[#58665c]">
+                  Please call or WhatsApp to confirm current opening hours and where to visit before travelling.
+                </p>
+              </div>
+              <div className="mt-5 border-t border-[#d1d9ce] pt-4">
+                <h3 className="text-sm font-semibold text-[#34463b]">Areas served</h3>
+                <p className="mt-1 text-sm leading-6 text-[#58665c]">
+                  {siteConfig.serviceAreas.join(", ")}.
+                </p>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-[#d1d9ce] pt-4">
+                <a
+                  href={siteConfig.googleBusinessProfileReviewUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center text-sm font-semibold text-[#214d3a] underline underline-offset-4"
+                >
+                  Review us on Google
+                </a>
+                <a
+                  href="/review-qr/"
+                  className="inline-flex min-h-11 items-center text-sm font-semibold text-[#214d3a] underline underline-offset-4"
+                >
+                  Print our review QR code
+                </a>
+              </div>
             </div>
-            <iframe
-              src={clinic.mapEmbedUrl}
-              title="Map showing Aura Ayurveda in Manjadi, near Thiruvalla, Kerala"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="mt-4 aspect-[4/3] w-full rounded-lg border-0 sm:aspect-[16/9] lg:aspect-auto lg:h-[26rem]"
-            />
+
+            <div className="rounded-xl border border-[#d8ded4] bg-white p-4 sm:p-5">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Find us</p>
+                  <h2 className="mt-1 font-serif text-2xl text-[#1d3026]">{siteConfig.locationLabel}</h2>
+                </div>
+                <a
+                  href={siteConfig.googleMapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#cbd4c9] px-4 text-sm font-semibold text-[#214d3a]"
+                >
+                  Get directions
+                </a>
+              </div>
+              <iframe
+                src={siteConfig.googleMapsEmbedUrl}
+                title={`Map showing ${siteConfig.businessName} at ${siteConfig.locationLabel}`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="mt-4 aspect-[4/3] w-full rounded-lg border-0 sm:aspect-[16/9] lg:aspect-auto lg:h-[26rem]"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-    </Container>
+        </section>
+      </Container>
+    </>
   );
 }

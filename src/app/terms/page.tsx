@@ -1,9 +1,10 @@
 import { Container } from "@/components/ui/container";
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Terms | Aura Ayurveda",
-  description: "Terms and conditions for Aura Ayurveda website visitors.",
+  title: `Terms | ${siteConfig.businessName}`,
+  description: `Terms and conditions for ${siteConfig.businessName} website visitors.`,
   path: "/terms",
 });
 
@@ -13,9 +14,9 @@ export default function TermsPage() {
   return (
     <Container>
       <section className="py-10 sm:py-14">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">Aura Ayurveda · Website information</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">{siteConfig.businessName} · Website information</p>
         <h1 className="mt-3 font-serif text-4xl text-[#1d3026]">Website terms</h1>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">By using this site, you understand that it provides general clinic, service and product information. Please contact Aura Ayurveda to confirm current details before making a decision or travelling.</p>
+        <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">By using this site, you understand that it provides general clinic, service and product information. Please contact {siteConfig.businessName} to confirm current details before making a decision or travelling.</p>
 
         <div className="mt-7 max-w-3xl divide-y divide-[#d8ded4] border-y border-[#d8ded4]">
           <section className="py-5">

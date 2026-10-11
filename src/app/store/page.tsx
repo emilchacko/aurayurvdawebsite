@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { clinic } from "@/data/clinic";
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "Ayurvedic Products & Online Consultation | Aura Ayurveda Thiruvalla",
+  title: `Ayurvedic Products & Online Consultation | ${siteConfig.businessName}`,
   description:
-    "Enquire about Ayurvedic skin and hair care products, a postpartum care kit, or an online consultation from Aura Ayurveda in Manjadi near Thiruvalla, Kerala.",
+    `Enquire about Ayurvedic products or an online consultation from ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
   path: "/store",
 });
 
@@ -19,7 +19,7 @@ const products = [
       "Speak with an Ayurvedic doctor from home and discuss your health concerns and next steps.",
     image: "/images/store/online-consultation.png",
     action: "Ask about a consultation",
-    message: "Hello, I would like to enquire about an online consultation with Aura Ayurveda. Please share availability and details.",
+    message: `Hello, I would like to enquire about an online consultation with ${siteConfig.businessName}. Please share availability and details.`,
   },
   {
     name: "Prasavaraksha Medicines Kit",
@@ -56,19 +56,19 @@ export default function StorePage() {
       <section className="py-10 sm:py-14">
         <div className="grid gap-6 border-b border-[#d8ded4] pb-8 sm:gap-8 sm:pb-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#a05435]">Aura Ayurveda · Manjadi, near Thiruvalla</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#a05435]">{siteConfig.businessName} · {siteConfig.locationLabel}</p>
             <h1 className="mt-3 max-w-2xl font-serif text-4xl leading-[1.08] text-[#1d3026] sm:text-5xl">Wellness essentials, with a real person to ask.</h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#58665c] sm:text-lg">
               Browse consultations and selected Ayurvedic products. Message us to confirm current price, availability, ingredients and whether an item is right for you.
             </p>
           </div>
-          <a href={getWhatsAppUrl("Hello, I would like help choosing an Aura Ayurveda product or service.")} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white transition hover:bg-[#183b2c]">
+          <a href={getWhatsAppUrl(`Hello, I would like help choosing a ${siteConfig.businessName} product or service.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white transition hover:bg-[#183b2c]">
             Ask us on WhatsApp
           </a>
         </div>
 
         <div className="mt-6 grid gap-3 rounded-xl bg-[#edf0e8] p-4 sm:grid-cols-3 sm:p-5">
-          <p className="text-sm leading-6 text-[#34463b]">Local clinic in Manjadi, near Thiruvalla</p>
+          <p className="text-sm leading-6 text-[#34463b]">Local clinic in {siteConfig.locationLabel}</p>
           <p className="text-sm leading-6 text-[#34463b]">Talk to the clinic before you order</p>
           <p className="text-sm leading-6 text-[#34463b]">Product suitability confirmed case by case</p>
         </div>
@@ -82,7 +82,7 @@ export default function StorePage() {
               >
                 <Image
                   src={withBasePath(product.image)}
-                  alt={`${product.name} from Aura Ayurveda`}
+                  alt={`${product.name} from ${siteConfig.businessName}`}
                   width={1200}
                   height={900}
                   sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
@@ -118,9 +118,9 @@ export default function StorePage() {
         <div className="mt-8 flex flex-col gap-3 rounded-xl bg-[#214d3a] p-5 text-white sm:flex-row sm:items-center sm:justify-between sm:p-6">
           <div>
             <h2 className="font-serif text-2xl">Prefer to visit the clinic?</h2>
-            <p className="mt-1 text-sm leading-6 text-white/80">Aura Ayurveda · {clinic.address}</p>
+            <p className="mt-1 text-sm leading-6 text-white/80">{siteConfig.businessName} · {siteConfig.address.display}</p>
           </div>
-          <a href={clinic.mapUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Get directions</a>
+          <a href={siteConfig.googleMapsUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Get directions</a>
         </div>
       </section>
     </Container>
