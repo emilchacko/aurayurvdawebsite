@@ -1,5 +1,4 @@
 type OpeningHoursSpecification = {
-  dayOfWeek: string[];
   opens: string;
   closes: string;
 };
@@ -22,17 +21,21 @@ export const siteConfig = {
       "TK Rd, Manjadi, Thiruvalla, Kerala 689105, near Chikkos Fried Chicken",
   },
   locationLabel: "Manjadi, near Thiruvalla, Kerala",
-  // TODO: Add only coordinates verified for Aura Ayurveda at Manjadi.
   geo: {
-    latitude: null as number | null,
-    longitude: null as number | null,
+    latitude: 9.3844839,
+    longitude: 76.5889257,
   },
-  // TODO: Add only clinic-confirmed weekly hours for the Manjadi location.
   openingHours: {
-    note: "TODO: confirm Aura Ayurveda's weekly opening hours at Manjadi",
-    specifications: [] as OpeningHoursSpecification[],
+    note: "Weekdays for these time windows have not been confirmed.",
+    display:
+      "Aura Ayurveda, Manjadi: 9:30 AM–1:00 PM and 6:00 PM–7:30 PM. Ayurarogyam, Manakachira: 1:00 PM–6:00 PM.",
+    specifications: [
+      { opens: "09:30:00", closes: "13:00:00" },
+      { opens: "18:00:00", closes: "19:30:00" },
+    ] as OpeningHoursSpecification[],
   },
-  googleMapsUrl: "https://share.google/tKnJchnqEmaezNX70",
+  googleMapsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=9.3844839%2C76.5889257",
   googleMapsEmbedUrl:
     "https://maps.google.com/maps?q=AURA+Ayurveda,+TK+Rd,+Manjadi,+Thiruvalla,+Kerala+689105&output=embed",
   googleBusinessProfileReviewUrl: "https://share.google/tKnJchnqEmaezNX70",

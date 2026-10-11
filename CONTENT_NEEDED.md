@@ -7,11 +7,12 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 - [ ] Confirm the doctor's public display name and spelling (`doctorName` is currently copied from the existing site).
 - [ ] Provide the doctor's exact approved professional qualification; registration number, issuing authority, and experience only if the clinic wants them published. `doctorQualification` is intentionally a TODO and is not rendered.
 - [ ] Provide a public clinic email address, or confirm that no email should be displayed. `email` is intentionally a TODO and is omitted from the page.
-- [ ] Confirm weekly opening hours for the Manjadi clinic, including closed days and any appointment-only periods. No hours are currently shown or emitted in structured data.
-- [ ] Provide verified latitude and longitude for the Manjadi clinic. `geo.latitude` and `geo.longitude` are intentionally `null`; they are omitted from structured data.
+- [ ] Confirm which weekdays the existing Manjadi hours apply to and any closed days or appointment-only periods. The displayed time windows came from the existing site; the clinic's Google Maps listing currently reports different hours, so reconcile the two sources.
+- [x] Verified Aura Ayurveda coordinates from the matching Google Maps result for TK Rd, Manjadi: 9.3844839, 76.5889257.
 - [ ] Confirm the full public address, including the existing road, locality, postal code, and nearby landmark.
 - [ ] Verify that the current phone and WhatsApp numbers are correct and approved for publication.
-- [ ] Provide a direct Google Maps directions link for Aura Ayurveda. The existing short link is currently shared with the Google review URL; verify whether it is appropriate for both, and replace `googleMapsUrl` and/or `googleBusinessProfileReviewUrl` as needed.
+- [x] Add a direct Google Maps directions URL for Aura Ayurveda using the coordinates from its matching map result.
+- [ ] Confirm that the existing Google review short link opens the correct clinic review form/profile; it is separate from the directions URL now.
 - [ ] Confirm the Google Business Profile review link opens the correct clinic profile.
 - [ ] If the Google review URL changes, regenerate the static QR asset at `public/images/review-qr.svg` with the replacement URL.
 - [ ] Confirm the Facebook and Instagram URLs in `socialLinks` are the clinic's official accounts.

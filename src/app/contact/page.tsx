@@ -66,7 +66,10 @@ export default function ContactPage() {
               <div className="mt-5 border-t border-[#d1d9ce] pt-4">
                 <h3 className="text-sm font-semibold text-[#34463b]">Opening hours</h3>
                 <p className="mt-1 text-sm leading-6 text-[#58665c]">
-                  Please call or WhatsApp to confirm current opening hours and where to visit before travelling.
+                  {siteConfig.openingHours.display}
+                </p>
+                <p className="mt-2 text-xs leading-5 text-[#58665c]">
+                  {siteConfig.openingHours.note} Please call or WhatsApp to confirm before travelling.
                 </p>
               </div>
               <div className="mt-5 border-t border-[#d1d9ce] pt-4">
