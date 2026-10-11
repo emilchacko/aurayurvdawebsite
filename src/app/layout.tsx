@@ -7,12 +7,17 @@ import { siteUrl } from "@/lib/site";
 import { clinic } from "@/data/clinic";
 import "./globals.css";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Ayurvedic Clinic in Manjadi, Thiruvalla | Aura Ayurveda",
-  description:
-    "Meet Dr. Lidiya Thomas at Aura Ayurveda, a local Ayurvedic clinic in Manjadi near Thiruvalla, Kerala. Explore consultations, hair and skin care, therapies and women’s wellness.",
-  path: "/",
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: "Ayurvedic Clinic in Manjadi, Thiruvalla | Aura Ayurveda",
+    description:
+      "Meet Dr. Lidiya Thomas at Aura Ayurveda, a local Ayurvedic clinic in Manjadi near Thiruvalla, Kerala. Explore consultations, hair and skin care, therapies and women’s wellness.",
+    path: "/",
+  }),
+  other: {
+    "google-site-verification": "3sWDsw2NJy8rZNrkzz-ysqvvH9qVe9aFmiw4z4_iXK0",
+  },
+};
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
