@@ -36,9 +36,18 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 ## Other copy
 
 - [ ] Review the Privacy Policy and Terms copy for legal accuracy and clinic approval.
-- [ ] Provide approved blog articles or topic approvals before publishing educational content.
+- [ ] Provide and approve future blog articles or topics before publishing additional educational content.
 - [ ] Confirm whether the clinic wants a contact form or if phone and WhatsApp enquiries are sufficient.
 - [ ] Confirm whether the store page should continue to describe the current products and consultation offer.
+
+## Food as Medicine blog article
+
+- [ ] [CONFIRM WITH CLINIC] Confirm English-language consultation availability for visitors from abroad.
+- [ ] [PLACEHOLDER, CONFIRM] Provide the nearest airport and a verified travel-time estimate to the Manjadi clinic. No airport or travel time is published as fact yet.
+- [ ] [CONFIRM WITH CLINIC] Verify current Aura Ayurveda opening hours and which weekdays the Manjadi time windows apply to. The article marks these details for confirmation and states India Standard Time (IST).
+- [ ] [CONFIRM WITH CLINIC] Verify the doctor's public display name and spelling before naming the doctor in article copy. The article currently refers to “our doctor” and uses Aura Ayurveda as its organization author.
+- [ ] Provide a current clinic-owned or licensed hero photograph of Kerala food, spices, or another suitable subject for this article. The current hero image is an illustrative existing site asset, not a photograph of a Kerala meal or the clinic.
+- [ ] Review the general food and health wording in the article with the clinic doctor before publication.
 
 ## Prasavaraksha page
 

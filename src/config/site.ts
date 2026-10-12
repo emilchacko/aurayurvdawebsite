@@ -6,6 +6,7 @@ type OpeningHoursSpecification = {
 export const siteConfig = {
   businessName: "Aura Ayurveda",
   siteUrl: "https://auraayurvedawellness.in",
+  logoUrl: "https://auraayurvedawellness.in/images/logo/image.png",
   doctorName: "Dr. Lidiya Thomas",
   doctorQualification: "TODO: confirm the doctor's full approved qualification",
   phone: "+91 96002 33308",
@@ -27,6 +28,8 @@ export const siteConfig = {
   },
   openingHours: {
     note: "Weekdays for these time windows have not been confirmed.",
+    manjadiDisplay:
+      "9:30 AM–1:00 PM and 6:00 PM–7:30 PM",
     display:
       "Aura Ayurveda, Manjadi: 9:30 AM–1:00 PM and 6:00 PM–7:30 PM. Ayurarogyam, Manakachira: 1:00 PM–6:00 PM.",
     specifications: [

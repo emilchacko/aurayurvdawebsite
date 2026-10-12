@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { treatments } from "@/content/treatments";
+import { blogPosts } from "@/content/blog";
 import { Container } from "@/components/ui/container";
 
 const routeLabels: Record<string, string> = {
@@ -21,6 +22,9 @@ const routeLabels: Record<string, string> = {
 function getLabel(segment: string, parentPath: string) {
   if (parentPath === "/treatments") {
     return treatments.find((item) => item.slug === segment)?.title ?? segment;
+  }
+  if (parentPath === "/blog") {
+    return blogPosts.find((item) => item.slug === segment)?.title ?? segment;
   }
 
   return (
