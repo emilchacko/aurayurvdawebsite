@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     icon: "/images/logo/image.png",
   },
   verification: {
-    google: "3sWDsw2NJy8rZNrkzz-ysqvvH9qVe9aFmiw4z4_iXK0",
+    google: "egcOVUrAu1fbzFAh17agjycJyqW1AbN44u1o_lbJyoY",
   },
 };
 
