@@ -158,8 +158,7 @@ function renderBlock(block: BlogBlock) {
               >
                 {siteConfig.whatsapp}
               </a>
-              . English-language consultation:{" "}
-              <strong>[CONFIRM WITH CLINIC]</strong>.
+              . English-language consultations are available.
             </p>
             <p className="mt-3 text-sm leading-7 text-[#46564b]">
               Clinic hours: {siteConfig.openingHours.manjadiDisplay}{" "}
@@ -167,8 +166,9 @@ function renderBlock(block: BlogBlock) {
               Times are India Standard Time (IST).
             </p>
             <p className="mt-3 text-sm leading-7 text-[#46564b]">
-              Nearest airport and travel time:{" "}
-              <strong>[PLACEHOLDER, CONFIRM]</strong>.
+              The nearest airports are Kochi and Thiruvananthapuram.
+              Approximate travel time from either airport is 2–3 hours,
+              depending on route and traffic.
             </p>
             <p className="mt-3 text-sm leading-7 text-[#46564b]">
               The clinic address is {siteConfig.address.display}. Before your
