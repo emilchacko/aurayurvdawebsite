@@ -5,6 +5,8 @@ import { siteConfig } from "@/config/site";
 
 export const dynamic = "force-static";
 
+const lastModified = new Date("2026-10-12T00:00:00.000Z");
+
 const indexablePaths = [
   "/",
   "/about/",
@@ -30,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
               )}T00:00:00.000Z`,
             ),
           }
-        : {}),
+        : { lastModified }),
     })),
     ...blogPosts.map((post) => ({
       url: `${siteConfig.siteUrl}/blog/${post.slug}/`,
@@ -38,6 +40,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...treatments.map((treatment) => ({
       url: `${siteConfig.siteUrl}/treatments/${treatment.slug}/`,
+      lastModified: new Date(
+        `${treatment.updatedDate ?? "2026-10-12"}T00:00:00.000Z`,
+      ),
     })),
   ];
 }

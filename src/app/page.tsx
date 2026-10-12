@@ -136,6 +136,11 @@ export default function Home() {
                 </Link>
               </div>
               <p className="mt-4 text-sm text-[#58665c]">Prefer to call? <a className="font-semibold text-[#214d3a] underline underline-offset-4" href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>{siteConfig.phone}</a></p>
+              {siteConfig.englishConsultation ? (
+                <p className="mt-2 text-sm text-[#58665c]">
+                  {siteConfig.englishConsultationLabel}.
+                </p>
+              ) : null}
             </div>
 
             <div className="relative order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none">

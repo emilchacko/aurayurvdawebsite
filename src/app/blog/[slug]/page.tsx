@@ -3,8 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
+import { VisitingKeralaInfo } from "@/components/content/visiting-kerala-info";
+import { RelatedTreatments } from "@/components/content/related-content";
 import { Container } from "@/components/ui/container";
 import { blogPosts, type BlogBlock, type BlogPost } from "@/content/blog";
+import { assertValidContentLinks } from "@/content/validate-related-content";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
@@ -29,7 +32,7 @@ function getBlockText(block: BlogBlock): string {
     case "disclaimer":
       return block.text;
     case "visitingInfo":
-      return `${siteConfig.openingHours.display} ${siteConfig.address.display} ${siteConfig.whatsapp}`;
+      return `${block.airportAndTravelInfo} ${siteConfig.openingHours.display} ${siteConfig.address.display} ${siteConfig.whatsapp}`;
   }
 }
 
@@ -48,6 +51,7 @@ function getReadingTime(post: BlogPost) {
 }
 
 export function generateStaticParams() {
+  assertValidContentLinks();
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
@@ -68,7 +72,7 @@ export async function generateMetadata({
   }
 
   const metadata = buildMetadata({
-    title: `${post.title} | ${siteConfig.businessName}, Kerala`,
+    title: post.metaTitle ?? `${post.title} | ${siteConfig.businessName}, Kerala`,
     description: post.description,
     path: `/blog/${post.slug}`,
   });
@@ -144,55 +148,9 @@ function renderBlock(block: BlogBlock) {
     }
     case "visitingInfo":
       return (
-        <div className="grid gap-5 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <p className="text-sm leading-7 text-[#46564b]">
-              Consultations are by appointment via WhatsApp at{" "}
-              <a
-                href={getWhatsAppUrl(
-                  `Hello, I am visiting Kerala and would like to ask about an Ayurvedic consultation at ${siteConfig.businessName}.`,
-                )}
-                target="_blank"
-                rel="noreferrer"
-                className="font-semibold text-[#214d3a] underline underline-offset-4"
-              >
-                {siteConfig.whatsapp}
-              </a>
-              . English-language consultations are available.
-            </p>
-            <p className="mt-3 text-sm leading-7 text-[#46564b]">
-              Clinic hours: {siteConfig.openingHours.display}{" "}
-              {siteConfig.openingHours.note}
-            </p>
-            <p className="mt-3 text-sm leading-7 text-[#46564b]">
-              The nearest airports are Kochi and Thiruvananthapuram.
-              Approximate travel time from either airport is 2–3 hours,
-              depending on route and traffic.
-            </p>
-            <p className="mt-3 text-sm leading-7 text-[#46564b]">
-              The clinic address is {siteConfig.address.display}. Before your
-              visit, bring a list of current medicines and share any allergies
-              or health conditions with the doctor.
-            </p>
-            <a
-              href={siteConfig.googleMapsUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full border border-[#214d3a] px-5 text-sm font-semibold text-[#214d3a] hover:bg-white"
-            >
-              Get directions
-            </a>
-          </div>
-          <iframe
-            src={siteConfig.googleMapsEmbedUrl}
-            title={`Map showing ${siteConfig.businessName} at ${siteConfig.locationLabel}`}
-            width="600"
-            height="450"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="aspect-[4/3] w-full rounded-lg border border-[#d8ded4] bg-white sm:aspect-[16/9]"
-          />
-        </div>
+        <VisitingKeralaInfo
+          airportAndTravelInfo={block.airportAndTravelInfo}
+        />
       );
     case "contactCta":
       return (
@@ -223,6 +181,11 @@ function renderBlock(block: BlogBlock) {
               Book a consultation
             </Link>
           </div>
+          {siteConfig.englishConsultation ? (
+            <p className="mt-3 text-sm leading-6 text-white/80">
+              {siteConfig.englishConsultationLabel}.
+            </p>
+          ) : null}
         </>
       );
     case "disclaimer":
@@ -342,15 +305,21 @@ export default async function BlogArticlePage({
           </header>
 
           <div className="mx-auto max-w-[70ch] space-y-6">
-            <p className="text-lg leading-8 text-[#34463b]">
-              {post.body.hook}
-            </p>
-            <p className="text-base leading-7 text-[#46564b]">
-              {post.body.introduction}
-            </p>
-            <p className="text-sm leading-7 text-[#58665c]">
-              {post.body.internationalTerms}
-            </p>
+            {post.body.hook ? (
+              <p className="text-lg leading-8 text-[#34463b]">
+                {post.body.hook}
+              </p>
+            ) : null}
+            {post.body.introduction ? (
+              <p className="text-base leading-7 text-[#46564b]">
+                {post.body.introduction}
+              </p>
+            ) : null}
+            {post.body.internationalTerms ? (
+              <p className="text-sm leading-7 text-[#58665c]">
+                {post.body.internationalTerms}
+              </p>
+            ) : null}
 
             {post.body.sections.map((section) => (
               <section
@@ -436,6 +405,8 @@ export default async function BlogArticlePage({
                 ))}
               </div>
             </section>
+
+            <RelatedTreatments treatmentSlugs={post.relatedTreatments} />
           </div>
         </article>
       </Container>

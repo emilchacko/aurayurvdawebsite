@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { RelatedArticles } from "@/components/content/related-content";
 import { siteConfig } from "@/config/site";
 import type { Treatment } from "@/content/treatments";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
@@ -51,6 +52,7 @@ export function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
           <Link href="/treatments" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/60 px-5 text-sm font-semibold text-white">Explore other services</Link>
         </div>
       </section>
+      <RelatedArticles treatmentSlug={treatment.slug} />
     </div>
   );
 }

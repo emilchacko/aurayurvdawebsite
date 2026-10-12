@@ -56,3 +56,13 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 - [ ] Provide a current, clinic-owned or licensed photograph of the Manjadi clinic or an approved postnatal-care setting. The current page image is illustrative and is not a photograph of the clinic or treatment.
 - [ ] Confirm the existing Google Maps embed points to the correct Aura Ayurveda location.
 - [ ] If adding a duration, stay/visit format, packages, or prices later, provide clinic-confirmed details first; none are stated on the page.
+
+## Kalari marma (varma) massage page and article
+
+- [ ] [CONFIRM WITH CLINIC] Typical session length and whether a number of sessions is usually advised; neither is stated as fact on the pages.
+- [ ] [CONFIRM WITH CLINIC] How a session may feel, including whether it may be uncomfortable or painful; the FAQ leaves this unanswered pending clinic guidance.
+- [ ] [CONFIRM WITH CLINIC] Any specific oils used, and clothing and privacy arrangements; no oil names or arrangements are stated.
+- [ ] [CONFIRM WITH CLINIC] Practitioner background, including whether the practitioner is a Kalari master; the pages do not make a credential claim.
+- [ ] [CONFIRM WITH CLINIC] Nearest airport and travel time for the Kalari visitor information; the pages display a placeholder and do not reuse the separate food article's travel note.
+- [ ] Provide a current, clinic-owned or licensed photograph that accurately depicts Kalari care at Aura Ayurveda. Current imagery is explicitly labeled illustrative.
+- [ ] Prices are not published. Provide clinic-approved details only if the clinic decides to publish them later.

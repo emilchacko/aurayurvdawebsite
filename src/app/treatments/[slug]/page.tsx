@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { TreatmentTemplate } from "@/components/treatments/treatment-template";
+import { KalariVarmaPage } from "@/components/treatments/kalari-varma-page";
 import { PrasavarakshaPage } from "@/components/treatments/prasavaraksha-page";
 import { treatments } from "@/content/treatments";
+import { assertValidContentLinks } from "@/content/validate-related-content";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
@@ -10,8 +12,13 @@ const prasavarakshaTitle =
   "Prasavaraksha (Ayurvedic Postnatal Care) in Thiruvalla | Aura Ayurveda, Manjadi";
 const prasavarakshaDescription =
   "Ask about prasavaraksha and postnatal Ayurvedic care in Thiruvalla and Manjadi. Call or WhatsApp Aura Ayurveda to discuss a consultation.";
+const kalariTitle =
+  "Kalari Marma (Varma) Massage in Kerala | Aura Ayurveda, Thiruvalla";
+const kalariDescription =
+  "Experience traditional Kalari marma (varma) massage at an Ayurveda clinic in Manjadi, near Thiruvalla, Kerala. English consultation available; visitors from abroad welcome.";
 
 export async function generateStaticParams() {
+  assertValidContentLinks();
   return treatments.map((treatment) => ({ slug: treatment.slug }));
 }
 
@@ -35,6 +42,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     });
   }
 
+  if (slug === "kalari-varma-massage") {
+    return buildMetadata({
+      title: kalariTitle,
+      description: kalariDescription,
+      path: `/treatments/${slug}`,
+    });
+  }
+
   return buildMetadata({
     title: `${treatment.title} in Thiruvalla | ${siteConfig.businessName}`,
     description: `${treatment.shortDescription} Enquire at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
@@ -52,6 +67,10 @@ export default async function TreatmentDetailPage({ params }: { params: Promise<
 
   if (slug === "prasavaraksha") {
     return <PrasavarakshaPage />;
+  }
+
+  if (slug === "kalari-varma-massage") {
+    return <KalariVarmaPage />;
   }
 
   return (

@@ -49,6 +49,16 @@ export default function TreatmentsPage() {
 
         <p className="mt-6 max-w-3xl text-xs leading-6 text-[#58665c]">Images are illustrative and do not depict treatment results or guarantee an outcome. Persistent or severe symptoms should be assessed by an appropriately qualified medical professional.</p>
         <p className="mt-3 text-sm text-[#58665c]">Visit {siteConfig.businessName}: {siteConfig.locationLabel} · <Link href="/contact" className="font-semibold text-[#214d3a] underline underline-offset-4">Contact and directions</Link></p>
+        <p className="mt-5 text-sm text-[#58665c]">
+          For background on Kerala Ayurveda, browse the{" "}
+          <Link
+            href="/blog/"
+            className="font-semibold text-[#214d3a] underline underline-offset-4"
+          >
+            Aura Ayurveda blog
+          </Link>
+          .
+        </p>
       </section>
     </Container>
   );

@@ -33,6 +33,9 @@ export function ClinicJsonLd() {
     areaServed: serviceAreas,
     sameAs: [...socialLinks, siteConfig.googleBusinessProfileReviewUrl],
     medicalSpecialty: "Ayurvedic",
+    ...(siteConfig.englishConsultation
+      ? { availableLanguage: "English" }
+      : {}),
   };
 
   return (

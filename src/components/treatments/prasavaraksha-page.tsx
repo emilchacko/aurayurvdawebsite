@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
 import { Container } from "@/components/ui/container";
+import { RelatedArticles } from "@/components/content/related-content";
 import { siteConfig } from "@/config/site";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
 
@@ -445,6 +446,7 @@ export function PrasavarakshaPage() {
               >
                 Book Consultation
               </Link>
+              <RelatedArticles treatmentSlug="prasavaraksha" />
             </div>
           </section>
         </article>

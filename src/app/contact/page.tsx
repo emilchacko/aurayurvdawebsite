@@ -57,6 +57,11 @@ export default function ContactPage() {
                   Get directions
                 </a>
               </div>
+              {siteConfig.englishConsultation ? (
+                <p className="mt-3 text-sm leading-6 text-[#58665c]">
+                  {siteConfig.englishConsultationLabel}.
+                </p>
+              ) : null}
 
               {isConfiguredValue(siteConfig.email) ? (
                 <p className="mt-4 text-sm text-[#58665c]">

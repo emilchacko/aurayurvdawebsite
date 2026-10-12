@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
 import { blogPosts } from "@/content/blog";
+import { treatments } from "@/content/treatments";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { withBasePath } from "@/lib/site";
@@ -72,6 +73,31 @@ export default function BlogPage() {
                     </span>
                   </div>
                 </Link>
+                {post.relatedTreatments.length > 0 ? (
+                  <div className="border-t border-[#d8ded4] px-5 pb-5 pt-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">
+                      Related treatments
+                    </p>
+                    <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+                      {post.relatedTreatments.map((slug) => {
+                        const treatment = treatments.find(
+                          (item) => item.slug === slug,
+                        );
+
+                        return treatment ? (
+                          <li key={slug}>
+                            <Link
+                              href={`/treatments/${slug}/`}
+                              className="inline-flex min-h-11 items-center text-sm font-semibold text-[#214d3a] underline underline-offset-4"
+                            >
+                              {treatment.title}
+                            </Link>
+                          </li>
+                        ) : null;
+                      })}
+                    </ul>
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>

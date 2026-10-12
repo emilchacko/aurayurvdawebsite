@@ -8,6 +8,8 @@ export type Treatment = {
   category: string;
   image: string;
   imageAlt: string;
+  relatedPosts: readonly string[];
+  updatedDate?: string;
 };
 
 export const treatments: Treatment[] = [
@@ -26,6 +28,7 @@ export const treatments: Treatment[] = [
     image: "/images/focus-areas/pregnancy-postnatal.jpg",
     imageAlt:
       "Illustrative postnatal-care image; not a photograph of Aura Ayurveda or a treatment",
+    relatedPosts: [],
   },
   {
     slug: "panchakarma-massage",
@@ -41,21 +44,28 @@ export const treatments: Treatment[] = [
     category: "Massage & Therapies",
     image: "/images/focus-areas/ayurvedic-therapies.jpg",
     imageAlt: "Ayurvedic massage therapy, illustrative image",
+    relatedPosts: [],
   },
   {
     slug: "kalari-varma-massage",
-    title: "Kalari Varma Massage",
+    title: "Kalari Marma (Varma) Massage",
     shortDescription:
-      "A traditional Kalari-inspired massage approach, planned around your needs and practitioner assessment.",
+      "A traditional Kerala therapy, considered by the doctor after an individual consultation.",
     description:
-      "Kalari Varma techniques are considered individually. The practitioner discusses your concerns and health history before deciding whether a session is suitable.",
+      "A traditional Kerala hands-on therapy connected to kalaripayattu and its knowledge of marma, also called varma, points. The doctor assesses each person and decides what is appropriate.",
     whoItsFor:
-      "People interested in a traditional Kalari-inspired massage can ask about the approach and discuss their circumstances before deciding whether to proceed.",
+      "People interested in a traditional Kerala therapy can discuss their circumstances with the doctor before deciding whether to proceed.",
     whatToExpect:
-      "Ask which techniques are included, what the session involves, and whether any preparation or follow-up is recommended. Confirm the proposed steps with the clinic before booking.",
+      "A Kalari session begins with a consultation with the doctor. The doctor discusses your needs and decides what is appropriate for you.",
     category: "Massage & Therapies",
     image: "/images/focus-areas/ayurvedic-therapies.jpg",
-    imageAlt: "Ayurvedic massage therapy, illustrative image",
+    imageAlt:
+      "Illustrative Ayurvedic massage image; not a photograph of a Kalari session at Aura Ayurveda",
+    relatedPosts: [
+      "kalari-marma-massage-kerala",
+      "food-as-medicine-ayurveda",
+    ],
+    updatedDate: "2026-10-12",
   },
   {
     slug: "ayurvedic-dandruff-treatment",
@@ -71,6 +81,7 @@ export const treatments: Treatment[] = [
     category: "Hair & Scalp",
     image: "/images/focus-areas/hair-scalp.jpg",
     imageAlt: "Hair and scalp care, illustrative image",
+    relatedPosts: [],
   },
   {
     slug: "ayurvedic-acne-treatment",
@@ -86,6 +97,7 @@ export const treatments: Treatment[] = [
     category: "Skin Care",
     image: "/images/focus-areas/skin-wellness.jpg",
     imageAlt: "Facial skin care, illustrative image",
+    relatedPosts: [],
   },
   {
     slug: "ayurvedic-hair-spa",
@@ -101,6 +113,7 @@ export const treatments: Treatment[] = [
     category: "Hair & Scalp",
     image: "/images/focus-areas/hair-scalp.jpg",
     imageAlt: "Hair and scalp care, illustrative image",
+    relatedPosts: [],
   },
   {
     slug: "varicose-vein-care",
@@ -116,5 +129,6 @@ export const treatments: Treatment[] = [
     category: "Circulation & Wellness",
     image: "/images/focus-areas/varicose-veins.jpg",
     imageAlt: "Diagram comparing normal and varicose veins in the leg",
+    relatedPosts: [],
   },
 ];

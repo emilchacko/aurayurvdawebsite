@@ -62,6 +62,9 @@ export function Footer() {
                 WhatsApp · {siteConfig.whatsapp}
               </a>
             </li>
+            {siteConfig.englishConsultation ? (
+              <li>{siteConfig.englishConsultationLabel}.</li>
+            ) : null}
             <li>{siteConfig.openingHours.display} {siteConfig.openingHours.note}</li>
             {siteConfig.socialLinks.map((url) => (
               <li key={url}>
