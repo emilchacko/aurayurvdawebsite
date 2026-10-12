@@ -65,8 +65,48 @@ export function Footer() {
             <li>Call or WhatsApp to confirm current opening hours.</li>
             {siteConfig.socialLinks.map((url) => (
               <li key={url}>
-                <a href={url} target="_blank" rel="noreferrer" className="transition hover:text-[#1d4f3a]">
-                  {url.includes("facebook") ? "Facebook" : "Instagram"}
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Follow ${siteConfig.businessName} on ${url.includes("facebook") ? "Facebook" : "Instagram"}`}
+                  className="inline-flex min-h-11 items-center gap-2 transition hover:text-[#1d4f3a]"
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="size-5 shrink-0"
+                    fill="currentColor"
+                  >
+                    {url.includes("facebook") ? (
+                      <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.2H7.3v3.2h2.8V21h3.4Z" />
+                    ) : (
+                      <>
+                        <rect
+                          x="3"
+                          y="3"
+                          width="18"
+                          height="18"
+                          rx="5"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                        <circle cx="17.5" cy="6.8" r="1.2" />
+                      </>
+                    )}
+                  </svg>
+                  <span>
+                    {url.includes("facebook") ? "Facebook" : "Instagram"}
+                  </span>
                 </a>
               </li>
             ))}

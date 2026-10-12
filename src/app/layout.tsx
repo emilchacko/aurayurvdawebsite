@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: siteConfig.businessName,
   description: `${siteConfig.businessName}, an Ayurvedic clinic in ${siteConfig.locationLabel}.`,
   icons: {
-    icon: "/images/logo/image.png",
+    icon: "/favicon.ico",
   },
   verification: {
     google: "egcOVUrAu1fbzFAh17agjycJyqW1AbN44u1o_lbJyoY",

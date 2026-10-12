@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "What treatments are included?",
     answer:
-      "The mother's care includes abhyanga (massage) with a medicated water bath. The mother may also receive postnatal medicines and packs for stretch-mark and skin-care concerns, with diet advice based on the mother's and baby's conditions. The doctor discusses care individually; no specific result from a pack or medicine is promised.",
+      "The mother's care includes abhyanga (massage) with a medicated water bath. The mother may also receive postnatal medicines and packs for stretch-mark and postnatal skin-care concerns, with diet advice based on the mother's and baby's conditions. The doctor discusses care individually.",
   },
   {
     question: "Is massage and bath also provided for the baby?",
@@ -203,7 +203,7 @@ export function PrasavarakshaPage() {
                 "Baby's massage with a medicated water bath",
                 "Postnatal medicines for the mother to support strength during recovery, as advised by the doctor",
                 "Diet advice based on the conditions of the mother and baby",
-                "Postnatal packs for stretch-mark and skin-care concerns; no specific result is promised",
+                "Postnatal packs for stretch-mark and skin-care concerns",
               ].map((item) => (
                 <li
                   key={item}

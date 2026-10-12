@@ -29,7 +29,7 @@ export function buildMetadata({
       follow: true,
     },
     icons: {
-      icon: "/images/logo/image.png",
+      icon: "/favicon.ico",
     },
     alternates: {
       canonical,
