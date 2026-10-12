@@ -1,9 +1,15 @@
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { TreatmentTemplate } from "@/components/treatments/treatment-template";
+import { PrasavarakshaPage } from "@/components/treatments/prasavaraksha-page";
 import { treatments } from "@/content/treatments";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
+
+const prasavarakshaTitle =
+  "Prasavaraksha (Ayurvedic Postnatal Care) in Thiruvalla | Aura Ayurveda, Manjadi";
+const prasavarakshaDescription =
+  "Ask about prasavaraksha and postnatal Ayurvedic care in Thiruvalla and Manjadi. Call or WhatsApp Aura Ayurveda to discuss a consultation.";
 
 export async function generateStaticParams() {
   return treatments.map((treatment) => ({ slug: treatment.slug }));
@@ -21,6 +27,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     });
   }
 
+  if (slug === "prasavaraksha") {
+    return buildMetadata({
+      title: prasavarakshaTitle,
+      description: prasavarakshaDescription,
+      path: `/treatments/${slug}`,
+    });
+  }
+
   return buildMetadata({
     title: `${treatment.title} in Thiruvalla | ${siteConfig.businessName}`,
     description: `${treatment.shortDescription} Enquire at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
@@ -34,6 +48,10 @@ export default async function TreatmentDetailPage({ params }: { params: Promise<
 
   if (!treatment) {
     notFound();
+  }
+
+  if (slug === "prasavaraksha") {
+    return <PrasavarakshaPage />;
   }
 
   return (

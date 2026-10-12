@@ -12,6 +12,22 @@ export type Treatment = {
 
 export const treatments: Treatment[] = [
   {
+    slug: "prasavaraksha",
+    title: "Prasavaraksha (Ayurvedic Postnatal Care)",
+    shortDescription:
+      "Learn about traditional postnatal Ayurvedic care and discuss suitability with the doctor after an individual assessment.",
+    description:
+      "Prasavaraksha is a traditional postnatal care approach. Any care, timing, and visit details should be discussed with the doctor after an individual assessment.",
+    whoItsFor:
+      "Families interested in discussing traditional postnatal care after birth can ask the doctor whether a consultation is appropriate for their circumstances.",
+    whatToExpect:
+      "Start by sharing delivery and recovery details and any advice from your maternity-care team. Confirm availability, proposed care, timing, duration, and visit format directly with the clinic.",
+    category: "Women’s Wellness",
+    image: "/images/focus-areas/pregnancy-postnatal.jpg",
+    imageAlt:
+      "Illustrative postnatal-care image; not a photograph of Aura Ayurveda or a treatment",
+  },
+  {
     slug: "panchakarma-massage",
     title: "Ayurvedic Panchakarma Massage",
     shortDescription:

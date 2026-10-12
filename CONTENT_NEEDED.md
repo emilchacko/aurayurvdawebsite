@@ -39,3 +39,22 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 - [ ] Provide approved blog articles or topic approvals before publishing educational content.
 - [ ] Confirm whether the clinic wants a contact form or if phone and WhatsApp enquiries are sufficient.
 - [ ] Confirm whether the store page should continue to describe the current products and consultation offer.
+
+## Prasavaraksha page
+
+- [ ] [CONFIRM WITH CLINIC] Whether prasavaraksha/postnatal Ayurvedic care is currently offered at the Manjadi clinic and whether the page may describe it as an available service.
+- [ ] [CONFIRM WITH CLINIC] Whether oil massage (abhyanga) is offered as part of this care.
+- [ ] [CONFIRM WITH CLINIC] Whether herbal steam is offered as part of this care.
+- [ ] [CONFIRM WITH CLINIC] Whether herbal dressing is offered as part of this care.
+- [ ] [CONFIRM WITH CLINIC] Whether diet and lifestyle guidance is offered as part of this care.
+- [ ] [CONFIRM WITH CLINIC] Whether any additional care categories may be described; do not add unverified therapies.
+- [ ] Confirm the approved postnatal-care description and have the doctor review all health-related wording.
+- [ ] Confirm when a consultation may be considered after vaginal or caesarean delivery, and state that timing is decided after individual assessment and coordination with the patient's maternity-care team.
+- [ ] Confirm the number of days or sessions: currently shown as `[To be confirmed by the clinic]`; do not publish a duration until confirmed.
+- [ ] Confirm whether visits are outpatient or involve a stay: currently shown as `[To be confirmed by the clinic]`.
+- [ ] Confirm whether any package options exist: currently shown as `[To be confirmed by the clinic]`. Add no prices without explicit approval.
+- [ ] Confirm the doctor's exact approved credentials for this page; credentials are currently shown as `[To be confirmed by the clinic]`.
+- [ ] Confirm the clinic's recommended appointment process, availability, and any postnatal intake requirements. The current “what to bring” list is general and should be checked by the clinic.
+- [ ] Confirm whether the site-configured address, phone, WhatsApp number, directions link, and displayed hours are correct for enquiries about postnatal care.
+- [ ] Provide a current, clinic-owned or licensed photograph of the Manjadi clinic or an approved postnatal-care setting. The current page image is illustrative and is not a photograph of the clinic or treatment.
+- [ ] Confirm that the existing Google Maps embed points to the correct Aura Ayurveda location.

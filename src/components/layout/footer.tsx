@@ -7,6 +7,7 @@ const footerLinks = [
   { href: "/about", label: "About" },
   { href: "/ayurveda", label: "Ayurveda" },
   { href: "/treatments", label: "Treatments" },
+  { href: "/treatments/prasavaraksha", label: "Prasavaraksha care" },
   { href: "/store", label: "Store" },
   { href: "/doctor", label: "Doctor" },
   { href: "/contact", label: "Contact" },
