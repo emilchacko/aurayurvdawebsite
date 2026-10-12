@@ -7,7 +7,7 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 - [ ] Confirm the doctor's public display name and spelling (`doctorName` is currently copied from the existing site).
 - [ ] Provide the doctor's exact approved professional qualification; registration number, issuing authority, and experience only if the clinic wants them published. `doctorQualification` is intentionally a TODO and is not rendered.
 - [ ] Provide a public clinic email address, or confirm that no email should be displayed. `email` is intentionally a TODO and is omitted from the page.
-- [ ] Confirm which weekdays the existing Manjadi hours apply to and any closed days or appointment-only periods. The displayed time windows came from the existing site; the clinic's Google Maps listing currently reports different hours, so reconcile the two sources.
+- [x] Clinic confirms Aura Ayurveda, Manjadi, is open Monday–Saturday from 9:30 AM–1:00 PM and 6:00 PM–7:30 PM; Sunday is closed. Hours are displayed in India Standard Time (IST).
 - [x] Verified Aura Ayurveda coordinates from the matching Google Maps result for TK Rd, Manjadi: 9.3844839, 76.5889257.
 - [ ] Confirm the full public address, including the existing road, locality, postal code, and nearby landmark.
 - [ ] Verify that the current phone and WhatsApp numbers are correct and approved for publication.
@@ -44,7 +44,7 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 
 - [x] Clinic confirms English-language consultations are available for visitors from abroad.
 - [x] Clinic identifies Kochi and Thiruvananthapuram as nearest airports and estimates travel time at 2–3 hours; the article labels this approximate and dependent on route and traffic.
-- [ ] [CONFIRM WITH CLINIC] Verify current Aura Ayurveda opening hours and which weekdays the Manjadi time windows apply to. The article marks these details for confirmation and states India Standard Time (IST).
+- [x] Clinic confirms the Manjadi hours and Monday–Saturday schedule; Sunday is closed. The article displays all hours in India Standard Time (IST).
 - [ ] [CONFIRM WITH CLINIC] Verify the doctor's public display name and spelling before naming the doctor in article copy. The article currently refers to “our doctor” and uses Aura Ayurveda as its organization author.
 - [ ] Provide a current clinic-owned or licensed hero photograph of Kerala food, spices, or another suitable subject for this article. The current hero image is an illustrative existing site asset, not a photograph of a Kerala meal or the clinic.
 - [ ] Review the general food and health wording in the article with the clinic doctor before publication.

@@ -161,9 +161,8 @@ function renderBlock(block: BlogBlock) {
               . English-language consultations are available.
             </p>
             <p className="mt-3 text-sm leading-7 text-[#46564b]">
-              Clinic hours: {siteConfig.openingHours.manjadiDisplay}{" "}
-              <strong>[CONFIRM WITH CLINIC: weekdays and current hours]</strong>.
-              Times are India Standard Time (IST).
+              Clinic hours: {siteConfig.openingHours.display}{" "}
+              {siteConfig.openingHours.note}
             </p>
             <p className="mt-3 text-sm leading-7 text-[#46564b]">
               The nearest airports are Kochi and Thiruvananthapuram.

@@ -69,7 +69,7 @@ export default function ContactPage() {
                   {siteConfig.openingHours.display}
                 </p>
                 <p className="mt-2 text-xs leading-5 text-[#58665c]">
-                  {siteConfig.openingHours.note} Please call or WhatsApp to confirm before travelling.
+                  {siteConfig.openingHours.note}
                 </p>
               </div>
               <div className="mt-5 border-t border-[#d1d9ce] pt-4">

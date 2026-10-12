@@ -1,4 +1,5 @@
 type OpeningHoursSpecification = {
+  dayOfWeek: string[];
   opens: string;
   closes: string;
 };
@@ -27,14 +28,34 @@ export const siteConfig = {
     longitude: 76.5889257,
   },
   openingHours: {
-    note: "Weekdays for these time windows have not been confirmed.",
-    manjadiDisplay:
-      "9:30 AM–1:00 PM and 6:00 PM–7:30 PM",
+    note: "All times are India Standard Time (IST).",
     display:
-      "Aura Ayurveda, Manjadi: 9:30 AM–1:00 PM and 6:00 PM–7:30 PM. Ayurarogyam, Manakachira: 1:00 PM–6:00 PM.",
+      "Monday–Saturday: 9:30 AM–1:00 PM and 6:00 PM–7:30 PM. Sunday: Closed.",
     specifications: [
-      { opens: "09:30:00", closes: "13:00:00" },
-      { opens: "18:00:00", closes: "19:30:00" },
+      {
+        dayOfWeek: [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+        ],
+        opens: "09:30:00",
+        closes: "13:00:00",
+      },
+      {
+        dayOfWeek: [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+        ],
+        opens: "18:00:00",
+        closes: "19:30:00",
+      },
     ] as OpeningHoursSpecification[],
   },
   googleMapsUrl:

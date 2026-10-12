@@ -344,7 +344,7 @@ export default function Home() {
                 <div className="rounded-lg bg-white p-4 sm:col-span-2">
                   <p className="text-sm font-medium text-[#263332]">Opening hours</p>
                   <p className="mt-2 text-sm text-[#536260]">{siteConfig.openingHours.display}</p>
-                  <p className="mt-2 text-xs text-[#536260]">{siteConfig.openingHours.note} Please call to confirm before travelling.</p>
+                  <p className="mt-2 text-xs text-[#536260]">{siteConfig.openingHours.note}</p>
                 </div>
               </div>
 

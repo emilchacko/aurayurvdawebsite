@@ -62,7 +62,7 @@ export function Footer() {
                 WhatsApp · {siteConfig.whatsapp}
               </a>
             </li>
-            <li>Call or WhatsApp to confirm current opening hours.</li>
+            <li>{siteConfig.openingHours.display} {siteConfig.openingHours.note}</li>
             {siteConfig.socialLinks.map((url) => (
               <li key={url}>
                 <a
