@@ -9,42 +9,37 @@ const faqs = [
   {
     question: "When can prasavaraksha care start after delivery?",
     answer:
-      "There is no universal start day stated here. The doctor must first assess your delivery and recovery, review advice from your maternity-care team, and decide whether and when a consultation or any care is appropriate.",
-  },
-  {
-    question: "How long does postnatal care last?",
-    answer:
-      "The number of days or sessions has not been confirmed by the clinic. It may depend on the individual assessment and the care discussed. Please ask the clinic before making plans.",
+      "The doctor decides the timing after assessing your delivery and recovery. Please also follow the advice of your maternity-care team.",
   },
   {
     question: "Is this suitable after a C-section?",
     answer:
-      "A caesarean delivery needs individual consideration. Discuss your recovery and your obstetric team's instructions with the doctor; the doctor will assess timing and suitability before discussing any care.",
+      "The doctor considers each mother's delivery and recovery individually, including after a C-section. Share your maternity-care team's instructions so the doctor can assess whether and when care may be appropriate.",
   },
   {
     question: "What treatments are included?",
     answer:
-      "The clinic has not yet confirmed which services are offered as part of prasavaraksha. Oil massage, herbal steam, herbal dressing, and diet or lifestyle guidance are examples of categories to ask about, not a confirmed treatment list.",
+      "The mother's care includes abhyanga (massage) with a medicated water bath. The mother may also receive postnatal medicines and packs for stretch-mark and skin-care concerns, with diet advice based on the mother's and baby's conditions. The doctor discusses care individually; no specific result from a pack or medicine is promised.",
   },
   {
-    question: "Do I need an appointment?",
+    question: "Is massage and bath also provided for the baby?",
     answer:
-      "Please call or WhatsApp before travelling to ask whether an appointment is needed, what times are available, and whether a postnatal consultation can be arranged.",
+      "Massage and a medicated water bath are also provided for the baby. The doctor considers the baby's individual condition when discussing care; continue to follow advice from your baby's healthcare team.",
   },
   {
-    question: "What should I bring to the consultation?",
+    question: "What postnatal medicines are given?",
     answer:
-      "The clinic has not confirmed a required document list. You may ask whether to bring relevant discharge notes, current medicines, or advice from your maternity-care team, and follow any instructions they give you.",
+      "Postnatal medicines may be given to the mother to support strength during recovery. The doctor decides what is appropriate after an individual assessment; this page does not recommend a medicine or promise an outcome.",
   },
   {
-    question: "What should I eat during recovery?",
+    question: "What diet advice is provided?",
     answer:
-      "Food needs can vary with recovery, health history, and advice from your maternity-care team. Ask the doctor for individual guidance rather than following a general diet list from a webpage.",
+      "Diet advice is based on the individual conditions of the mother and baby. Discuss their needs with the doctor rather than relying on a general diet plan.",
   },
   {
-    question: "What does പ്രസവരക്ഷ mean, and how do I book?",
+    question: "How do I book, and what should I bring?",
     answer:
-      "പ്രസവരക്ഷ is a Malayalam term associated with traditional postnatal care. To ask about availability or arrange a consultation, call or message Aura Ayurveda; any recommendations follow an individual assessment.",
+      "Call or WhatsApp Aura Ayurveda to arrange a consultation. Bring or have available any advice from your maternity-care team that you would like to discuss; the doctor can guide you on any other information relevant to your assessment. പ്രസവരക്ഷ is a Malayalam term associated with traditional postnatal care.",
   },
 ] as const;
 
@@ -114,14 +109,14 @@ export function PrasavarakshaPage() {
               Prasavaraksha: Ayurvedic Postnatal Care in Thiruvalla
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-[#58665c] sm:text-lg sm:leading-8">
-              Prasavaraksha (പ്രസവരക്ഷ) is a traditional approach to postnatal
-              care. At Aura Ayurveda in Manjadi, Thiruvalla, a consultation is
-              the first step: the doctor considers your delivery, recovery,
-              medical advice, and preferences individually before discussing
-              whether any care is appropriate. This page is general information,
-              not a substitute for guidance from your obstetric or medical
-              team. Please contact the clinic to confirm service availability
-              and current details.
+              Prasavaraksha (പ്രസവരക്ഷ) is traditional postnatal care offered
+              at Aura Ayurveda in Manjadi, Thiruvalla. The care includes
+              abhyanga (massage) and a medicated water bath for the mother and
+              baby, along with postnatal medicines and diet advice tailored to
+              their individual conditions. The doctor assesses each mother and
+              baby individually and decides the appropriate timing and care.
+              Continue to follow advice from your maternity-care and baby-care
+              teams.
             </p>
             <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap">
               <a
@@ -161,18 +156,20 @@ export function PrasavarakshaPage() {
                 What is prasavaraksha?
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#58665c]">
-                In Kerala, prasavaraksha is a traditional term for care around
-                the postnatal period. Families may also see it written as
-                “prasava raksha” or described as “postnatal Ayurveda care”.
-                These terms refer to a traditional care context, not one
-                standard set of procedures. What may be discussed depends on
-                the person, delivery, recovery, and advice already received.
+                In Kerala, prasavaraksha is a traditional approach to care
+                after childbirth. It brings together care for the mother and
+                baby, with the exact timing and recommendations considered
+                individually by the doctor.
               </p>
               <p className="mt-3 text-sm leading-7 text-[#58665c]">
-                A conversation with the doctor can help clarify what the clinic
-                currently offers and whether a consultation makes sense for
-                your situation. No particular therapy, timetable, or outcome is
-                assumed on this page.
+                You may also see it written as “prasava raksha” or described
+                as “postnatal Ayurveda care”.
+              </p>
+              <p className="mt-3 text-sm leading-7 text-[#58665c]">
+                At Aura Ayurveda, this includes massage and a medicated water
+                bath for both mother and baby, as well as guidance and
+                postnatal care for the mother. Recommendations are discussed
+                after the doctor considers the mother&rsquo;s and baby&rsquo;s conditions.
               </p>
             </div>
             <Image
@@ -196,18 +193,17 @@ export function PrasavarakshaPage() {
               What our prasavaraksha care includes
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-              The clinic has not confirmed which of the following are offered.
-              These are categories to ask about, not a promise that they form
-              part of a package or will be suitable for you. The doctor should
-              explain any proposed steps and consider your individual
-              circumstances before you decide.
+              Prasavaraksha at Aura Ayurveda includes the following elements.
+              The doctor assesses the mother and baby individually and
+              discusses care in light of their conditions.
             </p>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {[
-                "Oil massage (abhyanga)",
-                "Herbal steam",
-                "Herbal dressing",
-                "Diet and lifestyle guidance",
+                "Mother's abhyanga (massage) with a medicated water bath",
+                "Baby's massage with a medicated water bath",
+                "Postnatal medicines for the mother to support strength during recovery, as advised by the doctor",
+                "Diet advice based on the conditions of the mother and baby",
+                "Postnatal packs for stretch-mark and skin-care concerns; no specific result is promised",
               ].map((item) => (
                 <li
                   key={item}
@@ -218,9 +214,15 @@ export function PrasavarakshaPage() {
               ))}
             </ul>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-              Ask what is currently available at Manjadi, what each option
-              involves, and whether you should first check with your maternity
-              team. Other clinic services, including{" "}
+              Parents can discuss the baby&rsquo;s massage and bath with the
+              doctor, who considers the baby&rsquo;s condition when discussing
+              this care. The mother can also ask about the postnatal medicines,
+              packs, and diet advice considered for her. The doctor assesses
+              both mother and baby individually before deciding on care.
+            </p>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
+              The doctor discusses the care and medicines with each family.
+              For other services, see{" "}
               <Link
                 href="/treatments/panchakarma-massage/"
                 className="font-semibold text-[#214d3a] underline underline-offset-4"
@@ -234,8 +236,7 @@ export function PrasavarakshaPage() {
               >
                 Kalari Varma Massage
               </Link>
-              , are separate descriptions and should not be assumed to be
-              included in, or suitable after, postnatal care.
+              .
             </p>
           </section>
 
@@ -247,43 +248,16 @@ export function PrasavarakshaPage() {
               Who it is for and when to start
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-              People who have recently given birth and their families may
-              contact the clinic to ask about a postnatal consultation,
-              including after either a vaginal delivery or a C-section. The
-              delivery type, recovery, any complications, current medicines,
-              and instructions from your obstetric team all matter when
-              considering next steps.
+              Mothers and babies may be considered for this traditional
+              postnatal care after either a vaginal delivery or a C-section.
+              The doctor assesses each mother and baby individually, taking
+              their conditions into account.
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-[#58665c]">
-              There is no start date recommended here. The doctor decides
-              whether and when to discuss care after an individual assessment;
-              please also follow your maternity-care team&rsquo;s instructions. If
-              you have a new or urgent concern, contact your maternity team or
-              appropriate medical service rather than waiting for an
-              appointment at the clinic.
-            </p>
-          </section>
-
-          <section
-            aria-labelledby="duration-format"
-            className="border-t border-[#d8ded4] py-8 sm:py-10"
-          >
-            <h2
-              id="duration-format"
-              className="font-serif text-3xl text-[#1d3026]"
-            >
-              Duration and visit format
-            </h2>
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-              The clinic has not yet confirmed how many days or sessions
-              prasavaraksha involves, whether visits are outpatient or include
-              a stay, or whether package options are available. Each detail is
-              currently{" "}
-              <strong className="font-semibold text-[#34463b]">
-                [To be confirmed by the clinic]
-              </strong>
-              . Please call or WhatsApp before making travel, childcare, or
-              recovery plans. No price or fixed schedule is published here.
+              The doctor decides when care should start after assessment.
+              Continue to follow your maternity-care team&rsquo;s guidance, and
+              contact them or an appropriate medical service about urgent
+              concerns.
             </p>
           </section>
 
@@ -295,14 +269,8 @@ export function PrasavarakshaPage() {
               Meet the doctor
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-              The existing clinic profile names {siteConfig.doctorName}. The
-              doctor&rsquo;s approved credentials for this page are{" "}
-              <strong className="font-semibold text-[#34463b]">
-                [To be confirmed by the clinic]
-              </strong>
-              ; no qualification is stated until verified. The doctor assesses
-              each patient individually and can discuss what information is
-              relevant before any care is considered. Read{" "}
+              The doctor assesses each mother and baby individually and
+              discusses care based on their conditions. Read{" "}
               <Link
                 href="/doctor/"
                 className="font-semibold text-[#214d3a] underline underline-offset-4"
@@ -328,37 +296,23 @@ export function PrasavarakshaPage() {
               How to book and what to bring
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-              Contact the clinic by phone or WhatsApp to ask whether a
-              postnatal consultation is available, whether an appointment is
-              needed, and what timings are possible. You can also use the{" "}
+              Contact the clinic by phone or WhatsApp to arrange a
+              postnatal-care consultation. You can also use the{" "}
               <Link
                 href="/contact/"
                 className="font-semibold text-[#214d3a] underline underline-offset-4"
               >
                 contact page
               </Link>{" "}
-              for clinic details. Share only information you are comfortable
-              discussing, and ask the doctor which details are useful for an
-              assessment.
+              for clinic details. You can discuss the mother&rsquo;s and baby&rsquo;s
+              conditions and any guidance already received from their
+              healthcare teams.
             </p>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-[#58665c] marker:text-[#a05435]">
-              <li>
-                Ask the clinic whether it needs any discharge notes, current
-                medicine list, or other documents; its exact list is{" "}
-                <strong className="font-semibold text-[#34463b]">
-                  [To be confirmed by the clinic]
-                </strong>
-                .
-              </li>
-              <li>
-                Bring questions about the proposed visit and share any relevant
-                instructions from your maternity-care team.
-              </li>
-              <li>
-                Confirm the appointment time, location, and visit arrangements
-                before setting out.
-              </li>
-            </ul>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#58665c]">
+              Bring any information you would like the doctor to consider and
+              follow the instructions of your maternity-care and baby-care
+              teams.
+            </p>
           </section>
 
           <section
@@ -404,10 +358,8 @@ export function PrasavarakshaPage() {
                   Location and contact
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-[#58665c]">
-                  {siteConfig.businessName} is at {siteConfig.address.display}.
-                  The clinic serves enquiries from Thiruvalla, Manjadi, and
-                  nearby areas. Please confirm the address and appointment
-                  details before travelling.
+                  {siteConfig.businessName} is at {siteConfig.address.display},
+                  in Manjadi, Thiruvalla.
                 </p>
                 <dl className="mt-4 space-y-3 text-sm leading-6 text-[#58665c]">
                   <div>
@@ -433,13 +385,6 @@ export function PrasavarakshaPage() {
                         {siteConfig.whatsapp}
                       </a>
                     </dd>
-                  </div>
-                  <div>
-                    <dt className="font-semibold text-[#34463b]">
-                      Opening hours
-                    </dt>
-                    <dd>{siteConfig.openingHours.display}</dd>
-                    <dd className="mt-1 text-xs">{siteConfig.openingHours.note} Call to confirm before travelling.</dd>
                   </div>
                 </dl>
                 <a

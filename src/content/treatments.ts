@@ -15,13 +15,13 @@ export const treatments: Treatment[] = [
     slug: "prasavaraksha",
     title: "Prasavaraksha (Ayurvedic Postnatal Care)",
     shortDescription:
-      "Learn about traditional postnatal Ayurvedic care and discuss suitability with the doctor after an individual assessment.",
+      "Postnatal massage and medicated water baths for mother and baby, with medicines and diet advice based on their individual conditions.",
     description:
-      "Prasavaraksha is a traditional postnatal care approach. Any care, timing, and visit details should be discussed with the doctor after an individual assessment.",
+      "Prasavaraksha includes abhyanga (massage) and a medicated water bath for mother and baby, postnatal medicines and skin-care packs for the mother, and diet advice based on their individual conditions.",
     whoItsFor:
       "Families interested in discussing traditional postnatal care after birth can ask the doctor whether a consultation is appropriate for their circumstances.",
     whatToExpect:
-      "Start by sharing delivery and recovery details and any advice from your maternity-care team. Confirm availability, proposed care, timing, duration, and visit format directly with the clinic.",
+      "The doctor assesses the mother and baby individually and decides appropriate timing and care based on their conditions. Continue to follow advice from their maternity-care teams.",
     category: "Women’s Wellness",
     image: "/images/focus-areas/pregnancy-postnatal.jpg",
     imageAlt:
