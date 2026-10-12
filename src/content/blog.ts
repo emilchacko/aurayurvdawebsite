@@ -17,7 +17,7 @@ export type BlogBlock =
     }
   | { type: "orderedList"; items: readonly string[] }
   | { type: "unorderedList"; items: readonly string[] }
-  | { type: "visitingInfo"; airportAndTravelInfo: string }
+  | { type: "visitingInfo" }
   | { type: "contactCta"; text: string }
   | { type: "disclaimer"; text: string };
 
@@ -159,13 +159,7 @@ export const blogPosts: readonly BlogPost[] = [
         {
           heading: "Visiting Kerala from abroad?",
           boxed: true,
-          blocks: [
-            {
-              type: "visitingInfo",
-              airportAndTravelInfo:
-                "The nearest airports are Kochi and Thiruvananthapuram. Approximate travel time from either airport is 2–3 hours, depending on route and traffic.",
-            },
-          ],
+          blocks: [{ type: "visitingInfo" }],
         },
         {
           heading: "Talk to us",
@@ -311,7 +305,6 @@ export const blogPosts: readonly BlogPost[] = [
                 "Bring a list of current medicines and any allergies.",
                 "Wear comfortable clothing and allow time to rest afterwards.",
                 "Clinic hours are in India Standard Time (IST).",
-                "Nearest airport and travel time: [PLACEHOLDER, CONFIRM WITH CLINIC].",
               ],
             },
           ],
@@ -319,13 +312,7 @@ export const blogPosts: readonly BlogPost[] = [
         {
           heading: "Visiting Kerala from abroad?",
           boxed: true,
-          blocks: [
-            {
-              type: "visitingInfo",
-              airportAndTravelInfo:
-                "Nearest airport and travel time: [PLACEHOLDER, CONFIRM WITH CLINIC].",
-            },
-          ],
+          blocks: [{ type: "visitingInfo" }],
         },
         {
           heading: "Visit Aura Ayurveda, Manjadi",

@@ -215,9 +215,7 @@ export function KalariVarmaPage() {
                 Visiting Kerala from abroad?
               </h2>
               <div className="mt-4">
-                <VisitingKeralaInfo
-                  airportAndTravelInfo="Nearest airport and travel time: [PLACEHOLDER, CONFIRM WITH CLINIC]."
-                />
+                <VisitingKeralaInfo />
               </div>
             </section>
 

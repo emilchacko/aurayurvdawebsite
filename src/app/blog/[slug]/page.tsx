@@ -8,6 +8,7 @@ import { RelatedTreatments } from "@/components/content/related-content";
 import { Container } from "@/components/ui/container";
 import { blogPosts, type BlogBlock, type BlogPost } from "@/content/blog";
 import { assertValidContentLinks } from "@/content/validate-related-content";
+import { visitorAirportInfo } from "@/content/visitor-info";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
@@ -32,7 +33,7 @@ function getBlockText(block: BlogBlock): string {
     case "disclaimer":
       return block.text;
     case "visitingInfo":
-      return `${block.airportAndTravelInfo} ${siteConfig.openingHours.display} ${siteConfig.address.display} ${siteConfig.whatsapp}`;
+      return `${visitorAirportInfo} ${siteConfig.openingHours.display} ${siteConfig.address.display} ${siteConfig.whatsapp}`;
   }
 }
 
@@ -148,9 +149,7 @@ function renderBlock(block: BlogBlock) {
     }
     case "visitingInfo":
       return (
-        <VisitingKeralaInfo
-          airportAndTravelInfo={block.airportAndTravelInfo}
-        />
+        <VisitingKeralaInfo />
       );
     case "contactCta":
       return (

@@ -63,6 +63,5 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 - [ ] [CONFIRM WITH CLINIC] How a session may feel, including whether it may be uncomfortable or painful; the FAQ leaves this unanswered pending clinic guidance.
 - [ ] [CONFIRM WITH CLINIC] Any specific oils used, and clothing and privacy arrangements; no oil names or arrangements are stated.
 - [ ] [CONFIRM WITH CLINIC] Practitioner background, including whether the practitioner is a Kalari master; the pages do not make a credential claim.
-- [ ] [CONFIRM WITH CLINIC] Nearest airport and travel time for the Kalari visitor information; the pages display a placeholder and do not reuse the separate food article's travel note.
 - [ ] Provide a current, clinic-owned or licensed photograph that accurately depicts Kalari care at Aura Ayurveda. Current imagery is explicitly labeled illustrative.
 - [ ] Prices are not published. Provide clinic-approved details only if the clinic decides to publish them later.

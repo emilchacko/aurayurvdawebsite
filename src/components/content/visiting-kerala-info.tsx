@@ -1,11 +1,8 @@
 import { siteConfig } from "@/config/site";
+import { visitorAirportInfo } from "@/content/visitor-info";
 import { getWhatsAppUrl } from "@/lib/site";
 
-export function VisitingKeralaInfo({
-  airportAndTravelInfo,
-}: {
-  airportAndTravelInfo: string;
-}) {
+export function VisitingKeralaInfo() {
   return (
     <div className="grid gap-5 lg:grid-cols-[1fr_1fr]">
       <div>
@@ -13,7 +10,7 @@ export function VisitingKeralaInfo({
           Consultations are by appointment via WhatsApp at{" "}
           <a
             href={getWhatsAppUrl(
-              `Hello, I am visiting Kerala and would like to ask about a Kalari marma massage consultation at ${siteConfig.businessName}.`,
+              `Hello, I am visiting Kerala and would like to ask about a consultation at ${siteConfig.businessName}.`,
             )}
             target="_blank"
             rel="noreferrer"
@@ -31,7 +28,7 @@ export function VisitingKeralaInfo({
           {siteConfig.openingHours.note}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#46564b]">
-          {airportAndTravelInfo}
+          {visitorAirportInfo}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#46564b]">
           The clinic is at {siteConfig.address.display}. Bring a list of
