@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
+import { LocationMapCards } from "@/components/content/location-map-cards";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -284,6 +285,19 @@ export default function Home() {
         </Container>
       </section>
 
+      <section id="locations" className="py-12 sm:py-16">
+        <Container>
+          <SectionHeading
+            eyebrow="Visit us in Thiruvalla"
+            title="Find both clinic locations."
+            description="Choose the map for Aura Ayurveda in Manjadi or Ayurarogyam in Manakachira. Check the hours for your chosen location before visiting."
+          />
+          <div className="mt-7">
+            <LocationMapCards />
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-[#edf0e8] py-12 sm:py-16">
         <Container>
           <SectionHeading
@@ -319,81 +333,6 @@ export default function Home() {
                 <p className="max-w-3xl pb-2 pt-3 text-sm leading-7 text-[#58665c]">{faq.answer}</p>
               </details>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <Container>
-          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-xl bg-[#edf0e8] p-5 sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#496d56]">Clinic location</p>
-              <h3 className="mt-4 font-serif text-4xl text-[#1a2a2a]">{siteConfig.businessName}</h3>
-              <p className="mt-4 text-base leading-8 text-[#536260]">{siteConfig.locationLabel}</p>
-
-              <div className="mt-5 rounded-lg border border-[#cdd9cf] bg-[#f8faf7] p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Also available at</p>
-                <p className="mt-2 font-serif text-2xl text-[#1d3026]">{siteConfig.sisterConcern.name}</p>
-                <p className="mt-1 text-sm text-[#536260]">{siteConfig.sisterConcern.location}</p>
-              </div>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-lg bg-white p-4">
-                  <p className="text-sm font-medium text-[#263332]">Phone</p>
-                  <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{siteConfig.phone}</a>
-                </div>
-                <div className="rounded-lg bg-white p-4">
-                  <p className="text-sm font-medium text-[#263332]">WhatsApp</p>
-                  <a href={getWhatsAppUrl(`Hello, I would like to ask about visiting ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-[#536260] underline underline-offset-4">{siteConfig.whatsapp}</a>
-                </div>
-                <div className="rounded-lg bg-white p-4 sm:col-span-2">
-                  <p className="text-sm font-medium text-[#263332]">Opening hours</p>
-                  <p className="mt-2 text-sm text-[#536260]">{siteConfig.openingHours.display}</p>
-                  <p className="mt-2 text-xs text-[#536260]">{siteConfig.openingHours.note}</p>
-                </div>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="/contact">Book a Consultation</Button>
-                <a
-                  href={getWhatsAppUrl(`Hello, I would like to enquire about visiting ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-[#d9d0c5] bg-white px-5 py-3 text-sm font-semibold text-[#1a2a2a] transition-colors hover:bg-[#f4efe8]"
-                >
-                  WhatsApp Us
-                </a>
-                <a
-                  href={siteConfig.googleMapsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-[#d9d0c5] bg-white px-5 py-3 text-sm font-semibold text-[#1a2a2a] transition-colors hover:bg-[#f4efe8]"
-                >
-                  Get Directions
-                </a>
-              </div>
-            </div>
-
-            <div className="rounded-xl border border-[#d8ded4] bg-white p-4">
-              <div className="flex items-center justify-between gap-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#496d56]">Clinic location</p>
-                <a
-                  href={siteConfig.googleMapsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium text-[#1d4f3a] underline underline-offset-4"
-                >
-                  Directions
-                </a>
-              </div>
-              <iframe
-                src={siteConfig.googleMapsEmbedUrl}
-                title={`Map showing ${siteConfig.businessName} at ${siteConfig.locationLabel}`}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="mt-4 aspect-[4/3] w-full rounded-lg border-0 sm:aspect-[16/9] lg:aspect-auto lg:h-[420px]"
-              />
-            </div>
           </div>
         </Container>
       </section>

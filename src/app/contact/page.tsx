@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { LocationMapCards } from "@/components/content/location-map-cards";
 import { ClinicJsonLd } from "@/components/seo/clinic-json-ld";
 import { isConfiguredValue, siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
@@ -102,28 +103,11 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-[#d8ded4] bg-white p-4 sm:p-5">
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Find us</p>
-                  <h2 className="mt-1 font-serif text-2xl text-[#1d3026]">{siteConfig.locationLabel}</h2>
-                </div>
-                <a
-                  href={siteConfig.googleMapsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#cbd4c9] px-4 text-sm font-semibold text-[#214d3a]"
-                >
-                  Get directions
-                </a>
-              </div>
-              <iframe
-                src={siteConfig.googleMapsEmbedUrl}
-                title={`Map showing ${siteConfig.businessName} at ${siteConfig.locationLabel}`}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="mt-4 aspect-[4/3] w-full rounded-lg border-0 sm:aspect-[16/9] lg:aspect-auto lg:h-[26rem]"
-              />
+            <div>
+              <h2 className="mb-4 font-serif text-2xl text-[#1d3026]">
+                Both locations and their maps
+              </h2>
+              <LocationMapCards />
             </div>
           </div>
         </section>

@@ -75,9 +75,11 @@ export const siteConfig = {
     name: "Ayurarogyam",
     location: "Manakachira, near Thiruvalla, Kerala",
     address: "Manakachira, near Thiruvalla, Kerala",
-    mapUrl: "https://maps.app.goo.gl/FDMo1n2TrK6qWVNi7",
+    openingHours:
+      "Monday–Saturday: 2:00 PM–6:00 PM. Sunday: Closed.",
+    mapUrl: "https://share.google/jPFCLRAwhGdUOdlMe",
     mapEmbedUrl:
-      "https://maps.google.com/maps?q=9.3818422,76.6034454&z=17&output=embed",
+      "https://maps.google.com/maps?q=Dr.+Lidiya+Thomas+%7C+Ayurarogyam+Ayurveda+Clinic,+Manakachira,+Thiruvalla&output=embed",
   },
 } as const;
 
