@@ -370,4 +370,118 @@ export const blogPosts: readonly BlogPost[] = [
       "panchakarma-massage",
     ],
   },
+  {
+    slug: "knee-back-pain-thiruvalla",
+    title:
+      "Knee and Back Pain in Thiruvalla: What to Know and When to Seek Care",
+    metaTitle: "Knee & Back Pain in Thiruvalla | Aura Ayurveda",
+    description:
+      "Looking for information about knee pain or back pain in Thiruvalla? Learn what to discuss at a consultation, when to seek urgent care, and how to contact Aura Ayurveda in Manjadi.",
+    publishedDate: "2026-10-13",
+    updatedDate: "2026-10-13",
+    author: {
+      type: "Organization",
+      name: siteConfig.businessName,
+      url: siteConfig.siteUrl,
+    },
+    heroImage: {
+      src: "/images/focus-areas/joint-muscle.jpg",
+      alt: "Illustrative image of a man holding his lower back outdoors; not a clinic patient or treatment",
+      width: 1152,
+      height: 768,
+    },
+    body: {
+      hook:
+        "If you are searching for knee pain treatment in Thiruvalla or trying to understand persistent back pain, start with a proper assessment. Pain can have different causes, and an online article cannot diagnose what is causing yours.",
+      internationalTerms: "",
+      introduction:
+        "Knee or lower-back discomfort can affect walking, work, sleep, and everyday activities. Note when the pain began, what makes it better or worse, any injury, and symptoms such as swelling, numbness, or weakness. These details can help a health professional decide what assessment or next steps may be appropriate.",
+      sections: [
+        {
+          heading: "Knee pain: details worth noting",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Knee pain may follow an injury or build gradually. Notice whether the knee is swollen, warm, stiff, unstable, or difficult to bend; whether walking or stairs make it worse; and whether you can put weight on the leg. Avoid assuming that every knee problem has the same cause or needs the same treatment.",
+            },
+            {
+              type: "unorderedList",
+              items: [
+                "Seek urgent medical assessment if a serious injury causes severe pain, marked swelling, deformity, or inability to bear weight.",
+                "Get prompt medical help for a hot, red, swollen knee, especially with fever or feeling unwell.",
+                "Tell the health professional about previous injuries, operations, medicines, and any other health conditions.",
+              ],
+            },
+          ],
+        },
+        {
+          heading: "Back pain: when to get checked",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Back pain has many possible causes. A health professional can assess your symptoms and decide whether further investigation or a particular kind of care is needed. Seek urgent care for back pain with new difficulty controlling your bladder or bowel, numbness around the groin or inner thighs, or increasing weakness in a leg. Severe pain after an accident, or back pain with fever or feeling very unwell, also needs prompt medical attention.",
+            },
+            {
+              type: "paragraph",
+              text: "If symptoms are persistent, getting worse, repeatedly returning, or interfering with daily life, arrange an assessment rather than relying only on home remedies or online advice. Until you have advice, avoid activities that sharply worsen the pain; gentle movement may be reasonable if it feels comfortable and is safe for you.",
+            },
+          ],
+        },
+        {
+          heading: "Considering an Ayurvedic consultation in Thiruvalla?",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "People looking for an Ayurvedic doctor for knee pain or back pain in Thiruvalla can contact Aura Ayurveda in Manjadi to ask whether a consultation is suitable for their concern. Any recommendations depend on an individual assessment. Traditional or supportive care should not delay urgent evaluation, replace a needed diagnosis, or mean stopping prescribed medicines or treatment.",
+            },
+            {
+              type: "paragraph",
+              text: "Before an appointment, bring a list of current medicines and relevant reports if you have them. Explain any injury, numbness, weakness, swelling, other health conditions, or treatment you are already receiving. Ask what is being proposed, why it may be appropriate, and when you should seek other medical care.",
+            },
+          ],
+        },
+        {
+          heading: "Contact Aura Ayurveda in Manjadi",
+          blocks: [
+            {
+              type: "contactCta",
+              text: "Aura Ayurveda is in Manjadi, near Thiruvalla, Kerala. Contact the clinic to ask about an appointment and whether a consultation may be appropriate for your knee or back concern.",
+            },
+            {
+              type: "disclaimer",
+              text: "This article provides general information only. It does not diagnose or treat pain and is not a substitute for advice from a qualified medical professional. Seek urgent care for severe or concerning symptoms.",
+            },
+          ],
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Where can I ask about knee or back pain in Thiruvalla?",
+        answer:
+          "Aura Ayurveda is in Manjadi, near Thiruvalla. Contact the clinic to ask whether a consultation is suitable for your concern. Seek urgent medical care for severe or concerning symptoms.",
+      },
+      {
+        question: "Can Ayurveda treat knee pain or back pain?",
+        answer:
+          "The cause of pain and appropriate care vary from person to person. Contact Aura Ayurveda to ask whether a consultation is suitable; any recommendations depend on an individual assessment. Ayurvedic care should not replace needed medical evaluation or prescribed treatment.",
+      },
+      {
+        question: "When should I seek urgent help for back pain?",
+        answer:
+          "Seek urgent care for back pain with new bladder or bowel control problems, numbness around the groin or inner thighs, increasing leg weakness, severe pain after an accident, or fever and feeling very unwell.",
+      },
+      {
+        question: "What should I bring to a consultation about joint or back pain?",
+        answer:
+          "Bring a list of current medicines and any relevant reports you have. Be ready to describe when the pain began, any injury, what affects it, and symptoms such as swelling, numbness, or weakness.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/ayurveda/", label: "Learn about an Ayurvedic consultation" },
+      { href: "/doctor/", label: "Meet the clinic doctor" },
+      { href: "/contact/", label: "Contact Aura Ayurveda in Manjadi" },
+    ],
+    relatedTreatments: [],
+  },
 ];
