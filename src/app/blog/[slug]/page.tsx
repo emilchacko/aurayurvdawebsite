@@ -24,6 +24,8 @@ function getBlockText(block: BlogBlock): string {
   switch (block.type) {
     case "paragraph":
       return block.text;
+    case "subheading":
+      return block.text;
     case "linkedParagraph":
       return `${block.before}${block.linkText}${block.after}`;
     case "orderedList":
@@ -117,6 +119,10 @@ function renderBlock(block: BlogBlock) {
           {block.text}
         </p>
       );
+    case "subheading":
+      return (
+        <h3 className="font-serif text-2xl text-[#1d3026]">{block.text}</h3>
+      );
     case "linkedParagraph":
       return (
         <p key={block.linkText} className="text-base leading-7 text-[#46564b]">
@@ -164,13 +170,14 @@ function renderBlock(block: BlogBlock) {
             </a>
             <a
               href={getWhatsAppUrl(
-                `Hello, I would like to book a consultation at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
+                block.whatsappMessage ??
+                  `Hello, I would like to book a consultation at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
               )}
               target="_blank"
               rel="noreferrer"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/70 px-5 text-sm font-semibold text-white"
             >
-              WhatsApp
+              {block.whatsappLabel ?? "WhatsApp"}
             </a>
             <Link
               href="/contact/"

@@ -97,7 +97,7 @@ export const treatments: Treatment[] = [
     category: "Skin Care",
     image: "/images/focus-areas/skin-wellness.jpg",
     imageAlt: "Facial skin care, illustrative image",
-    relatedPosts: [],
+    relatedPosts: ["ayurvedic-skincare-different-skin-types-prakriti"],
   },
   {
     slug: "ayurvedic-hair-spa",

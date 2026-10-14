@@ -8,6 +8,7 @@ export type BlogLink = {
 
 export type BlogBlock =
   | { type: "paragraph"; text: string }
+  | { type: "subheading"; text: string }
   | {
       type: "linkedParagraph";
       before: string;
@@ -18,7 +19,12 @@ export type BlogBlock =
   | { type: "orderedList"; items: readonly string[] }
   | { type: "unorderedList"; items: readonly string[] }
   | { type: "visitingInfo" }
-  | { type: "contactCta"; text: string }
+  | {
+      type: "contactCta";
+      text: string;
+      whatsappMessage?: string;
+      whatsappLabel?: string;
+    }
   | { type: "disclaimer"; text: string };
 
 export type BlogSection = {
@@ -62,6 +68,294 @@ export type BlogPost = {
 };
 
 export const blogPosts: readonly BlogPost[] = [
+  {
+    slug: "ayurvedic-skincare-different-skin-types-prakriti",
+    title: "Why Ayurvedic Skincare Is Different for Every Skin Type",
+    metaTitle: "Ayurvedic Skincare for Every Skin Type | Aura Ayurveda",
+    description:
+      "Learn how Ayurveda understands Prakriti and approaches dry, oily and sensitive skin, including eczema-prone skin and everyday skin-care habits.",
+    publishedDate: "2026-10-14",
+    updatedDate: "2026-10-14",
+    author: {
+      type: "Organization",
+      name: siteConfig.businessName,
+      url: siteConfig.siteUrl,
+    },
+    heroImage: {
+      src: "/images/focus-areas/skin-wellness.jpg",
+      alt: "Illustrative image of a person receiving facial care; not an Aura Ayurveda treatment or result",
+      width: 640,
+      height: 420,
+    },
+    body: {
+      hook:
+        "A cleanser or moisturiser that feels comfortable for one person may leave another feeling tight, greasy or irritated. Ayurvedic skincare starts from the idea that care should be considered in the context of the individual, rather than chosen from a single routine for everyone. At Aura Ayurveda in Manjadi, near Thiruvalla, Kerala, people can ask about an individual consultation for their concerns.",
+      internationalTerms: "",
+      introduction:
+        "In Ayurveda, Prakriti describes a person's natural constitution through Vata, Pitta and Kapha. It offers one way to understand individual patterns and needs. It is different from modern skin labels such as dry or oily. Your skin can also change with weather, age, health, medicines and the products you use.",
+      sections: [
+        {
+          heading: "What is Prakriti in Ayurveda?",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Prakriti is the Ayurvedic understanding of a person's constitution. It is described through Vata, Pitta and Kapha, also called doshas. Each person has a unique combination. In traditional descriptions, Vata is linked with movement and dryness, Pitta with heat, and Kapha with stability and moisture.",
+            },
+            {
+              type: "subheading",
+              text: "Prakriti is not simply another name for skin type",
+            },
+            {
+              type: "paragraph",
+              text: "Dry, oily, combination and sensitive are common ways to describe how skin looks and feels. Prakriti describes a person's wider constitution, so it is not the same as a modern skin-type label. Ayurveda also uses the term Vikriti for a person's current state, which may differ from their usual tendencies. Weather, stress, sleep, health, hormones, age, medicines and skin products can all affect the skin.",
+            },
+            {
+              type: "paragraph",
+              text: "Terms such as Vata skin and Pitta skin describe traditional tendencies. They are a starting point for understanding individual needs, not fixed categories.",
+            },
+          ],
+        },
+        {
+          heading: "Vata and skin: when skin tends towards dryness",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Ayurveda associates Vata tendencies with dryness, roughness and tightness. Skin may feel drier after washing or in cold, windy weather. These are common patterns, but everyone's skin is different.",
+            },
+            {
+              type: "subheading",
+              text: "A gentle, nourishing approach",
+            },
+            {
+              type: "paragraph",
+              text: "For dry skin, keep cleansing gentle and use a moisturiser that feels comfortable. Choose lukewarm water instead of a very hot shower, and avoid scrubbing or exfoliating if it makes your skin feel tight or sore. Natural oils and herbal products do not suit everyone, so introduce new products carefully.",
+            },
+            {
+              type: "paragraph",
+              text: "Vata skin is one traditional way of describing dryness. If very dry or itchy skin persists, ask a health professional for advice.",
+            },
+          ],
+        },
+        {
+          heading: "Pitta and skin: when sensitivity is a concern",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Pitta skin is traditionally associated with sensitivity, warmth, redness, irritation or occasional breakouts. Sun, heat or fragranced products may bother some people. These signs can have different causes, so notice what affects your skin.",
+            },
+            {
+              type: "subheading",
+              text: "Keep the routine calm and uncomplicated",
+            },
+            {
+              type: "paragraph",
+              text: "For sensitive skin, use a mild cleanser and a moisturiser you already know suits you. Try new products one at a time and stop using one if it irritates your skin. Protect yourself from the sun with shade, clothing and a suitable sunscreen. Avoid strong products or home remedies on irritated skin.",
+            },
+            {
+              type: "paragraph",
+              text: "An Ayurvedic skincare routine for sensitive skin can be simple and personal. If irritation continues or gets worse, ask a health professional for advice.",
+            },
+          ],
+        },
+        {
+          heading: "Kapha and skin: when oiliness or congestion is noticed",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Kapha tendencies are traditionally linked with oiliness, moisture and a heavier feel. You may notice shine, visible pores or occasional blemishes. Climate, hormones, medicines and skin-care habits can also affect oiliness.",
+            },
+            {
+              type: "subheading",
+              text: "Cleanse without over-cleansing",
+            },
+            {
+              type: "paragraph",
+              text: "For oily skin, cleanse gently and choose products that do not feel too heavy. Oily skin can still need moisturiser. Harsh cleansers and scrubbing may irritate it, so choose gentle products and avoid picking at blemishes.",
+            },
+            {
+              type: "paragraph",
+              text: "Kapha skin is a traditional description, not a diagnosis. Ask a health professional about persistent or painful acne, scarring or breakouts that affect your wellbeing.",
+            },
+          ],
+        },
+        {
+          heading: "An Ayurvedic approach to dry skin",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Dry skin can have many causes. Dry weather, air conditioning, frequent washing, hot showers and harsh cleansers can all play a part. Some health conditions and medicines can affect the skin too. If your skin is very dry, cracked or keeps bothering you, ask a health professional for advice.",
+            },
+            {
+              type: "subheading",
+              text: "Review the everyday habits around your skin",
+            },
+            {
+              type: "unorderedList",
+              items: [
+                "Use lukewarm water and keep baths or showers comfortable rather than very hot.",
+                "Choose a gentle cleanser and use it where needed instead of repeatedly washing or scrubbing.",
+                "Apply an appropriate moisturiser after bathing, while the skin is still slightly damp.",
+                "Pause exfoliants or fragranced products if they sting, burn or worsen dryness.",
+                "Notice whether weather, work conditions, a new product or a medicine coincides with changes; discuss medication concerns with the prescriber rather than stopping it yourself.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "Good sleep, regular meals and drinking enough water support general wellbeing. They are part of a wider approach to self-care. An Ayurvedic consultation can consider your skin and daily habits together.",
+            },
+          ],
+        },
+        {
+          heading: "Ayurveda, eczema and sensitive skin",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Eczema can make skin dry, itchy and easily irritated. Ayurveda takes an individual approach to wellbeing and skin care. A health professional can help assess ongoing, recurring or severe symptoms and discuss suitable care.",
+            },
+            {
+              type: "subheading",
+              text: "Prioritise skin-barrier care and appropriate assessment",
+            },
+            {
+              type: "paragraph",
+              text: "If your skin is eczema-prone or very sensitive, keep your routine simple, avoid known irritants and notice what seems to trigger symptoms. Fragrance, essential oils and herbal products may irritate some people. Ask a health professional before trying a new product on inflamed or broken skin.",
+            },
+            {
+              type: "paragraph",
+              text: "An Ayurvedic consultation can include your skin concerns and overall wellbeing. Continue any care recommended by your health professional. Get medical advice if symptoms quickly worsen, the skin becomes painful, or you notice possible signs of infection such as increasing warmth or pus.",
+            },
+            {
+              type: "linkedParagraph",
+              before: "If acne is your main concern, read more about ",
+              linkText: "the clinic's Ayurvedic acne-care approach",
+              href: "/treatments/ayurvedic-acne-treatment/",
+              after:
+                ". A health professional can advise you about persistent or severe acne.",
+            },
+          ],
+        },
+        {
+          heading: "Ayurvedic skincare for healthy, glowing skin",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Healthy skin is supported by everyday care, not instant fixes. Cleanse gently, moisturise when needed and protect your skin from the sun. Sleep, nourishing food and ways to manage stress also support general wellbeing.",
+            },
+            {
+              type: "paragraph",
+              text: "Natural skincare does not have to mean lots of products or homemade remedies. A simple routine that suits your skin is a good place to start. If you want to explore Ayurvedic skin care, discuss your goals, allergies and current products during a consultation.",
+            },
+            {
+              type: "paragraph",
+              text: "Ask a health professional about uneven skin tone, pigmentation, persistent redness or any new or changing marks.",
+            },
+          ],
+        },
+        {
+          heading: "How to build a skin-care routine that suits you",
+          blocks: [
+            {
+              type: "orderedList",
+              items: [
+                "Start with what your skin is doing now. Note dryness, oiliness, irritation, breakouts and when they tend to appear.",
+                "Keep the basics consistent for a while: gentle cleansing, suitable moisturisation and sun protection.",
+                "Introduce one new product at a time so you can notice an unwanted reaction. Stop using it if it causes significant irritation.",
+                "Consider context such as climate, work, sleep, stress, health changes, medicines and the products already in your routine.",
+                "Ask a health professional for guidance if symptoms persist, are severe or keep returning.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "Prakriti is one part of understanding your individual needs. If a skin problem continues, seek professional advice as well.",
+            },
+          ],
+        },
+        {
+          heading: "When to seek professional skin care",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Ask a health professional about a rash that persists or worsens, severe or painful acne, repeated skin infections, unexplained pigmentation or a changing mark. Seek urgent care for a severe allergic reaction, rapidly spreading rash, major swelling or trouble breathing.",
+            },
+            {
+              type: "paragraph",
+              text: "If you take prescribed medicines, speak with the clinician who prescribed them before changing your treatment or adding medicines, supplements or skin products. Share what you use during any consultation.",
+            },
+          ],
+        },
+        {
+          heading: "Explore an individualized Ayurvedic consultation",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "At a consultation, you can explain your concerns, share your health history and ask about care options. Recommendations are based on your individual needs. You can also ask when another health professional should assess a concern.",
+            },
+            {
+              type: "linkedParagraph",
+              before: "Learn how to ask about an ",
+              linkText: "Ayurvedic consultation",
+              href: "/ayurveda/",
+              after:
+                " or find practical information about the clinic and directions on the contact page.",
+            },
+          ],
+        },
+        {
+          heading: "Your skin is unique. Your skincare can be too.",
+          blocks: [
+            {
+              type: "contactCta",
+              text: `Your skin is unique. If you would like to discuss Ayurvedic skin care, message ${siteConfig.businessName} in Manjadi, Thiruvalla on WhatsApp.`,
+              whatsappMessage: `Hello, I would like to ask about Ayurvedic skin care at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
+              whatsappLabel: "Ask about skin care on WhatsApp",
+            },
+            {
+              type: "disclaimer",
+              text: "This article provides general information and does not replace professional medical advice. Please speak with a health professional about persistent or severe skin symptoms.",
+            },
+          ],
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "What is Prakriti skin type in Ayurveda?",
+        answer:
+          "Prakriti is a traditional Ayurvedic concept describing a person's constitution through Vata, Pitta and Kapha. It is broader than modern skin-type labels and is not a medical diagnosis.",
+      },
+      {
+        question: "How does Ayurveda approach eczema-prone skin?",
+        answer:
+          "Ayurveda takes an individual approach to wellbeing and skin care. A health professional can assess eczema symptoms and discuss suitable care. You can also ask an Ayurvedic practitioner how an individual consultation may support your overall skin-care approach.",
+      },
+      {
+        question: "What is an Ayurvedic skincare routine for dry skin?",
+        answer:
+          "A gentle approach may include lukewarm water, a mild cleanser, suitable moisturisation and avoiding products or exfoliation that irritate the skin. Ongoing or severe dryness should be discussed with a health professional.",
+      },
+      {
+        question: "Is Ayurvedic skincare suitable for sensitive skin?",
+        answer:
+          "Ayurvedic skin care is considered individually. Keep your routine gentle, avoid known triggers and introduce new products carefully. Ask a health professional about persistent or worsening symptoms.",
+      },
+      {
+        question: "Can my current skin condition differ from my Prakriti?",
+        answer:
+          "Yes. In Ayurvedic thought, a person's current state may differ from their constitutional tendencies. Weather, age, health, medicines and skin-care habits can also affect how skin feels.",
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/treatments/ayurvedic-acne-treatment/",
+        label: "Explore Ayurvedic acne care",
+      },
+      { href: "/treatments/", label: "Browse Ayurvedic treatments" },
+      { href: "/ayurveda/", label: "Learn about an Ayurvedic consultation" },
+      { href: "/about/", label: "About Aura Ayurveda" },
+      { href: "/contact/", label: "Contact and directions" },
+    ],
+    relatedTreatments: ["ayurvedic-acne-treatment"],
+  },
   {
     slug: "food-as-medicine-ayurveda",
     title: "Food as Medicine: The Ayurvedic Way of Eating",
