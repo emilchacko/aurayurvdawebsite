@@ -21,9 +21,9 @@ export const treatments: Treatment[] = [
     description:
       "Prasavaraksha includes abhyanga (massage) and a medicated water bath for mother and baby, postnatal medicines and skin-care packs for the mother, and diet advice based on their individual conditions.",
     whoItsFor:
-      "Families interested in discussing traditional postnatal care after birth can ask the doctor whether a consultation is appropriate for their circumstances.",
+      "Postnatal care for mothers and babies, planned by the doctor after an individual assessment.",
     whatToExpect:
-      "The doctor assesses the mother and baby individually and decides appropriate timing and care based on their conditions. Continue to follow advice from their maternity-care teams.",
+      "The doctor assesses the mother and baby individually and plans care around their conditions and recovery. Continue to follow advice from their maternity-care teams.",
     category: "Women’s Wellness",
     image: "/images/focus-areas/pregnancy-postnatal.jpg",
     imageAlt:
@@ -36,11 +36,11 @@ export const treatments: Treatment[] = [
     shortDescription:
       "A doctor-guided oil massage selected as part of an individualized Panchakarma or wellness plan.",
     description:
-      "Panchakarma-related therapies are chosen only after a consultation. Massage may be one part of a broader plan when appropriate for the individual.",
+      "The doctor plans Panchakarma care after a consultation. An oil massage can be included as part of an individual wellness plan.",
     whoItsFor:
-      "People considering an oil massage as part of a broader Ayurvedic plan can discuss their goals and circumstances with the doctor first.",
+      "People exploring an oil massage as part of an Ayurvedic wellness plan can discuss their goals with the doctor.",
     whatToExpect:
-      "Ask which therapy and oils, if any, would be used, how the session is carried out, and whether preparation or follow-up is recommended. Confirm the proposed steps with the clinic before booking.",
+      "The doctor explains the recommended therapy and session steps before you book. Contact the clinic to confirm oils, preparation and follow-up details.",
     category: "Massage & Therapies",
     image: "/images/focus-areas/ayurvedic-therapies.jpg",
     imageAlt: "Ayurvedic massage therapy, illustrative image",
@@ -50,13 +50,13 @@ export const treatments: Treatment[] = [
     slug: "kalari-varma-massage",
     title: "Kalari Marma (Varma) Massage",
     shortDescription:
-      "A traditional Kerala therapy, considered by the doctor after an individual consultation.",
+      "A Kerala massage practice planned by the doctor after an individual consultation.",
     description:
-      "A traditional Kerala hands-on therapy connected to kalaripayattu and its knowledge of marma, also called varma, points. The doctor assesses each person and decides what is appropriate.",
+      "Kalari marma (varma) massage is a Kerala hands-on practice connected to kalaripayattu. The doctor plans each session after an individual consultation.",
     whoItsFor:
-      "People interested in a traditional Kerala therapy can discuss their circumstances with the doctor before deciding whether to proceed.",
+      "People interested in Kalari marma massage can discuss their needs and health history with the doctor.",
     whatToExpect:
-      "A Kalari session begins with a consultation with the doctor. The doctor discusses your needs and decides what is appropriate for you.",
+      "A Kalari session begins with a doctor consultation. The doctor reviews your needs and health history, then plans your individual session.",
     category: "Massage & Therapies",
     image: "/images/focus-areas/ayurvedic-therapies.jpg",
     imageAlt:
@@ -73,11 +73,11 @@ export const treatments: Treatment[] = [
     shortDescription:
       "A scalp assessment followed by suitable cleansing, care guidance, and follow-up for flakes or irritation.",
     description:
-      "Dandruff and scalp irritation can have different causes. A consultation helps identify your symptoms and select an appropriate scalp-care approach.",
+      "The doctor reviews dandruff, scalp irritation and your current care routine, then explains a personalized scalp-care approach.",
     whoItsFor:
       "People concerned about visible flakes or scalp irritation can discuss their symptoms and current care routine with the doctor.",
     whatToExpect:
-      "Ask what scalp-care steps or products, if any, may be discussed, whether preparation is needed, and what follow-up may involve. The clinic can explain the proposed approach before you decide.",
+      "The doctor reviews your symptoms and current routine, then explains the recommended scalp-care steps. Contact the clinic to confirm products, preparation and follow-up details.",
     category: "Hair & Scalp",
     image: "/images/focus-areas/hair-scalp.jpg",
     imageAlt: "Hair and scalp care, illustrative image",
@@ -89,11 +89,11 @@ export const treatments: Treatment[] = [
     shortDescription:
       "Individual skin guidance based on your acne concerns, skin-care routine, and health history.",
     description:
-      "Acne care begins with understanding your skin and its history. Recommendations are tailored after assessment rather than using the same routine for everyone.",
+      "The doctor reviews your acne concerns, skin-care routine and health history, then plans personalized skin care.",
     whoItsFor:
       "People seeking guidance about acne and their skin-care routine can discuss their concerns and health history with the doctor.",
     whatToExpect:
-      "Ask what skin-care steps or products, if any, may be discussed, whether preparation is needed, and what follow-up may involve. The clinic can explain the proposed approach before you decide.",
+      "The doctor discusses your skin-care plan and explains recommended products, preparation and follow-up. Contact the clinic to confirm details before booking.",
     category: "Skin Care",
     image: "/images/focus-areas/skin-wellness.jpg",
     imageAlt: "Facial skin care, illustrative image",
@@ -103,13 +103,13 @@ export const treatments: Treatment[] = [
     slug: "ayurvedic-hair-spa",
     title: "Ayurvedic Hair Spa",
     shortDescription:
-      "A relaxing hair and scalp session that may include cleansing, suitable oils, and gentle massage.",
+      "A relaxing hair and scalp session planned around your scalp and hair-care preferences.",
     description:
-      "The hair-spa approach is selected to suit your scalp and hair-care preferences, with product and technique choices discussed before the session.",
+      "The clinic discusses your scalp, hair-care preferences, products and session steps with you before booking.",
     whoItsFor:
-      "People considering a hair and scalp care session can ask about the products, steps, and whether it fits their preferences.",
+      "People looking for a dedicated hair and scalp care session.",
     whatToExpect:
-      "Ask what steps and products are included, how long the visit may take, and what after-care is recommended. Confirm the session details with the clinic before booking.",
+      "Contact the clinic to confirm the session steps, products, duration and after-care before booking.",
     category: "Hair & Scalp",
     image: "/images/focus-areas/hair-scalp.jpg",
     imageAlt: "Hair and scalp care, illustrative image",
@@ -119,13 +119,13 @@ export const treatments: Treatment[] = [
     slug: "varicose-vein-care",
     title: "Varicose Vein Care",
     shortDescription:
-      "A consultation to discuss vein-related symptoms and determine safe, appropriate supportive care.",
+      "A consultation to review vein-related symptoms and discuss an individualized care plan.",
     description:
-      "Visible or uncomfortable varicose veins should be assessed carefully. The first step is to review symptoms and discuss whether supportive Ayurvedic care is appropriate alongside medical advice.",
+      "The doctor reviews your symptoms and health history to plan Ayurvedic supportive care alongside appropriate medical advice.",
     whoItsFor:
-      "People with visible or uncomfortable varicose veins can use a consultation to discuss symptoms and appropriate next steps, including medical assessment.",
+      "People with visible or uncomfortable varicose veins can discuss their symptoms and care plan with the doctor.",
     whatToExpect:
-      "Discuss your symptoms and any relevant medical advice with the clinic before deciding whether to book. Ask what the proposed session involves and seek appropriate medical assessment for concerns about your veins.",
+      "Discuss your symptoms, any medical advice you have received and the proposed session with the doctor. Seek medical assessment for concerns about your veins.",
     category: "Circulation & Wellness",
     image: "/images/focus-areas/varicose-veins.jpg",
     imageAlt: "Diagram comparing normal and varicose veins in the leg",

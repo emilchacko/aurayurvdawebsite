@@ -327,42 +327,64 @@ export default async function BlogArticlePage({
               </p>
             ) : null}
 
-            {post.body.sections.map((section) => (
-              <section
-                key={section.heading}
-                className={
-                  section.boxed
-                    ? "rounded-xl border border-[#d8ded4] bg-[#edf0e8] p-5 sm:p-7"
-                    : "space-y-4"
-                }
-              >
-                {section.heading === "Talk to us" ? (
-                  <div className="rounded-xl bg-[#214d3a] p-5 text-white sm:p-7">
-                    <h2 className="font-serif text-3xl text-white">
-                      {section.heading}
-                    </h2>
-                    {section.blocks.map((block) => (
-                      <div className="mt-4" key={block.type}>
-                        {renderBlock(block)}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <>
-                    <h2 className="font-serif text-3xl text-[#1d3026]">
-                      {section.heading}
-                    </h2>
-                    <div className="space-y-4">
-                      {section.blocks.map((block, index) => (
-                        <div key={`${block.type}-${index}`}>
+            {post.body.sections
+              .filter((section) => !section.afterArticle)
+              .map((section) => (
+                <section
+                  key={section.heading}
+                  className={
+                    section.boxed
+                      ? "rounded-xl border border-[#d8ded4] bg-[#edf0e8] p-5 sm:p-7"
+                      : "space-y-4"
+                  }
+                >
+                  {section.heading === "Talk to us" ? (
+                    <div className="rounded-xl bg-[#214d3a] p-5 text-white sm:p-7">
+                      <h2 className="font-serif text-3xl text-white">
+                        {section.heading}
+                      </h2>
+                      {section.blocks.map((block) => (
+                        <div className="mt-4" key={block.type}>
                           {renderBlock(block)}
                         </div>
                       ))}
                     </div>
-                  </>
-                )}
-              </section>
-            ))}
+                  ) : (
+                    <>
+                      <h2 className="font-serif text-3xl text-[#1d3026]">
+                        {section.heading}
+                      </h2>
+                      <div className="space-y-4">
+                        {section.blocks.map((block, index) => (
+                          <div key={`${block.type}-${index}`}>
+                            {renderBlock(block)}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </section>
+              ))}
+
+            {post.body.sections
+              .filter((section) => section.afterArticle)
+              .map((section) => (
+                <section
+                  key={section.heading}
+                  className="rounded-xl bg-[#214d3a] p-5 text-white sm:p-7"
+                >
+                  <h2 className="font-serif text-3xl text-white">
+                    {section.heading}
+                  </h2>
+                  <div className="mt-4 space-y-4">
+                    {section.blocks.map((block, index) => (
+                      <div key={`${block.type}-${index}`}>
+                        {renderBlock(block)}
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ))}
 
             <section aria-labelledby="related-reading">
               <h2

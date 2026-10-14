@@ -9,7 +9,7 @@ import { getWhatsAppUrl, withBasePath } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: `Ayurvedic Treatments in Thiruvalla | ${siteConfig.businessName}`,
-  description: `Explore Ayurvedic services at ${siteConfig.businessName} in ${siteConfig.locationLabel}. Ask the clinic about suitability and availability.`,
+  description: `Explore Ayurvedic services at ${siteConfig.businessName} in ${siteConfig.locationLabel}. The doctor plans care after an individual consultation.`,
   path: "/treatments",
 });
 
@@ -19,14 +19,14 @@ export default function TreatmentsPage() {
       <section className="py-10 sm:py-14">
         <SectionHeading
           as="h1"
-          eyebrow="Ayurvedic treatments · Manjadi, Thiruvalla"
+          eyebrow="Ayurvedic treatments · Thiruvalla"
           title="Understand the service before you choose it."
-          description={`Browse Ayurvedic consultations and therapies available at ${siteConfig.businessName}. Ask the clinic about suitability and availability.`}
+          description={`Browse Ayurvedic consultations and therapies at ${siteConfig.businessName}. The doctor recommends a care plan after an individual assessment.`}
         />
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-y border-[#d8ded4] py-4">
           <p className="text-sm text-[#58665c]">Not sure where to start? Ask a question first.</p>
-          <a href={getWhatsAppUrl(`Hello, I would like to ask which Ayurvedic service at ${siteConfig.businessName} in ${siteConfig.locationLabel} may be appropriate for me.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white">Ask on WhatsApp</a>
+          <a href={getWhatsAppUrl(`Hello, I would like to ask about Ayurvedic care at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white">Ask on WhatsApp</a>
         </div>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">

@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: `Contact ${siteConfig.businessName} | Ayurveda Clinic in Manjadi, Thiruvalla`,
+  title: `Contact ${siteConfig.businessName} | Ayurveda Clinic in Thiruvalla`,
   description: `Call or WhatsApp ${siteConfig.businessName}, an Ayurvedic clinic in ${siteConfig.locationLabel}, to ask about appointments and directions.`,
   path: "/contact",
 });

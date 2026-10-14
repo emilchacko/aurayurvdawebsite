@@ -25,7 +25,7 @@ export const siteConfig = {
     display:
       "TK Rd, Manjadi, Thiruvalla, Kerala 689105, near Chikkos Fried Chicken",
   },
-  locationLabel: "Manjadi, near Thiruvalla, Kerala",
+  locationLabel: "Thiruvalla, Kerala",
   geo: {
     latitude: 9.3844839,
     longitude: 76.5889257,
@@ -70,7 +70,7 @@ export const siteConfig = {
     "https://www.facebook.com/Drlidiya.thomas",
     "https://www.instagram.com/ayurarogyam1987/",
   ],
-  serviceAreas: ["Manjadi", "Thiruvalla", "Kuttapuzha"],
+  serviceAreas: ["Thiruvalla", "Manjadi", "Kuttapuzha","Kerala","Tamil Nadu","India","Chennai","Banglore"],
   sisterConcern: {
     name: "Ayurarogyam",
     location: "Manakachira, near Thiruvalla, Kerala",

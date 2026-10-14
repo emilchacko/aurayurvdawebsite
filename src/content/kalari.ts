@@ -1,18 +1,18 @@
 import { siteConfig } from "@/config/site";
 
 export const kalariSessionText =
-  "At Aura Ayurveda, a Kalari session begins with a consultation with the doctor. After understanding your needs and concerns, the doctor prescribes a Kalari session suited to you, so the plan is not the same for everyone. The session itself mostly consists of a body and head massage, done with herbal oil in the Kerala tradition. Afterwards, you are given time to rest. Because the session is prescribed individually, the doctor decides what is appropriate for you. Please tell the doctor in advance about any injuries, recent surgery, skin conditions, pregnancy, blood pressure or heart conditions, or blood-thinning medicines.";
+  "At Aura Ayurveda, a Kalari session begins with a consultation. The doctor reviews your needs and health history, then plans your individual session. Contact the clinic to confirm what to expect before booking. Tell the doctor about any injuries, recent surgery, skin conditions, pregnancy, blood pressure or heart conditions, or blood-thinning medicines.";
 
 export const kalariFaq = [
   {
     question: "What is Kalari marma massage?",
     answer:
-      "It is a hands-on Kerala therapy connected to kalaripayattu and the traditional understanding of marma points. At Aura Ayurveda, the doctor decides whether and how a session is appropriate after consultation.",
+      "It is a hands-on Kerala massage practice connected to kalaripayattu and the Ayurvedic understanding of marma points. At Aura Ayurveda, each session is prescribed by the doctor after consultation.",
   },
   {
     question: "What is the difference between marma and varma?",
     answer:
-      "The terms describe the same traditional idea; marma is a widely used spelling, while varma is common in Kerala and Tamil traditions.",
+      "Marma is the spelling used widely across India; varma is common in Kerala and Tamil traditions.",
   },
   {
     question: "What does a session involve?",
@@ -21,7 +21,7 @@ export const kalariFaq = [
   {
     question: "Is it painful?",
     answer:
-      "The clinic has not confirmed how a session may feel for each person. [CONFIRM WITH CLINIC: Ask the clinic what to expect. The doctor decides what is appropriate after consultation.]",
+      "[CONFIRM WITH CLINIC: Describe how a session may feel and what clients should expect.]",
   },
   {
     question: "How long is a session?",
@@ -30,6 +30,6 @@ export const kalariFaq = [
   },
   {
     question: "Can I book while visiting Kerala from abroad?",
-    answer: `You can ask about an appointment by WhatsApp at ${siteConfig.whatsapp}. ${siteConfig.englishConsultationText} The doctor decides what is appropriate after the consultation; please confirm appointment availability and travel details with the clinic.`,
+    answer: `Contact the clinic by WhatsApp at ${siteConfig.whatsapp} to arrange a consultation. ${siteConfig.englishConsultationText} Confirm appointment availability and travel details with the clinic.`,
   },
 ] as const;

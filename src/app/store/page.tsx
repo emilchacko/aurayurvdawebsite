@@ -25,7 +25,7 @@ const products = [
     name: "Prasavaraksha Medicines Kit",
     category: "Women’s wellness",
     description:
-      "A postpartum care kit. The doctor can confirm the contents and whether it is suitable for you.",
+      "A postpartum care kit. Contact the doctor to review its contents and how it fits your care plan.",
     image: "/images/store/prasavaraksha-kit.png",
     action: "Ask about this kit",
     message: "Hello, I would like to enquire about the Prasavaraksha medicines kit. Could you share the contents, price, availability and suitability details?",
@@ -43,7 +43,7 @@ const products = [
     name: "Ayurvedic Hair Wash",
     category: "Ayurvedic hair care",
     description:
-      "A herbal wash for scalp and hair care. Contact us to discuss whether it suits your needs.",
+      "A herbal wash for scalp and hair care. Contact the clinic for ingredient and usage guidance.",
     image: "/images/store/ayurvedic-hair-wash.png",
     action: "Ask about this product",
     message: "Hello, I would like to enquire about the Ayurvedic hair wash. Could you share the ingredients, price, availability and usage guidance?",
@@ -59,7 +59,7 @@ export default function StorePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#a05435]">{siteConfig.businessName} · {siteConfig.locationLabel}</p>
             <h1 className="mt-3 max-w-2xl font-serif text-4xl leading-[1.08] text-[#1d3026] sm:text-5xl">Wellness essentials, with a real person to ask.</h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#58665c] sm:text-lg">
-              Browse consultations and selected Ayurvedic products. Message us to confirm current price, availability, ingredients and whether an item is right for you.
+              Browse consultations and selected Ayurvedic products. Message us for current prices, availability, ingredients and usage guidance.
             </p>
           </div>
           <a href={getWhatsAppUrl(`Hello, I would like help choosing a ${siteConfig.businessName} product or service.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white transition hover:bg-[#183b2c]">

@@ -11,7 +11,7 @@ import { withBasePath } from "@/lib/site";
 export const metadata = buildMetadata({
   title: `Ayurveda Blog | ${siteConfig.businessName}, Kerala`,
   description:
-    "Read practical articles about Ayurveda, food, and Kerala traditions from Aura Ayurveda in Manjadi, near Thiruvalla.",
+    "Read practical articles about Ayurveda, food, and Kerala traditions from Aura Ayurveda in Thiruvalla, Kerala.",
   path: "/blog",
 });
 

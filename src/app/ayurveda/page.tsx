@@ -16,9 +16,9 @@ export default function AyurvedaPage() {
       <section className="py-10 sm:py-14">
         <SectionHeading
           as="h1"
-          eyebrow={`Ayurveda · ${siteConfig.businessName}, Manjadi`}
-          title="Start with your questions, not a one-size-fits-all plan."
-          description={`An Ayurvedic consultation at ${siteConfig.businessName} is a chance to discuss your concerns, history and goals with ${siteConfig.doctorName}, then understand possible next steps. The right approach depends on an individual assessment.`}
+          eyebrow={`Ayurveda · ${siteConfig.businessName}, Thiruvalla`}
+          title="Personalized Ayurvedic care starts with a consultation."
+          description={`At ${siteConfig.businessName}, ${siteConfig.doctorName} reviews your concerns, health history and goals, then explains an Ayurvedic care plan tailored to your individual assessment.`}
         />
 
         <div className="mt-7 grid gap-4 sm:grid-cols-3">
@@ -28,11 +28,11 @@ export default function AyurvedaPage() {
           </section>
           <section className="border-t-2 border-[#a05435] bg-[#edf0e8] p-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">An individual assessment</h2>
-            <p className="mt-2 text-sm leading-6 text-[#58665c]">The doctor considers your circumstances before discussing whether any Ayurvedic care may be appropriate.</p>
+            <p className="mt-2 text-sm leading-6 text-[#58665c]">The doctor considers your circumstances and explains the Ayurvedic care plan recommended for you.</p>
           </section>
           <section className="border-t-2 border-[#a05435] bg-[#edf0e8] p-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">Clear next steps</h2>
-            <p className="mt-2 text-sm leading-6 text-[#58665c]">Ask about options, expected follow-up and when another health professional may be needed.</p>
+            <p className="mt-2 text-sm leading-6 text-[#58665c]">Discuss your care plan, follow-up and any coordination with other health professionals.</p>
           </section>
         </div>
 

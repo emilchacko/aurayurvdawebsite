@@ -81,8 +81,7 @@ export default function AyurarogyamPage() {
               Ayurarogyam is the general Ayurveda clinic at Manakachira, near
               Thiruvalla. It is a sister concern of {siteConfig.businessName},
               which has a separate focus on skin, hair and wellness. Contact
-              the clinic to ask about a consultation, available care and
-              whether a visit may suit your needs.
+              the clinic to discuss your needs, available care and next steps.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
@@ -146,9 +145,9 @@ export default function AyurarogyamPage() {
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#58665c]">
               A consultation is an opportunity to explain your concerns, share
-              relevant health history and ask questions. Recommendations depend
-              on individual assessment; the clinic can explain what care is
-              available and whether it may be appropriate before you decide.
+              relevant health history and ask questions. The clinic reviews
+              your needs and explains the available care and recommended next
+              steps.
             </p>
 
             <div className="mt-7 grid gap-4 md:grid-cols-3">
@@ -163,11 +162,11 @@ export default function AyurarogyamPage() {
               </article>
               <article className="border-t-2 border-[#a05435] bg-white p-5">
                 <h3 className="font-serif text-2xl text-[#1d3026]">
-                  Discuss possible care
+                  Review recommended care
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-[#58665c]">
-                  Ask what options may be available, what they involve and
-                  whether another health professional should also be consulted.
+                  Discuss the available options, what they involve and how
+                  they fit alongside any other care you receive.
                 </p>
               </article>
               <article className="border-t-2 border-[#a05435] bg-white p-5">

@@ -31,6 +31,7 @@ export type BlogSection = {
   heading: string;
   blocks: readonly BlogBlock[];
   boxed?: boolean;
+  afterArticle?: boolean;
 };
 
 export type BlogFaq = {
@@ -89,17 +90,17 @@ export const blogPosts: readonly BlogPost[] = [
     },
     body: {
       hook:
-        "A cleanser or moisturiser that feels comfortable for one person may leave another feeling tight, greasy or irritated. Ayurvedic skincare starts from the idea that care should be considered in the context of the individual, rather than chosen from a single routine for everyone. At Aura Ayurveda in Manjadi, near Thiruvalla, Kerala, people can ask about an individual consultation for their concerns.",
+        "A cleanser or moisturiser that feels comfortable for one person may leave another feeling tight, greasy or irritated. Ayurvedic skincare starts from the idea that care should be considered in the context of the individual, rather than chosen from a single routine for everyone. At Aura Ayurveda in Thiruvalla, Kerala, people can ask about an individual consultation for their concerns.",
       internationalTerms: "",
       introduction:
-        "In Ayurveda, Prakriti describes a person's natural constitution through Vata, Pitta and Kapha. It offers one way to understand individual patterns and needs. It is different from modern skin labels such as dry or oily. Your skin can also change with weather, age, health, medicines and the products you use.",
+        "Ayurveda uses Prakriti, understood through Vata, Pitta and Kapha, to describe a person's constitution and guide personalized care. This broader view complements modern skin descriptions such as dry or oily. Your skin can also change with weather, age, health, medicines and the products you use.",
       sections: [
         {
           heading: "What is Prakriti in Ayurveda?",
           blocks: [
             {
               type: "paragraph",
-              text: "Prakriti is the Ayurvedic understanding of a person's constitution. It is described through Vata, Pitta and Kapha, also called doshas. Each person has a unique combination. In traditional descriptions, Vata is linked with movement and dryness, Pitta with heat, and Kapha with stability and moisture.",
+              text: "Prakriti is the Ayurvedic understanding of a person's constitution through Vata, Pitta and Kapha, also called doshas. Each person has a unique combination. Ayurveda describes Vata with qualities such as movement and dryness, Pitta with heat, and Kapha with stability and moisture.",
             },
             {
               type: "subheading",
@@ -111,7 +112,7 @@ export const blogPosts: readonly BlogPost[] = [
             },
             {
               type: "paragraph",
-              text: "Terms such as Vata skin and Pitta skin describe traditional tendencies. They are a starting point for understanding individual needs, not fixed categories.",
+              text: "Terms such as Vata skin and Pitta skin describe Ayurvedic patterns that help guide an individual approach to skin care.",
             },
           ],
         },
@@ -132,7 +133,7 @@ export const blogPosts: readonly BlogPost[] = [
             },
             {
               type: "paragraph",
-              text: "Vata skin is one traditional way of describing dryness. If very dry or itchy skin persists, ask a health professional for advice.",
+              text: "In Ayurveda, Vata skin describes a tendency towards dryness. If very dry or itchy skin persists, ask a health professional for advice.",
             },
           ],
         },
@@ -141,7 +142,7 @@ export const blogPosts: readonly BlogPost[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Pitta skin is traditionally associated with sensitivity, warmth, redness, irritation or occasional breakouts. Sun, heat or fragranced products may bother some people. These signs can have different causes, so notice what affects your skin.",
+              text: "Ayurveda describes Pitta skin with qualities such as sensitivity, warmth, redness, irritation or occasional breakouts. Sun, heat or fragranced products can also affect the skin, so notice what influences your own skin.",
             },
             {
               type: "subheading",
@@ -162,7 +163,7 @@ export const blogPosts: readonly BlogPost[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Kapha tendencies are traditionally linked with oiliness, moisture and a heavier feel. You may notice shine, visible pores or occasional blemishes. Climate, hormones, medicines and skin-care habits can also affect oiliness.",
+              text: "Ayurveda describes Kapha skin with qualities such as oiliness, moisture and a heavier feel. You may notice shine, visible pores or occasional blemishes. Climate, hormones, medicines and skin-care habits can also affect oiliness.",
             },
             {
               type: "subheading",
@@ -174,7 +175,7 @@ export const blogPosts: readonly BlogPost[] = [
             },
             {
               type: "paragraph",
-              text: "Kapha skin is a traditional description, not a diagnosis. Ask a health professional about persistent or painful acne, scarring or breakouts that affect your wellbeing.",
+              text: "The Ayurvedic description of Kapha skin can help guide everyday care. Ask a health professional about persistent or painful acne, scarring or breakouts that affect your wellbeing.",
             },
           ],
         },
@@ -302,10 +303,11 @@ export const blogPosts: readonly BlogPost[] = [
         },
         {
           heading: "Your skin is unique. Your skincare can be too.",
+          afterArticle: true,
           blocks: [
             {
               type: "contactCta",
-              text: `Your skin is unique. If you would like to discuss Ayurvedic skin care, message ${siteConfig.businessName} in Manjadi, Thiruvalla on WhatsApp.`,
+              text: `Your skin is unique. If you would like to discuss Ayurvedic skin care, message ${siteConfig.businessName} in Thiruvalla on WhatsApp.`,
               whatsappMessage: `Hello, I would like to ask about Ayurvedic skin care at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
               whatsappLabel: "Ask about skin care on WhatsApp",
             },
@@ -361,7 +363,7 @@ export const blogPosts: readonly BlogPost[] = [
     title: "Food as Medicine: The Ayurvedic Way of Eating",
     relatedTreatments: ["prasavaraksha"],
     description:
-      "What does food as medicine mean in Ayurveda? Simple eating principles from a Kerala Ayurveda clinic in Manjadi, Thiruvalla. Visitors from abroad welcome.",
+      "What does food as medicine mean in Ayurveda? Simple eating principles from a Kerala Ayurveda clinic in Thiruvalla. Visitors from abroad welcome.",
     publishedDate: "2026-10-12",
     updatedDate: "2026-10-12",
     author: {
@@ -377,18 +379,18 @@ export const blogPosts: readonly BlogPost[] = [
     },
     body: {
       hook:
-        "Kerala is widely known as a home of Ayurvedic tradition, and many visitors from outside India are curious about how everyday food fits into it. Aura Ayurveda is in Manjadi, near Thiruvalla, in Kerala.",
+        "Kerala is widely known as a home of Ayurvedic tradition, and many visitors from outside India are curious about how everyday food fits into it. Aura Ayurveda is in Thiruvalla, Kerala.",
       internationalTerms:
-        "For readers abroad, Ayurvedic diet and Ayurvedic food are terms used for these food traditions; Kerala Ayurveda describes the regional context. An Ayurvedic consultation is an opportunity to ask a doctor what may suit your individual needs.",
+        "Ayurvedic diet and Ayurvedic food describe the role of food in Ayurveda. At Aura Ayurveda, a consultation considers your individual needs and daily habits.",
       introduction:
-        "There is an old saying often linked to Ayurveda: let food be your medicine. In many Kerala homes, this idea isn't new. Ginger and cumin water for an upset stomach, rice kanji when someone is unwell, and special foods for new mothers are all part of everyday life. Here is what Ayurveda means by it, in simple terms.",
+        "Ayurveda places food and digestion at the heart of daily wellbeing. In many Kerala homes, ginger and cumin water, rice kanji and special foods for new mothers are part of everyday life. Here is how Ayurvedic food principles can inform everyday choices.",
       sections: [
         {
           heading: "The basic idea",
           blocks: [
             {
               type: "paragraph",
-              text: "Ayurveda treats food as the foundation of health, not just fuel. What you eat, when you eat, and how well you digest it all matter. The traditional view is that good digestion supports good health, and that eating the wrong things, or at the wrong time, can leave you feeling heavy, tired, or unwell. This does not mean food replaces medicine. It means everyday eating is the first and most regular form of care you give your body.",
+              text: "In Ayurveda, food is an important part of caring for wellbeing. What you eat, when you eat and how you digest it all matter. Ayurvedic guidance considers digestion and daily habits when discussing a person's food choices.",
             },
           ],
         },
@@ -400,11 +402,11 @@ export const blogPosts: readonly BlogPost[] = [
               items: [
                 "Eat fresh and warm. Freshly cooked, warm meals are favoured over cold, stale, or heavily processed food.",
                 "Eat with the seasons. Lighter, easily digested food in the hot months. Warm, nourishing food in the rains and cooler weather. This is why Kerala has special monsoon food traditions.",
-                "Eat at regular times. Having your main meal at midday, when digestion is traditionally considered strongest, and a lighter dinner earlier in the evening.",
+                "Eat at regular times. Ayurveda emphasizes a substantial midday meal and a lighter dinner earlier in the evening.",
                 "Include all six tastes. Ayurveda describes sweet, sour, salty, bitter, pungent, and astringent tastes. A varied plate with vegetables, grains, pulses, and spices naturally covers them.",
                 "Eat mindfully. Sit down, chew well, and avoid eating while distracted or in a rush. Stop before you feel overly full.",
                 "Use common kitchen spices. Turmeric, ginger, cumin, coriander, black pepper, and curry leaves are traditional parts of Kerala cooking and are valued in Ayurveda.",
-                "Choose food to suit the person. Ayurveda says one diet doesn't fit everyone. Age, season, digestion, and health conditions all affect what suits you, which is why a doctor's advice matters.",
+                "Choose food to suit the person. Ayurveda tailors food guidance to age, season, digestion and health needs.",
               ],
             },
           ],
@@ -419,7 +421,7 @@ export const blogPosts: readonly BlogPost[] = [
               linkText: "after childbirth",
               href: "/treatments/prasavaraksha/",
               after:
-                ", illness, or when digestion is weak. Warm, simple, easily digested meals are traditionally recommended in these periods, usually along with a doctor's guidance.",
+                ", illness, or when digestion is weak. Ayurvedic food guidance is tailored to the person's needs and discussed with a doctor.",
             },
           ],
         },
@@ -429,7 +431,7 @@ export const blogPosts: readonly BlogPost[] = [
             {
               type: "unorderedList",
               items: [
-                "Food can support health, but it cannot cure serious illness. Please continue any prescribed treatment.",
+                "For a serious illness, work with your healthcare professional and continue prescribed treatment. Ayurvedic food guidance can be discussed as part of your overall care.",
                 "If you have diabetes, high blood pressure, kidney problems, allergies, or are pregnant or breastfeeding, check with your doctor before changing your diet or adding herbs.",
                 '"Natural" doesn\'t always mean safe for everyone. A qualified practitioner can tell you what suits you.',
               ],
@@ -460,7 +462,7 @@ export const blogPosts: readonly BlogPost[] = [
           blocks: [
             {
               type: "contactCta",
-              text: "At Aura Ayurveda in Manjadi, near Thiruvalla, our doctor can discuss food and lifestyle suited to your needs. Book a consultation by phone or WhatsApp.",
+              text: "At Aura Ayurveda in Thiruvalla, our doctor can discuss food and lifestyle suited to your needs. Book a consultation by phone or WhatsApp.",
             },
             {
               type: "disclaimer",
@@ -474,7 +476,7 @@ export const blogPosts: readonly BlogPost[] = [
       {
         question: "What is food as medicine in Ayurveda?",
         answer:
-          "It is the traditional idea that everyday food and digestion are an important part of caring for health. Food does not replace prescribed medicine or medical advice.",
+          "Ayurveda considers everyday food and digestion an important part of wellbeing. Discuss dietary changes with your doctor, especially if you have a health condition or take prescribed medicine.",
       },
       {
         question: "Is there one Ayurvedic diet for everyone?",
@@ -489,7 +491,7 @@ export const blogPosts: readonly BlogPost[] = [
       {
         question: "Can Ayurvedic food replace my regular medicines?",
         answer:
-          "No. Continue prescribed treatment and speak with your doctor before changing your diet or adding herbs.",
+          "Ayurvedic food guidance can be discussed alongside your prescribed care. Speak with your doctor before changing your diet or adding herbs.",
       },
       {
         question:
@@ -513,7 +515,7 @@ export const blogPosts: readonly BlogPost[] = [
     metaTitle:
       "Kalari Marma (Varma) Massage in Kerala: A Visitor's Guide | Aura Ayurveda",
     description:
-      "What is Kalari marma (varma) massage, and what should visitors to Kerala expect? A plain guide from an Ayurveda clinic in Manjadi, near Thiruvalla.",
+      "What is Kalari marma (varma) massage, and what should visitors to Kerala expect? A plain guide from an Ayurveda clinic in Thiruvalla.",
     publishedDate: "2026-10-12",
     updatedDate: "2026-10-12",
     author: {
@@ -547,7 +549,7 @@ export const blogPosts: readonly BlogPost[] = [
           blocks: [
             {
               type: "paragraph",
-              text: 'The two words describe the same traditional idea. "Marma" is the Sanskrit-derived spelling used widely across India. "Varma" is the form common in Kerala and Tamil traditions. You may see both on clinic websites; they usually refer to the same style of therapy.',
+              text: '"Marma" is the spelling used widely across India; "varma" is common in Kerala and Tamil traditions. Both names refer to this Kerala hands-on practice.',
             },
           ],
         },
@@ -560,7 +562,7 @@ export const blogPosts: readonly BlogPost[] = [
               linkText: "Panchakarma massage",
               href: "/treatments/panchakarma-massage/",
               after:
-                " and oil massages such as abhyanga. These are often longer, programme-style therapies. Kalari marma massage is described as more focused on specific points and movement. Which one suits you is best decided with a doctor.",
+                " and oil massages such as abhyanga. These are distinct Ayurvedic practices with different approaches. The doctor explains the options and recommends a care plan based on your consultation.",
             },
           ],
         },
@@ -580,11 +582,11 @@ export const blogPosts: readonly BlogPost[] = [
           ],
         },
         {
-          heading: "What it is not",
+          heading: "Your safety",
           blocks: [
             {
               type: "paragraph",
-              text: "It is not a medical treatment for any disease and doesn't replace medical care. Please continue any prescribed treatment and seek medical help for serious or sudden symptoms.",
+              text: "Kalari marma massage is an Ayurvedic wellness therapy. Continue prescribed care and seek medical attention for serious or sudden symptoms.",
             },
           ],
         },
@@ -597,7 +599,7 @@ export const blogPosts: readonly BlogPost[] = [
                 `Book ahead by WhatsApp at ${siteConfig.whatsapp}.`,
                 `${siteConfig.englishConsultationText} You can discuss your needs with the doctor directly.`,
                 "Bring a list of current medicines and any allergies.",
-                "Wear comfortable clothing and allow time to rest afterwards.",
+                "Confirm session details and any preparation advice with the clinic before travelling.",
                 "Clinic hours are in India Standard Time (IST).",
               ],
             },
@@ -609,11 +611,11 @@ export const blogPosts: readonly BlogPost[] = [
           blocks: [{ type: "visitingInfo" }],
         },
         {
-          heading: "Visit Aura Ayurveda, Manjadi",
+          heading: "Visit Aura Ayurveda in Thiruvalla",
           blocks: [
             {
               type: "contactCta",
-              text: "Aura Ayurveda is in Manjadi, near Thiruvalla, Kerala. Contact the clinic to ask about a consultation and discuss whether a Kalari session may be appropriate after assessment.",
+              text: "Aura Ayurveda in Thiruvalla offers Kalari marma massage after an individual doctor consultation. Contact the clinic to arrange your consultation.",
             },
             {
               type: "disclaimer",
@@ -627,17 +629,17 @@ export const blogPosts: readonly BlogPost[] = [
       {
         question: "What is Kalari marma massage?",
         answer:
-          "It is a hands-on Kerala therapy connected to kalaripayattu and the traditional understanding of marma points. The doctor decides whether a session is appropriate after consultation.",
+          "It is a Kerala Ayurvedic hands-on practice connected to kalaripayattu and the Ayurvedic understanding of marma points. At Aura Ayurveda, each session is planned by the doctor after consultation.",
       },
       {
         question: "What is the difference between marma and varma?",
         answer:
-          "The terms describe the same traditional idea; marma is a widely used spelling, while varma is common in Kerala and Tamil traditions.",
+          '"Marma" is the spelling used widely across India; "varma" is common in Kerala and Tamil traditions.',
       },
       {
         question: "How is it different from Panchakarma or abhyanga?",
         answer:
-          "They are different traditional approaches. The doctor can explain them and discuss which, if any, may be appropriate for you after hearing your circumstances.",
+          "They are distinct Ayurvedic practices. The doctor explains their differences and recommends an approach based on your consultation.",
       },
       {
         question: "Who should check with a doctor before booking?",
@@ -647,7 +649,7 @@ export const blogPosts: readonly BlogPost[] = [
       {
         question:
           "Can I book while visiting Kerala from abroad?",
-        answer: `You can ask about an appointment by WhatsApp at ${siteConfig.whatsapp}. ${siteConfig.englishConsultationText} The doctor decides what is appropriate after the consultation; please confirm appointment availability and travel details with the clinic.`,
+        answer: `Contact the clinic by WhatsApp at ${siteConfig.whatsapp} to arrange a consultation. ${siteConfig.englishConsultationText} Confirm appointment availability and travel details with the clinic.`,
       },
     ],
     relatedLinks: [
@@ -670,7 +672,7 @@ export const blogPosts: readonly BlogPost[] = [
       "Knee and Back Pain in Thiruvalla: What to Know and When to Seek Care",
     metaTitle: "Knee & Back Pain in Thiruvalla | Aura Ayurveda",
     description:
-      "Looking for information about knee pain or back pain in Thiruvalla? Learn what to discuss at a consultation, when to seek urgent care, and how to contact Aura Ayurveda in Manjadi.",
+      "Looking for information about knee pain or back pain in Thiruvalla? Learn what to discuss at a consultation, when to seek urgent care, and how to contact Aura Ayurveda.",
     publishedDate: "2026-10-13",
     updatedDate: "2026-10-13",
     author: {
@@ -726,20 +728,20 @@ export const blogPosts: readonly BlogPost[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "People looking for an Ayurvedic doctor for knee pain or back pain in Thiruvalla can contact Aura Ayurveda in Manjadi to ask whether a consultation is suitable for their concern. Any recommendations depend on an individual assessment. Traditional or supportive care should not delay urgent evaluation, replace a needed diagnosis, or mean stopping prescribed medicines or treatment.",
+              text: "People with knee or back pain can contact Aura Ayurveda in Thiruvalla for an Ayurvedic consultation. The doctor reviews symptoms and health history before recommending a care plan. For urgent symptoms, seek prompt medical care and continue prescribed treatment.",
             },
             {
               type: "paragraph",
-              text: "Before an appointment, bring a list of current medicines and relevant reports if you have them. Explain any injury, numbness, weakness, swelling, other health conditions, or treatment you are already receiving. Ask what is being proposed, why it may be appropriate, and when you should seek other medical care.",
+              text: "Bring a list of current medicines and any relevant reports. Explain injuries, numbness, weakness, swelling, health conditions and care you are already receiving. The doctor can explain your care plan and when to seek additional medical care.",
             },
           ],
         },
         {
-          heading: "Contact Aura Ayurveda in Manjadi",
+          heading: "Contact Aura Ayurveda in Thiruvalla",
           blocks: [
             {
               type: "contactCta",
-              text: "Aura Ayurveda is in Manjadi, near Thiruvalla, Kerala. Contact the clinic to ask about an appointment and whether a consultation may be appropriate for your knee or back concern.",
+              text: "Aura Ayurveda in Thiruvalla offers consultations for people with knee or back concerns. Contact the clinic to arrange an appointment.",
             },
             {
               type: "disclaimer",
@@ -753,12 +755,12 @@ export const blogPosts: readonly BlogPost[] = [
       {
         question: "Where can I ask about knee or back pain in Thiruvalla?",
         answer:
-          "Aura Ayurveda is in Manjadi, near Thiruvalla. Contact the clinic to ask whether a consultation is suitable for your concern. Seek urgent medical care for severe or concerning symptoms.",
+          "Aura Ayurveda in Thiruvalla offers consultations for knee and back concerns. Seek urgent medical care for severe or concerning symptoms.",
       },
       {
         question: "Can Ayurveda treat knee pain or back pain?",
         answer:
-          "The cause of pain and appropriate care vary from person to person. Contact Aura Ayurveda to ask whether a consultation is suitable; any recommendations depend on an individual assessment. Ayurvedic care should not replace needed medical evaluation or prescribed treatment.",
+          "The doctor reviews each person's symptoms and health history before recommending Ayurvedic care. Continue prescribed treatment and seek medical evaluation when needed.",
       },
       {
         question: "When should I seek urgent help for back pain?",
@@ -774,7 +776,7 @@ export const blogPosts: readonly BlogPost[] = [
     relatedLinks: [
       { href: "/ayurveda/", label: "Learn about an Ayurvedic consultation" },
       { href: "/doctor/", label: "Meet the clinic doctor" },
-      { href: "/contact/", label: "Contact Aura Ayurveda in Manjadi" },
+      { href: "/contact/", label: "Contact Aura Ayurveda in Thiruvalla" },
     ],
     relatedTreatments: [],
   },

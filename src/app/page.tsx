@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl, withBasePath } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: `Ayurveda Clinic in Manjadi, Thiruvalla | ${siteConfig.businessName}`,
+  title: `Ayurveda Clinic in Thiruvalla | ${siteConfig.businessName}`,
   description: `Visit ${siteConfig.businessName}, an Ayurvedic clinic in ${siteConfig.locationLabel}. Contact the clinic to ask about consultations, services and directions.`,
   path: "/",
 });
@@ -50,7 +50,7 @@ const focusAreas = [
   },
   {
     title: "Ayurvedic Therapies",
-    summary: "Traditional therapies considered in a personalized care plan.",
+    summary: "Ayurvedic therapies selected by the doctor for your care plan.",
     image: "/images/focus-areas/ayurvedic-therapies.jpg",
     imageAlt: "A relaxing massage therapy",
   },
@@ -62,7 +62,7 @@ const focusAreas = [
   },
   {
     title: "Ayurvedic Medicines",
-    summary: "Medicines considered as part of appropriate clinical recommendation.",
+    summary: "Ayurvedic medicines recommended by the doctor as part of your care plan.",
     image: "/images/focus-areas/ayurvedic-medicines.jpg",
     imageAlt: "An amber glass bottle with a dropper",
   },
@@ -70,7 +70,7 @@ const focusAreas = [
 
 const reasons = [
   "Meet your doctor before you book",
-  "Ask about suitability and next steps",
+  "Understand your care plan and next steps",
   "Clear clinic location and directions",
   "Message the clinic directly on WhatsApp",
 ];
@@ -96,7 +96,7 @@ const faqs = [
   {
     question: "Do you provide Ayurvedic medicines?",
     answer:
-      "Medicines may be provided as part of appropriate Ayurvedic care and clinical guidance, subject to consultation and recommendation.",
+      "The doctor recommends Ayurvedic medicines as part of your care plan when they are needed.",
   },
   {
     question: "Where is the clinic located?",
@@ -201,7 +201,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Treatments"
             title="Treatments we offer."
-            description="Learn what each service may involve and what to ask before deciding whether it may be suitable for you."
+            description="Explore our services and learn how a consultation guides care suited to your needs."
           />
 
           <div className="mt-7 grid gap-x-8 sm:grid-cols-2">
@@ -257,7 +257,7 @@ export default function Home() {
                 description={`Meet the doctor at ${siteConfig.businessName}.`}
               />
 
-              <p className="mt-5 max-w-xl text-sm leading-7 text-[#58665c]">Learn about the consultation process and what to expect before you decide on care. Recommendations are discussed after an individual assessment.</p>
+              <p className="mt-5 max-w-xl text-sm leading-7 text-[#58665c]">Learn about the consultation process and what to expect. The doctor plans care after an individual assessment.</p>
               <Link href="/doctor" className="mt-5 inline-flex min-h-11 items-center font-semibold text-[#214d3a] underline underline-offset-4">Read the doctor profile</Link>
             </div>
           </div>
@@ -290,7 +290,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Visit us in Thiruvalla"
             title="Find both clinic locations."
-            description="Choose the map for Aura Ayurveda in Manjadi or Ayurarogyam in Manakachira. Check the hours for your chosen location before visiting."
+            description="Choose the Aura Ayurveda clinic in Thiruvalla or Ayurarogyam near Thiruvalla. Check the hours for your chosen location before visiting."
           />
           <div className="mt-7">
             <LocationMapCards />

@@ -15,22 +15,22 @@ const faqs = [
   {
     question: "Is this suitable after a C-section?",
     answer:
-      "The doctor considers each mother's delivery and recovery individually, including after a C-section. Share your maternity-care team's instructions so the doctor can assess whether and when care may be appropriate.",
+      "The doctor considers each mother's delivery and recovery, including after a C-section, before planning care. Share your maternity-care team's instructions and continue following their advice.",
   },
   {
     question: "What treatments are included?",
     answer:
-      "The mother's care includes abhyanga (massage) with a medicated water bath. The mother may also receive postnatal medicines and packs for stretch-mark and postnatal skin-care concerns, with diet advice based on the mother's and baby's conditions. The doctor discusses care individually.",
+      "Care includes the mother's abhyanga (massage) and medicated water bath, postnatal medicines and skin-care packs for the mother, and diet advice based on the mother and baby's conditions. The doctor plans care individually.",
   },
   {
     question: "Is massage and bath also provided for the baby?",
     answer:
-      "Massage and a medicated water bath are also provided for the baby. The doctor considers the baby's individual condition when discussing care; continue to follow advice from your baby's healthcare team.",
+      "The baby's care includes massage and a medicated water bath. The doctor considers the baby's individual condition when planning care; continue to follow advice from your baby's healthcare team.",
   },
   {
     question: "What postnatal medicines are given?",
     answer:
-      "Postnatal medicines may be given to the mother to support strength during recovery. The doctor decides what is appropriate after an individual assessment; this page does not recommend a medicine or promise an outcome.",
+      "The doctor recommends postnatal medicines for the mother after an individual assessment and explains them during the consultation.",
   },
   {
     question: "What diet advice is provided?",
@@ -101,7 +101,7 @@ export function PrasavarakshaPage() {
         <article className="pb-14 sm:pb-20">
           <section aria-labelledby="prasavaraksha-intro" className="py-8 sm:py-12">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a05435]">
-              Postnatal care · Manjadi, Thiruvalla
+              Postnatal care · Thiruvalla
             </p>
             <h1
               id="prasavaraksha-intro"
@@ -111,7 +111,7 @@ export function PrasavarakshaPage() {
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-[#58665c] sm:text-lg sm:leading-8">
               Prasavaraksha (പ്രസവരക്ഷ) is traditional postnatal care offered
-              at Aura Ayurveda in Manjadi, Thiruvalla. The care includes
+              at Aura Ayurveda in Thiruvalla. The care includes
               abhyanga (massage) and a medicated water bath for the mother and
               baby, along with postnatal medicines and diet advice tailored to
               their individual conditions. The doctor assesses each mother and
@@ -360,7 +360,7 @@ export function PrasavarakshaPage() {
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-[#58665c]">
                   {siteConfig.businessName} is at {siteConfig.address.display},
-                  in Manjadi, Thiruvalla.
+                  in Thiruvalla.
                 </p>
                 <dl className="mt-4 space-y-3 text-sm leading-6 text-[#58665c]">
                   <div>

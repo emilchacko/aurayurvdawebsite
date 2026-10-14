@@ -79,12 +79,11 @@ export function KalariVarmaPage() {
               Kalari Marma (Varma) Massage in Kerala
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-[#58665c] sm:text-lg sm:leading-8">
-              Kalari marma massage, also called varma massage, is a traditional
-              Kerala Ayurvedic massage connected to the kalaripayattu
-              tradition. At Aura Ayurveda, an Ayurveda clinic near Thiruvalla
-              in Manjadi, the doctor discusses your needs and health history
-              before deciding whether this traditional Kerala therapy is
-              appropriate.{" "}
+              Kalari marma massage, also called varma massage, is a Kerala
+              Ayurvedic massage connected to kalaripayattu. At Aura Ayurveda
+              in Thiruvalla, each session begins with a doctor
+              consultation and is planned around your needs and health
+              history.{" "}
               {siteConfig.englishConsultation
                 ? siteConfig.englishConsultationLabel
                 : ""}
@@ -134,10 +133,9 @@ export function KalariVarmaPage() {
                   care.
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[#58665c]">
-                  In this context, the terms describe a traditional practice,
-                  not a promise of a medical result. A doctor&rsquo;s
-                  assessment comes first, and the approach is decided for the
-                  individual rather than assumed to be the same for everyone.
+                  Kalari marma massage is a hands-on practice with roots in
+                  Kerala&rsquo;s kalaripayattu tradition. The doctor plans
+                  each session after an individual consultation.
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[#58665c]">
                   If you are comparing approaches, read about{" "}
@@ -184,12 +182,11 @@ export function KalariVarmaPage() {
                 Before a consultation, tell the doctor if you are pregnant,
                 have an injury, have had recent surgery, have a skin condition,
                 have high blood pressure or a heart condition, or take
-                blood-thinning medicines. These details help the doctor
-                consider whether a session is appropriate and what should be
-                avoided or discussed further.
+                blood-thinning medicines. These details help the doctor plan
+                your session and identify anything that needs further
+                discussion.
               </p>
               <p className="mt-3 max-w-3xl text-sm leading-7 text-[#58665c]">
-                This traditional therapy is not a substitute for medical care.
                 Continue any prescribed treatment and seek medical advice for
                 health concerns, including serious or sudden symptoms.
               </p>
@@ -200,13 +197,10 @@ export function KalariVarmaPage() {
                 Kalari marma and other Kerala therapies
               </h2>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
-                Kerala has a range of traditional therapies. Panchakarma and
-                oil massages such as abhyanga may be discussed as part of
-                different care plans. Kalari marma massage is traditionally
-                described in relation to marma points and movement. These
-                approaches are not interchangeable; the doctor can explain
-                their differences and decide what may be appropriate after
-                hearing your circumstances.
+                Kerala has a range of Ayurvedic therapies. Panchakarma,
+                abhyanga oil massage and Kalari marma massage are distinct
+                practices with different approaches. The doctor explains
+                these options and plans care around your needs.
               </p>
             </section>
 
@@ -315,9 +309,9 @@ export function KalariVarmaPage() {
                 Ask whether a consultation is right for you
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-white/90">
-                Contact Aura Ayurveda in Manjadi, near Thiruvalla, to discuss
-                your questions. The doctor will assess your needs before
-                deciding what is appropriate.
+                Contact Aura Ayurveda in Thiruvalla to discuss
+                your questions and arrange a consultation for a personalized
+                Kalari session.
               </p>
               <Link
                 href="/contact/"

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: `About ${siteConfig.businessName} | Ayurveda Clinic in Manjadi, Thiruvalla`,
+  title: `About ${siteConfig.businessName} | Ayurveda Clinic in Thiruvalla`,
   description: `Learn about ${siteConfig.businessName} and how to enquire about Ayurvedic care in ${siteConfig.locationLabel}.`,
   path: "/about",
 });
@@ -18,13 +18,13 @@ export default function AboutPage() {
           as="h1"
           eyebrow={`About ${siteConfig.businessName} · ${siteConfig.locationLabel}`}
           title="Care starts with listening and a proper consultation."
-          description={`${siteConfig.businessName} is an Ayurvedic clinic in ${siteConfig.locationLabel}. ${siteConfig.doctorName} meets with people to understand their concerns and discuss suitable next steps before care is recommended.`}
+          description={`${siteConfig.businessName} is an Ayurvedic clinic in ${siteConfig.locationLabel}. ${siteConfig.doctorName} reviews each person's concerns and health history, then recommends care based on an individual consultation.`}
         />
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
             ["Talk it through", "Share your concerns, health goals and questions directly with the doctor."],
-            ["Understand your options", "Ask how a consultation works and whether a service may suit your needs."],
+            ["Understand your care", "The doctor explains the recommended services and next steps for your needs."],
             ["Plan the next step", "Discuss appointment availability, follow-up and what to expect before visiting."],
           ].map((item) => (
             <div key={item[0]} className="border-t-2 border-[#a05435] bg-[#edf0e8] p-5 text-[#34463b]">

@@ -9,13 +9,13 @@ import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 const prasavarakshaTitle =
-  "Prasavaraksha (Ayurvedic Postnatal Care) in Thiruvalla | Aura Ayurveda, Manjadi";
+  "Prasavaraksha (Ayurvedic Postnatal Care) in Thiruvalla | Aura Ayurveda";
 const prasavarakshaDescription =
-  "Ask about prasavaraksha and postnatal Ayurvedic care in Thiruvalla and Manjadi. Call or WhatsApp Aura Ayurveda to discuss a consultation.";
+  "Ask about prasavaraksha and postnatal Ayurvedic care in Thiruvalla. Call or WhatsApp Aura Ayurveda to discuss a consultation.";
 const kalariTitle =
   "Kalari Marma (Varma) Massage in Kerala | Aura Ayurveda, Thiruvalla";
 const kalariDescription =
-  "Experience traditional Kalari marma (varma) massage at an Ayurveda clinic in Manjadi, near Thiruvalla, Kerala. English consultation available; visitors from abroad welcome.";
+  "Experience traditional Kalari marma (varma) massage at an Ayurveda clinic in Thiruvalla, Kerala. English consultation available; visitors from abroad welcome.";
 
 export async function generateStaticParams() {
   assertValidContentLinks();

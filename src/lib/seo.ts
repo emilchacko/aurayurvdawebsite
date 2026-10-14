@@ -19,8 +19,8 @@ export function buildMetadata({
     description,
     metadataBase: new URL(`${siteUrl}/`),
     keywords: [
-      "Ayurvedic clinic in Manjadi",
-      "Ayurvedic doctor near Thiruvalla",
+      "Ayurvedic clinic in Thiruvalla",
+      "Ayurvedic doctor in Thiruvalla",
       "Ayurvedic treatments in Kerala",
       siteConfig.businessName,
     ],

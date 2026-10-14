@@ -26,7 +26,7 @@ export function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
         <Image src={withBasePath(treatment.image)} alt={treatment.imageAlt} width={900} height={620} sizes="(max-width: 767px) 100vw, 45vw" className={isVaricoseVeinPage ? "aspect-square w-full rounded-lg bg-[#f4f3ed] p-3 object-contain md:aspect-auto md:min-h-72" : "aspect-[1.45/1] w-full rounded-lg object-cover md:aspect-auto md:h-full md:min-h-72"} />
         <div className="grid gap-6">
           <div className="border-t-2 border-[#a05435] bg-[#edf0e8] p-5">
-            <h2 className="font-serif text-2xl text-[#1d3026]">Who this may be for</h2>
+            <h2 className="font-serif text-2xl text-[#1d3026]">Who this service supports</h2>
             <p className="mt-3 text-sm leading-7 text-[#58665c]">{treatment.whoItsFor}</p>
           </div>
           <div className="border-t-2 border-[#214d3a] bg-white p-5">
@@ -38,14 +38,14 @@ export function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
 
       <section className="rounded-lg bg-[#f4f3ed] p-5 sm:p-6">
         <p className="text-sm leading-7 text-[#58665c]">
-          Treatment suitability and outcomes vary by person. Please consult the doctor before starting care; these services do not replace appropriate medical evaluation or treatment.
+          Your doctor plans care after an individual consultation. Continue appropriate medical care and prescribed treatment for your health conditions.
         </p>
       </section>
 
       <section className="rounded-lg bg-[#214d3a] p-5 text-white sm:p-7">
         <h2 className="font-serif text-3xl">Talk it through with the clinic</h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
-          Ask about {treatment.title.toLowerCase()}, appointment availability and whether a consultation may be appropriate for you. {siteConfig.businessName} is in {siteConfig.locationLabel}.
+          Ask the clinic about {treatment.title.toLowerCase()}, appointment availability and the consultation process. {siteConfig.businessName} is in {siteConfig.locationLabel}.
         </p>
         <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
           <a href={getWhatsAppUrl(`Hello, I would like to ask about booking ${treatment.title} at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask about booking</a>
