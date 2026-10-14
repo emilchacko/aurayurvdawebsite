@@ -3,6 +3,8 @@ import { blogPosts } from "@/content/blog";
 import { treatments } from "@/content/treatments";
 import { siteConfig } from "@/config/site";
 
+export const dynamic = "force-static";
+
 const lastModified = new Date("2026-10-12T00:00:00.000Z");
 
 const indexablePaths = [
