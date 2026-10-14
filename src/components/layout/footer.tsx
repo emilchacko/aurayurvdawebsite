@@ -10,6 +10,7 @@ const footerLinks = [
   { href: "/treatments/prasavaraksha", label: "Prasavaraksha care" },
   { href: "/store", label: "Store" },
   { href: "/doctor", label: "Doctor" },
+  { href: "/ayurarogyam", label: "Ayurarogyam · Sister concern" },
   { href: "/contact", label: "Contact" },
   { href: "/review-qr", label: "Google review QR" },
   { href: "/blog", label: "Blog" },

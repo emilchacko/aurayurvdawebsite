@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 const locations = [
@@ -61,6 +62,14 @@ export function LocationMapCards() {
                 >
                   Directions to {location.name}
                 </a>
+                {location.name === siteConfig.sisterConcern.name ? (
+                  <Link
+                    href="/ayurarogyam/"
+                    className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#214d3a] px-5 text-sm font-semibold text-[#214d3a]"
+                  >
+                    About Ayurarogyam
+                  </Link>
+                ) : null}
                 <a
                   href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#214d3a] px-5 text-sm font-semibold text-[#214d3a]"

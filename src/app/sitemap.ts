@@ -11,6 +11,7 @@ const indexablePaths = [
   "/",
   "/about/",
   "/ayurveda/",
+  "/ayurarogyam/",
   "/blog/",
   "/contact/",
   "/doctor/",
@@ -22,7 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...indexablePaths.map((path) => ({
       url: `${siteConfig.siteUrl}${path}`,
-      ...(path === "/blog/"
+      ...(path === "/ayurarogyam/"
+        ? { lastModified: new Date("2026-10-14T00:00:00.000Z") }
+        : path === "/blog/"
         ? {
             lastModified: new Date(
               `${blogPosts.reduce(
