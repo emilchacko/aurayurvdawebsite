@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { ClinicActionTracking } from "@/components/analytics/clinic-action-tracking";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { Footer } from "@/components/layout/footer";
@@ -22,6 +23,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-H7YR7XQVCN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H7YR7XQVCN');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full bg-[#faf9f5] pb-16 text-[#1d3026] md:pb-0 print:pb-0">
         <div className="flex min-h-screen flex-col">
           <Header />
