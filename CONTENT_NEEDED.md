@@ -56,6 +56,7 @@ Business facts used by the site live in [`src/config/site.ts`](./src/config/site
 - [ ] Provide a current, clinic-owned or licensed photograph of the Manjadi clinic or an approved postnatal-care setting. The current page image is illustrative and is not a photograph of the clinic or treatment.
 - [ ] Confirm the existing Google Maps embed points to the correct Aura Ayurveda location.
 - [ ] If adding a duration, stay/visit format, packages, or prices later, provide clinic-confirmed details first; none are stated on the page.
+- [ ] Confirm how appointment availability and visit arrangements should be described for families travelling from outside Kerala; do not imply remote care or local branches.
 
 ## Kalari marma (varma) massage page and article
 

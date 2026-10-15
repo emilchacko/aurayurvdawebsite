@@ -37,7 +37,6 @@ export function Footer() {
             Ayurvedic consultations and services in {siteConfig.locationLabel}.
           </p>
           <a href={siteConfig.googleMapsUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-[#214d3a] underline underline-offset-4">Get directions</a>
-          <p className="mt-4 text-sm leading-6 text-[#2d3837]">{siteConfig.serviceAreas.join(" · ")}</p>
         </div>
 
         <div>

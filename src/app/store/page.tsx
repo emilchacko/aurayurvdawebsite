@@ -28,7 +28,7 @@ const products = [
       "A postpartum care kit. Contact the doctor to review its contents and how it fits your care plan.",
     image: "/images/store/prasavaraksha-kit.png",
     action: "Ask about this kit",
-    message: "Hello, I would like to enquire about the Prasavaraksha medicines kit. Could you share the contents, price, availability and suitability details?",
+    message: "Hello, I would like to enquire about the Prasavaraksha medicines kit. Could you share the contents, price, availability, suitability, and whether delivery is available to my location?",
   },
   {
     name: "Kumkumadi Cream",
@@ -78,6 +78,7 @@ export default function StorePage() {
             return (
               <article
                 key={product.name}
+                id={product.name === "Prasavaraksha Medicines Kit" ? "prasavaraksha-kit" : undefined}
                 className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-[#d8ded4] bg-white"
               >
                 <Image

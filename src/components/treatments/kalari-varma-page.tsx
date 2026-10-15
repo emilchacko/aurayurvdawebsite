@@ -238,9 +238,6 @@ export function KalariVarmaPage() {
                   for the existing clinic information. Any treatment decision
                   is made after individual assessment.
                 </p>
-                <p className="mt-3 text-sm leading-7 text-[#58665c]">
-                  Professional qualification: [CONFIRM WITH CLINIC].
-                </p>
               </div>
             </section>
 
@@ -273,10 +270,9 @@ export function KalariVarmaPage() {
                 Location and contact
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#58665c]">
-                Aura Ayurveda is at {siteConfig.address.display}, serving{" "}
-                {siteConfig.serviceAreas.join(", ")} and nearby areas. The
-                clinic hours and directions are listed above; please arrange
-                an appointment before visiting.
+                Aura Ayurveda is at {siteConfig.address.display}. The clinic
+                hours and directions are listed above; please arrange an
+                appointment before visiting.
               </p>
               <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#58665c]">
                 <a

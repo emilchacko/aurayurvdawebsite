@@ -317,6 +317,58 @@ export function PrasavarakshaPage() {
           </section>
 
           <section
+            aria-labelledby="visiting-kerala"
+            className="border-t border-[#d8ded4] py-8 sm:py-10"
+          >
+            <h2
+              id="visiting-kerala"
+              className="font-serif text-3xl text-[#1d3026]"
+            >
+              Planning a visit to Kerala?
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
+              Aura Ayurveda is based in Manjadi, Thiruvalla, and welcomes
+              enquiries from families across Kerala, elsewhere in India, and
+              abroad who are interested in Prasavaraksha during a visit to
+              Kerala. This includes Malayalis living in cities such as
+              Bengaluru and Chennai. Contact the clinic before making travel
+              plans to discuss your circumstances and ask about appointment
+              availability. {siteConfig.englishConsultationText} The doctor assesses each mother and baby
+              individually. If travelling after childbirth, discuss travel
+              with your maternity-care and baby-care teams.
+            </p>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex min-h-11 items-center font-semibold text-[#214d3a] underline underline-offset-4"
+            >
+              Ask about a visit by WhatsApp
+            </a>
+          </section>
+
+          <section
+            aria-labelledby="order-kit"
+            className="border-t border-[#d8ded4] py-8 sm:py-10"
+          >
+            <h2 id="order-kit" className="font-serif text-3xl text-[#1d3026]">
+              Interested in the Prasavaraksha medicines kit?
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#58665c]">
+              If you are elsewhere in India or abroad and want to enquire about
+              the kit without visiting the clinic, view it in our store. Contact
+              the clinic to ask about current availability, suitability, and
+              whether delivery is available to your location.
+            </p>
+            <Link
+              href="/store/#prasavaraksha-kit"
+              className="mt-4 inline-flex min-h-11 items-center font-semibold text-[#214d3a] underline underline-offset-4"
+            >
+              View the Prasavaraksha medicines kit
+            </Link>
+          </section>
+
+          <section
             aria-labelledby="prasavaraksha-faq"
             className="border-t border-[#d8ded4] py-8 sm:py-10"
           >

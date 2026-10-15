@@ -79,9 +79,9 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="mt-5 border-t border-[#d1d9ce] pt-4">
-                <h3 className="text-sm font-semibold text-[#34463b]">Areas served</h3>
+                <h3 className="text-sm font-semibold text-[#34463b]">Clinic location</h3>
                 <p className="mt-1 text-sm leading-6 text-[#58665c]">
-                  {siteConfig.serviceAreas.join(", ")}.
+                  Manjadi, Thiruvalla, Kerala.
                 </p>
               </div>
 

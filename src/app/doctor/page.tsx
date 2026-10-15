@@ -42,7 +42,15 @@ export default function DoctorPage() {
               <p className="mt-2 text-base text-[#58665c]">{siteConfig.doctorQualification}</p>
             ) : null}
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#58665c]">During a consultation, discuss your concerns and health history, ask questions, and learn about the care plan the doctor recommends for you. Care is planned after an individual assessment.</p>
-            <p className="mt-4 max-w-xl text-sm leading-7 text-[#58665c]">{siteConfig.businessName} welcomes enquiries from {siteConfig.serviceAreas.join(", ")}. Contact the clinic to ask about appointment availability and visit details.</p>
+            <p className="mt-4 max-w-xl text-sm leading-7 text-[#58665c]">
+              Based in Manjadi, Thiruvalla, {siteConfig.businessName} welcomes
+              enquiries from nearby residents and people across Kerala. We also
+              welcome enquiries from Malayalis living elsewhere in India,
+              including Bengaluru and Chennai, and from visitors to Kerala
+              from across India and abroad who are interested in Ayurvedic
+              care. If you are planning a visit, contact the clinic to discuss
+              appointment availability and visit details.
+            </p>
             <a href={getWhatsAppUrl(`Hello, I would like to ask about an appointment with ${siteConfig.doctorName} at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[#214d3a] px-5 text-sm font-semibold text-white">Ask about an appointment</a>
             <p className="mt-3 text-sm text-[#58665c]">{siteConfig.address.display}</p>
           </div>

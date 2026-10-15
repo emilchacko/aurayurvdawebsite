@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 const prasavarakshaTitle =
   "Prasavaraksha (Ayurvedic Postnatal Care) in Thiruvalla | Aura Ayurveda";
 const prasavarakshaDescription =
-  "Ask about prasavaraksha and postnatal Ayurvedic care in Thiruvalla. Call or WhatsApp Aura Ayurveda to discuss a consultation.";
+  "Ask about Prasavaraksha postnatal Ayurvedic care in Thiruvalla, Kerala. Families visiting from elsewhere in India or abroad can enquire before travelling.";
 const kalariTitle =
   "Kalari Marma (Varma) Massage in Kerala | Aura Ayurveda, Thiruvalla";
 const kalariDescription =

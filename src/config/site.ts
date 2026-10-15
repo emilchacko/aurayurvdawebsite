@@ -9,7 +9,7 @@ export const siteConfig = {
   siteUrl: "https://auraayurvedawellness.in",
   logoUrl: "https://auraayurvedawellness.in/images/logo/image.png",
   doctorName: "Dr. Lidiya Thomas",
-  doctorQualification: "TODO: confirm the doctor's full approved qualification",
+  doctorQualification: "Ayurveda doctor (BAMS)",
   englishConsultation: true,
   englishConsultationLabel: "English-language consultation available",
   englishConsultationText: "Consultations are available in English.",
@@ -70,7 +70,7 @@ export const siteConfig = {
     "https://www.facebook.com/Drlidiya.thomas",
     "https://www.instagram.com/ayurarogyam1987/",
   ],
-  serviceAreas: ["Thiruvalla", "Manjadi", "Kuttapuzha","Kerala","Tamil Nadu","India","Chennai","Banglore"],
+  serviceAreas: ["Thiruvalla"],
   sisterConcern: {
     name: "Ayurarogyam",
     location: "Manakachira, near Thiruvalla, Kerala",
