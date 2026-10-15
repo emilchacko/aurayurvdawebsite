@@ -194,8 +194,7 @@ export default function AyurarogyamPage() {
               <p className="mt-3 max-w-2xl text-sm leading-6 text-white/85">
                 Send an enquiry for Ayurarogyam to check availability, care
                 details or directions. Please seek urgent medical care for
-                severe or sudden symptoms; this page is general information and
-                is not medical advice.
+                severe or sudden symptoms.
               </p>
             </div>
             <a

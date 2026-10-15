@@ -32,7 +32,6 @@ function getBlockText(block: BlogBlock): string {
     case "unorderedList":
       return block.items.join(" ");
     case "contactCta":
-    case "disclaimer":
       return block.text;
     case "visitingInfo":
       return `${visitorAirportInfo} ${siteConfig.openingHours.display} ${siteConfig.address.display} ${siteConfig.whatsapp}`;
@@ -193,15 +192,6 @@ function renderBlock(block: BlogBlock) {
             </p>
           ) : null}
         </>
-      );
-    case "disclaimer":
-      return (
-        <p
-          key={block.text}
-          className="text-sm italic leading-6 text-white/80"
-        >
-          {block.text}
-        </p>
       );
   }
 }

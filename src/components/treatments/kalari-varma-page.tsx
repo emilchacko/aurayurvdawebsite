@@ -318,10 +318,6 @@ export function KalariVarmaPage() {
               </Link>
             </section>
 
-            <p className="text-sm italic leading-6 text-[#58665c]">
-              This page is for general information and is not a substitute for
-              medical advice.
-            </p>
           </div>
         </article>
       </Container>

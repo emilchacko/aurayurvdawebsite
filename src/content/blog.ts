@@ -24,8 +24,7 @@ export type BlogBlock =
       text: string;
       whatsappMessage?: string;
       whatsappLabel?: string;
-    }
-  | { type: "disclaimer"; text: string };
+    };
 
 export type BlogSection = {
   heading: string;
@@ -312,8 +311,8 @@ export const blogPosts: readonly BlogPost[] = [
               whatsappLabel: "Ask about skin care on WhatsApp",
             },
             {
-              type: "disclaimer",
-              text: "This article provides general information and does not replace professional medical advice. Please speak with a health professional about persistent or severe skin symptoms.",
+              type: "paragraph",
+              text: "Seek advice from a health professional if skin symptoms are persistent or severe.",
             },
           ],
         },
@@ -323,7 +322,7 @@ export const blogPosts: readonly BlogPost[] = [
       {
         question: "What is Prakriti skin type in Ayurveda?",
         answer:
-          "Prakriti is a traditional Ayurvedic concept describing a person's constitution through Vata, Pitta and Kapha. It is broader than modern skin-type labels and is not a medical diagnosis.",
+          "Prakriti is a traditional Ayurvedic concept describing a person's constitution through Vata, Pitta and Kapha. It is broader than modern skin-type labels.",
       },
       {
         question: "How does Ayurveda approach eczema-prone skin?",
@@ -463,10 +462,6 @@ export const blogPosts: readonly BlogPost[] = [
             {
               type: "contactCta",
               text: "At Aura Ayurveda in Thiruvalla, our doctor can discuss food and lifestyle suited to your needs. Book a consultation by phone or WhatsApp.",
-            },
-            {
-              type: "disclaimer",
-              text: "This article is for general information and isn't a substitute for medical advice.",
             },
           ],
         },
@@ -617,10 +612,6 @@ export const blogPosts: readonly BlogPost[] = [
               type: "contactCta",
               text: "Aura Ayurveda in Thiruvalla offers Kalari marma massage after an individual doctor consultation. Contact the clinic to arrange your consultation.",
             },
-            {
-              type: "disclaimer",
-              text: "This article is for general information and isn't a substitute for medical advice.",
-            },
           ],
         },
       ],
@@ -742,10 +733,6 @@ export const blogPosts: readonly BlogPost[] = [
             {
               type: "contactCta",
               text: "Aura Ayurveda in Thiruvalla offers consultations for people with knee or back concerns. Contact the clinic to arrange an appointment.",
-            },
-            {
-              type: "disclaimer",
-              text: "This article provides general information only. It does not diagnose or treat pain and is not a substitute for advice from a qualified medical professional. Seek urgent care for severe or concerning symptoms.",
             },
           ],
         },

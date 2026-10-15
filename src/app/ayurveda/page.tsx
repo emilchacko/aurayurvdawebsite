@@ -36,8 +36,6 @@ export default function AyurvedaPage() {
           </section>
         </div>
 
-        <p className="mt-6 max-w-3xl border-l-2 border-[#a05435] pl-4 text-sm leading-7 text-[#58665c]">This information is general and is not a diagnosis or a substitute for emergency or other appropriate medical care. Results vary, and no treatment outcome is guaranteed.</p>
-
         <div className="mt-8 flex flex-col gap-3 rounded-xl bg-[#214d3a] p-5 text-white sm:flex-row sm:items-center sm:justify-between sm:p-6">
           <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/70">Local Ayurvedic clinic</p><h2 className="mt-1 font-serif text-2xl">{siteConfig.locationLabel}</h2></div>
           <a href={getWhatsAppUrl(`Hello, I would like to ask how an Ayurvedic consultation works at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`)} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#214d3a]">Ask on WhatsApp</a>

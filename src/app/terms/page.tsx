@@ -21,18 +21,17 @@ export default function TermsPage() {
         <div className="mt-7 max-w-3xl divide-y divide-[#d8ded4] border-y border-[#d8ded4]">
           <section className="py-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">Health information</h2>
-            <p className="mt-2 text-sm leading-7 text-[#58665c]">Website content is not a diagnosis, personal treatment recommendation, or substitute for appropriate medical care. For urgent or severe symptoms, seek timely care from an appropriate medical professional.</p>
+            <p className="mt-2 text-sm leading-7 text-[#58665c]">For urgent or severe symptoms, seek timely care from an appropriate medical professional.</p>
           </section>
           <section className="py-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">Treatments and products</h2>
-            <p className="mt-2 text-sm leading-7 text-[#58665c]">Service descriptions and product images are informational. Availability, prices, ingredients, contents and suitability can change and should be confirmed directly with the clinic. Individual responses and outcomes vary; no result is guaranteed.</p>
+            <p className="mt-2 text-sm leading-7 text-[#58665c]">Availability, prices, ingredients, contents and suitability can change. Contact the clinic for current product and service details.</p>
           </section>
           <section className="py-5">
             <h2 className="font-serif text-2xl text-[#1d3026]">Appointments and external services</h2>
             <p className="mt-2 text-sm leading-7 text-[#58665c]">This website does not take bookings or payments. A WhatsApp or phone enquiry is not a confirmed appointment; the clinic will confirm arrangements directly. External maps and review sites are governed by their own terms.</p>
           </section>
         </div>
-        <p className="mt-5 max-w-3xl text-xs leading-6 text-[#58665c]">These general website terms should receive formal legal review before being treated as final clinic terms.</p>
       </section>
     </Container>
   );

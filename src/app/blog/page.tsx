@@ -35,9 +35,8 @@ export default function BlogPage() {
             Notes on Ayurveda, food, and everyday life
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-[#58665c]">
-            Explore practical, general information from {siteConfig.businessName}{" "}
-            in {siteConfig.locationLabel}. Articles do not replace individual
-            medical advice.
+            Explore practical articles about Ayurveda, food, and everyday life
+            from {siteConfig.businessName} in {siteConfig.locationLabel}.
           </p>
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
