@@ -34,7 +34,8 @@ export function Footer() {
             <div className="font-serif text-2xl text-[#1d3026]">{siteConfig.businessName}</div>
           </div>
           <p className="mt-3 max-w-md text-sm leading-7 text-[#536260]">
-            Ayurvedic consultations and services in {siteConfig.locationLabel}.
+            Based in {siteConfig.locationLabel}, Kerala. Enquiries are welcome
+            from India and abroad.
           </p>
           <a href={siteConfig.googleMapsUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-[#214d3a] underline underline-offset-4">Get directions</a>
         </div>

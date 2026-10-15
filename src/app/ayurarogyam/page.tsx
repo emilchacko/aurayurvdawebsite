@@ -186,7 +186,7 @@ export default function AyurarogyamPage() {
           <div className="grid gap-6 rounded-xl bg-[#214d3a] p-6 text-white sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/75">
-                Local clinic · Manakachira
+                Ayurarogyam clinic · Manakachira
               </p>
               <h2 className="mt-2 font-serif text-3xl">
                 Have a question before visiting?

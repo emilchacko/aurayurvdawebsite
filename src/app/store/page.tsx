@@ -68,7 +68,7 @@ export default function StorePage() {
         </div>
 
         <div className="mt-6 grid gap-3 rounded-xl bg-[#edf0e8] p-4 sm:grid-cols-3 sm:p-5">
-          <p className="text-sm leading-6 text-[#34463b]">Local clinic in {siteConfig.locationLabel}</p>
+          <p className="text-sm leading-6 text-[#34463b]">Based in {siteConfig.locationLabel}, Kerala</p>
           <p className="text-sm leading-6 text-[#34463b]">Talk to the clinic before you order</p>
           <p className="text-sm leading-6 text-[#34463b]">Product suitability confirmed case by case</p>
         </div>

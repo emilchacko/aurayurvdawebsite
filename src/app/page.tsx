@@ -160,7 +160,7 @@ export default function Home() {
       <section aria-label="Clinic details" className="border-y border-[#d8ded4] bg-[#faf9f5]">
         <Container>
           <div className="grid gap-4 py-5 sm:grid-cols-3 sm:gap-6">
-            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Local clinic</p><p className="mt-1 text-sm font-medium text-[#34463b]">{siteConfig.locationLabel}</p></div>
+            <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Clinic location</p><p className="mt-1 text-sm font-medium text-[#34463b]">{siteConfig.locationLabel}</p></div>
             <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">Speak directly</p><p className="mt-1 text-sm font-medium text-[#34463b]">Call or message the clinic</p></div>
             <div><p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#a05435]">First step</p><p className="mt-1 text-sm font-medium text-[#34463b]">Ask about an appointment</p></div>
           </div>
