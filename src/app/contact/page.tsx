@@ -109,6 +109,26 @@ export default function ContactPage() {
               </h2>
               <LocationMapCards />
             </div>
+
+            <div>
+              <h2 className="mb-4 font-serif text-2xl text-[#1d3026]">
+                Finding our Ayurveda clinic in Thiruvalla
+              </h2>
+              <p className="max-w-2xl text-sm leading-7 text-[#58665c]">
+                {siteConfig.businessName} is at {siteConfig.address.display}.
+                Use the map link below for live directions from Thiruvalla
+                railway station, the bus stand or wherever you are starting
+                from.
+              </p>
+              <a
+                href={siteConfig.googleMapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-[#214d3a] underline underline-offset-4"
+              >
+                Get directions to our Thiruvalla clinic
+              </a>
+            </div>
           </div>
         </section>
       </Container>

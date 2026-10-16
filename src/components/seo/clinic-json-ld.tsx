@@ -9,6 +9,9 @@ export function ClinicJsonLd() {
     "@type": "MedicalClinic",
     name: siteConfig.businessName,
     url: siteConfig.siteUrl,
+    logo: siteConfig.logoUrl,
+    image: siteConfig.logoUrl,
+    hasMap: siteConfig.googleMapsUrl,
     telephone: siteConfig.phone,
     address: {
       "@type": "PostalAddress",
@@ -33,6 +36,13 @@ export function ClinicJsonLd() {
     areaServed: serviceAreas,
     sameAs: [...socialLinks, siteConfig.googleBusinessProfileReviewUrl],
     medicalSpecialty: "Ayurvedic",
+    employee: {
+      "@type": "Physician",
+      name: siteConfig.doctorName,
+      medicalSpecialty: "Ayurvedic",
+      url: `${siteConfig.siteUrl}/doctor/`,
+      worksFor: { "@type": "MedicalClinic", name: siteConfig.businessName },
+    },
     ...(siteConfig.englishConsultation
       ? { availableLanguage: "English" }
       : {}),
