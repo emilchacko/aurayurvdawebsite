@@ -1107,4 +1107,220 @@ export const blogPosts: readonly BlogPost[] = [
       "panchakarma-massage",
     ],
   },
+  {
+    slug: "safe-weight-loss-ayurvedic-diet-kerala",
+    title: "Safe Weight Loss with an Ayurvedic Diet: A Gentle, Sustainable Approach",
+    metaTitle: "Safe Weight Loss with an Ayurvedic Diet | Aura Ayurveda",
+    description:
+      "Looking for safe, sustainable weight loss through diet? Learn Ayurvedic eating principles, everyday Kerala foods, habits to avoid and when to see a doctor first.",
+    publishedDate: "2026-10-22",
+    updatedDate: "2026-10-22",
+    author: {
+      type: "Organization",
+      name: siteConfig.businessName,
+      url: siteConfig.siteUrl,
+    },
+    heroImage: {
+      src: "/images/focus-areas/weight-management.jpg",
+      alt: "A person meditating as part of a wellness routine",
+      width: 640,
+      height: 420,
+    },
+    body: {
+      hook:
+        "Crash diets, slimming teas and quick-fix promises are everywhere, but a healthy weight is usually built slowly, with food and habits you can keep up. Ayurveda looks at weight through digestion, daily routine and the individual person, which makes it a useful lens for a safer, more sustainable approach.",
+      internationalTerms: "",
+      introduction:
+        "This guide explains how Ayurvedic eating principles can inform everyday food choices if you want to manage your weight, and when it is wise to speak to a doctor first. At Aura Ayurveda in Thiruvalla, Kerala, you can ask about an individual consultation.",
+      sections: [
+        {
+          heading: "Why safe matters more than fast",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Rapid weight loss through very low-calorie eating, skipped meals or unregulated products can leave you tired, undernourished and more likely to regain weight. A gradual, balanced approach is generally easier to sustain and gentler on the body.",
+            },
+            {
+              type: "paragraph",
+              text: "Weight is also personal. Age, health conditions, medicines, hormones, sleep, stress and family history all play a part, so no single diet suits everyone.",
+            },
+          ],
+        },
+        {
+          heading: "How Ayurveda looks at weight and digestion",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "In Ayurveda, digestion (often described as agni) is central to wellbeing. Traditional texts associate a tendency to gain weight with heaviness, sluggish digestion and a lifestyle with little movement, and they emphasise food, routine and activity suited to the individual.",
+            },
+            {
+              type: "paragraph",
+              text: "These are traditional ideas that can guide everyday habits. They are not a substitute for medical assessment, and results vary from person to person.",
+            },
+          ],
+        },
+        {
+          heading: "Ayurvedic eating principles that may support a healthy weight",
+          blocks: [
+            {
+              type: "orderedList",
+              items: [
+                "Eat freshly cooked, warm meals rather than heavily processed, deep-fried or very sugary food.",
+                "Eat at regular times, with your largest meal around midday and a lighter dinner earlier in the evening.",
+                "Eat mindfully: sit down, chew well and stop before you feel overly full.",
+                "Do not eat again until the previous meal has digested; avoid constant snacking.",
+                "Include vegetables, pulses, whole grains and a little healthy fat, rather than cutting out whole food groups.",
+                "Drink warm or room-temperature water through the day, and avoid very cold, sweetened drinks.",
+              ],
+            },
+            {
+              type: "linkedParagraph",
+              before: "For more on how food and digestion fit into Ayurveda, read ",
+              linkText: "Food as Medicine: The Ayurvedic Way of Eating",
+              href: "/blog/food-as-medicine-ayurveda/",
+              after: ".",
+            },
+          ],
+        },
+        {
+          heading: "Everyday Kerala foods to build your plate around",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "You do not need unfamiliar ingredients. Many traditional Kerala foods fit a balanced, home-cooked plate when portions are sensible.",
+            },
+            {
+              type: "unorderedList",
+              items: [
+                "Vegetable-rich curries, thoran and sambar with a moderate portion of rice or millets.",
+                "Pulses and lentils such as dal and green gram (cherupayar) for protein and fibre.",
+                "Seasonal fruit and vegetables instead of packaged snacks and sweets.",
+                "Buttermilk (moru) and home-cooked kanji as light, easily digested options.",
+                "Familiar spices such as ginger, cumin, coriander, turmeric, black pepper and curry leaves used in cooking.",
+              ],
+            },
+          ],
+        },
+        {
+          heading: "Habits beyond the plate",
+          blocks: [
+            {
+              type: "unorderedList",
+              items: [
+                "Move daily. A regular walk or other activity you enjoy matters as much as what you eat.",
+                "Keep a steady sleep routine; poor sleep can affect appetite and energy.",
+                "Find ways to manage stress that do not involve food.",
+                "Keep a simple note of meals, hunger and energy for a week to spot patterns.",
+              ],
+            },
+          ],
+        },
+        {
+          heading: "What to avoid",
+          blocks: [
+            {
+              type: "unorderedList",
+              items: [
+                "Crash diets, prolonged fasting or skipping meals to lose weight quickly.",
+                "Slimming teas, powders or herbal products of unknown ingredients or origin.",
+                "Stopping or changing prescribed medicines without speaking to your doctor.",
+                "Comparing yourself with others; a healthy pace is different for each person.",
+              ],
+            },
+          ],
+        },
+        {
+          heading: "Who should check with a doctor first",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Speak with your doctor before changing your diet or adding herbs if you have diabetes, high blood pressure, thyroid, kidney, liver or heart conditions, take regular medicines, are pregnant or breastfeeding, or have a history of an eating disorder. Children and older adults also need individual guidance.",
+            },
+          ],
+        },
+        {
+          heading: "When to seek medical advice",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "See a doctor if your weight changes quickly without explanation, if you notice persistent tiredness, swelling, breathlessness, a very changed appetite, or if you feel unwell while changing your diet. Do not rely on online advice for these symptoms.",
+            },
+          ],
+        },
+        {
+          heading: "What an Ayurvedic consultation may involve",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "An Ayurvedic doctor can ask about your digestion, eating pattern, activity, sleep, health history and medicines, then discuss food and lifestyle guidance suited to you. Recommendations are individual; the doctor will also tell you when another health professional should assess a concern.",
+            },
+            {
+              type: "linkedParagraph",
+              before: "Learn how to ask about an ",
+              linkText: "Ayurvedic consultation",
+              href: "/ayurveda/",
+              after: " or meet the clinic doctor on the doctor page.",
+            },
+          ],
+        },
+        {
+          heading: "Visiting Kerala from abroad?",
+          boxed: true,
+          blocks: [{ type: "visitingInfo" }],
+        },
+        {
+          heading: "Talk to us",
+          blocks: [
+            {
+              type: "contactCta",
+              text: "At Aura Ayurveda in Thiruvalla, our doctor can discuss diet and lifestyle guidance for healthy weight management. Book a consultation by phone or WhatsApp.",
+              whatsappMessage: `Hello, I would like to ask about diet and weight management guidance at ${siteConfig.businessName} in ${siteConfig.locationLabel}.`,
+              whatsappLabel: "Ask about weight management on WhatsApp",
+            },
+          ],
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Can Ayurveda help with safe weight loss?",
+        answer:
+          "Ayurveda offers food and lifestyle guidance that some people find helpful as a gradual, complementary approach. It does not guarantee weight loss, and results vary. An individual consultation can discuss what may suit you.",
+      },
+      {
+        question: "What is an Ayurvedic diet for weight loss?",
+        answer:
+          "It generally means fresh, warm, home-cooked meals at regular times, a lighter dinner, mindful eating and suitable portions of vegetables, pulses and whole grains. The details are adjusted to the individual.",
+      },
+      {
+        question: "How fast should I lose weight?",
+        answer:
+          "A slow, steady pace is generally safer and easier to maintain than rapid loss. Ask your doctor what a healthy pace and target is for you.",
+      },
+      {
+        question: "Are herbal slimming products safe?",
+        answer:
+          "Not always. Products of unknown ingredients or origin can cause side effects or interact with medicines. Check with a doctor or qualified practitioner before using any.",
+      },
+      {
+        question: "Can I follow an Ayurvedic diet if I have diabetes or take regular medicines?",
+        answer:
+          "Speak with your doctor first and do not stop prescribed medicines. Ayurvedic food guidance can be discussed alongside your regular care.",
+      },
+      {
+        question: "Can I book a consultation if I am visiting Kerala from abroad?",
+        answer: `Appointments can be requested via WhatsApp at ${siteConfig.whatsapp}. ${siteConfig.englishConsultationText} Please contact the clinic to confirm visit details.`,
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/blog/food-as-medicine-ayurveda/",
+        label: "Food as Medicine: The Ayurvedic Way of Eating",
+      },
+      { href: "/ayurveda/", label: "Learn about an Ayurvedic consultation" },
+      { href: "/doctor/", label: "Meet the clinic doctor" },
+      { href: "/contact/", label: "Contact Aura Ayurveda" },
+    ],
+    relatedTreatments: [],
+  },
 ];
