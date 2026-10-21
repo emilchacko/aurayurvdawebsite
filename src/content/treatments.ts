@@ -47,6 +47,44 @@ export const treatments: Treatment[] = [
     relatedPosts: [],
   },
   {
+    slug: "back-pain-joint-pain-care",
+    title: "Ayurvedic Care for Back Pain and Joint Pain",
+    shortDescription:
+      "A consultation for back, knee, neck, shoulder and joint discomfort, with an individualized Ayurvedic care plan.",
+    description:
+      "If you have recurring back, knee, neck, shoulder or joint discomfort, the doctor reviews your symptoms, daily activities and health history, then discusses whether Ayurvedic care may be suitable for you.",
+    whoItsFor:
+      "People with back, knee, neck, shoulder or joint discomfort, including stiffness after long shifts, standing work or physically demanding care work, can discuss their concerns with the doctor.",
+    whatToExpect:
+      "Describe when the discomfort began, what affects it and any injury, swelling, numbness or weakness. Bring current medicines and any reports. Seek urgent medical care for severe pain, pain after an injury, fever, significant swelling, or new weakness or numbness.",
+    category: "Joint & Muscle Care",
+    image: "/images/focus-areas/joint-muscle.jpg",
+    imageAlt:
+      "Illustrative image of a man holding his lower back outdoors; not a clinic patient or treatment",
+    relatedPosts: [
+      "knee-back-pain-thiruvalla",
+      "ayurveda-for-nurses-care-workers-abroad",
+    ],
+    updatedDate: "2026-10-21",
+  },
+  {
+    slug: "ayurvedic-body-therapies",
+    title: "Ayurvedic Body Therapies: Abhyanga, Kizhi, Kati Vasti and Janu Vasti",
+    shortDescription:
+      "Traditional Kerala therapies that the doctor may discuss as part of an individualized plan for relaxation and physical wellbeing.",
+    description:
+      "Abhyanga (oil massage), Kizhi or Pinda Sweda (warm herbal boluses), Kati Vasti (warm oil over the lower back), Janu Vasti (warm oil over the knee) and Shirodhara (oil poured over the forehead) are traditionally used Ayurvedic therapies. The doctor assesses whether any is suitable for you.",
+    whoItsFor:
+      "People who feel physically tired or stiff, including those returning to Kerala from long working hours abroad, can ask the doctor which therapies, if any, may be appropriate.",
+    whatToExpect:
+      "The doctor begins with a consultation about your concerns and health history, then explains any recommended therapy and what a session involves. Contact the clinic to confirm availability, session duration and preparation before you visit.",
+    category: "Massage & Therapies",
+    image: "/images/focus-areas/ayurvedic-therapies.jpg",
+    imageAlt: "Ayurvedic massage therapy, illustrative image",
+    relatedPosts: ["ayurveda-for-nurses-care-workers-abroad"],
+    updatedDate: "2026-10-21",
+  },
+  {
     slug: "kalari-varma-massage",
     title: "Kalari Marma (Varma) Massage",
     shortDescription:

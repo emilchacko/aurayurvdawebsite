@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/content/blog";
+import { malayalamPostSlugs } from "@/content/blog-ml";
 import { treatments } from "@/content/treatments";
 import { siteConfig } from "@/config/site";
 
@@ -37,10 +38,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
           }
         : { lastModified }),
     })),
-    ...blogPosts.map((post) => ({
-      url: `${siteConfig.siteUrl}/blog/${post.slug}/`,
-      lastModified: new Date(`${post.updatedDate}T00:00:00.000Z`),
-    })),
+    ...blogPosts.flatMap((post) => {
+      const lastModified = new Date(`${post.updatedDate}T00:00:00.000Z`);
+      const englishUrl = `${siteConfig.siteUrl}/blog/${post.slug}/`;
+
+      if (!malayalamPostSlugs.includes(post.slug)) {
+        return [{ url: englishUrl, lastModified }];
+      }
+
+      const malayalamUrl = `${siteConfig.siteUrl}/ml/blog/${post.slug}/`;
+      const alternates = { languages: { en: englishUrl, ml: malayalamUrl } };
+
+      return [
+        { url: englishUrl, lastModified, alternates },
+        { url: malayalamUrl, lastModified, alternates },
+      ];
+    }),
     ...treatments.map((treatment) => ({
       url: `${siteConfig.siteUrl}/treatments/${treatment.slug}/`,
       lastModified: new Date(

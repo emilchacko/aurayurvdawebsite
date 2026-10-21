@@ -39,7 +39,7 @@ function getLabel(segment: string, parentPath: string) {
 export function Breadcrumbs() {
   const pathname = usePathname();
 
-  if (!pathname || pathname === "/") {
+  if (!pathname || pathname === "/" || pathname.startsWith("/ml/")) {
     return null;
   }
 

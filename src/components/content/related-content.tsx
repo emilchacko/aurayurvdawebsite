@@ -4,8 +4,10 @@ import { treatments } from "@/content/treatments";
 
 export function RelatedTreatments({
   treatmentSlugs,
+  heading = "Related treatments",
 }: {
   treatmentSlugs: readonly string[];
+  heading?: string;
 }) {
   const related = treatmentSlugs
     .map((slug) => treatments.find((treatment) => treatment.slug === slug))
@@ -21,7 +23,7 @@ export function RelatedTreatments({
         id="related-treatments"
         className="font-serif text-2xl text-[#1d3026]"
       >
-        Related treatments
+        {heading}
       </h2>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {related.map((treatment) => (
